@@ -98,7 +98,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 /*=============================================
    HEADER
    =============================================*/
-.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--raj-white); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); transition: var(--raj-transition); }
+.site-header { position: relative; top: 0; left: 0; right: 0; z-index: 1000; background: var(--raj-white); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); transition: var(--raj-transition); }
 .header-top-bar { background: var(--raj-dark); padding: 8px 0; display: none; }
 @media (min-width: 768px) { .header-top-bar { display: block; } }
 .header-top-inner { display: flex; justify-content: space-between; align-items: center; }
@@ -120,7 +120,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .logo-name { font-size: 22px; font-weight: 700; color: var(--raj-dark); }
 .logo-highlight { color: var(--raj-blue); }
 
-.site-logo { height: 80px; width: auto; display: block; }
+.site-logo { height: 55px; width: auto; display: block; }
 .footer-site-logo { height: 70px; width: auto; display: block; }
 .main-navigation { flex: 1; display: flex; justify-content: center; }
 .main-navigation .menu { display: flex; gap: 8px; }
@@ -163,7 +163,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 /*=============================================
    HERO SECTION
    =============================================*/
-.hero-section { width: 100%; aspect-ratio: 1200 / 620; max-height: 620px; color: var(--raj-dark); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: space-between; padding: 60px; padding-top: 130px; }
+.hero-section { width: 100%; aspect-ratio: 1200 / 620; max-height: 620px; color: var(--raj-dark); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: space-between; padding: 60px; }
 .hero-section::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.05) 100%); z-index: 1; pointer-events: none; }
 .hero-bg-img { position: absolute; inset: 0; background: var(--raj-light-gray) url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80') center center / cover no-repeat; }
 .hero-left { width: 52%; z-index: 2; }
@@ -574,7 +574,7 @@ ul { list-style: none; padding: 0; margin: 0; }
         <div class="header-main">
             <div class="container header-main-inner">
                 <div class="site-branding">
-                    <a href="index.html" rel="home" class="logo-text">
+                    <a href="https://rajagency.in/" rel="home" class="logo-text">
                         <img src="https://rajagency.in/wp-content/uploads/2025/04/Raj-300x200.png" alt="Raj Marketing Agency" class="site-logo">
                     </a>
                 </div>
@@ -585,22 +585,22 @@ ul { list-style: none; padding: 0; margin: 0; }
                         <span class="hamburger-line"></span>
                     </button>
                     <ul id="primary-menu" class="menu">
-                        <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
-                        <li class="menu-item"><a href="about.html">About Us</a></li>
-                        <li class="menu-item menu-item-has-children"><a href="services.html">Services</a>
+                        <li class="menu-item current-menu-item"><a href="https://rajagency.in/">Home</a></li>
+                        <li class="menu-item"><a href="https://rajagency.in/about-us/">About Us</a></li>
+                        <li class="menu-item menu-item-has-children"><a href="https://rajagency.in/services/">Services</a>
                             <ul class="sub-menu">
-                                <li class="menu-item"><a href="website-development.html">Website Development</a></li>
-                                <li class="menu-item"><a href="seo-services.html">SEO Services</a></li>
-                                <li class="menu-item"><a href="google-meta-ads.html">Google &amp; Meta Ads</a></li>
-                                <li class="menu-item"><a href="graphic-designing.html">Graphic Designing</a></li>
+                                <li class="menu-item"><a href="https://rajagency.in/website-development/">Website Development</a></li>
+                                <li class="menu-item"><a href="https://rajagency.in/seo-services/">SEO Services</a></li>
+                                <li class="menu-item"><a href="https://rajagency.in/google-meta-ads/">Google &amp; Meta Ads</a></li>
+                                <li class="menu-item"><a href="https://rajagency.in/graphic-designing/">Graphic Designing</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                        <li class="menu-item"><a href="https://rajagency.in/contact-us/">Contact Us</a></li>
                     </ul>
                 </nav>
                 <div class="header-cta">
                     <a href="tel:+918121781089" class="cta-btn cta-btn-phone"><i class="fas fa-phone-alt"></i> +91 81217 81089</a>
-                    <a href="contact.html" class="cta-btn cta-btn-primary">Get Free Consultation</a>
+                    <a href="https://rajagency.in/contact-us/" class="cta-btn cta-btn-primary">Get Free Consultation</a>
                 </div>
             </div>
         </div>
@@ -630,7 +630,7 @@ ul { list-style: none; padding: 0; margin: 0; }
                                 <input type="tel" id="hero-phone" name="phone" placeholder="Phone Number" required pattern="(?!.*(\d)\1{8})\d{10}" maxlength="10" oninput="this.value=this.value.replace(/\D/g,'')" title="Enter a valid 10-digit mobile number (repeated digits not allowed)">
                             </div>
                             <button type="submit" class="btn btn-primary btn-lg submit-btn" style="width:100%;justify-content:center;">Get Free Strategy Call</button>
-                            <p class="hero-form-safe">&#10003; Your details are safe. By submitting this form, you agree to the <a href="privacy-policy.html" style="color:var(--raj-accent);text-decoration:underline;">privacy policy</a> &amp; terms and conditions.</p>
+                            <p class="hero-form-safe">&#10003; Your details are safe. By submitting this form, you agree to the <a href="https://rajagency.in/privacy-policy/" style="color:var(--raj-accent);text-decoration:underline;">privacy policy</a> &amp; terms and conditions.</p>
                         </form>
                     </div>
                 </div>
@@ -722,7 +722,7 @@ ul { list-style: none; padding: 0; margin: 0; }
                             <p style="color: #636e72; line-height: 1.8; margin-bottom: 16px;">Raj Marketing Agency was born from a simple dream — helping businesses grow. Founder <strong>Srikanth Raj</strong> discovered the power of digital promotion while marketing real estate with his father, using just his phone to create and publish property videos on YouTube.</p>
                             <p style="color: #636e72; line-height: 1.8; margin-bottom: 16px;">The results were remarkable — multiple properties sold within months without a website or fancy tools. That sparked a deep dive into <strong>digital marketing, web development, graphic design, and content creation</strong>.</p>
                             <p style="color: #636e72; line-height: 1.8; margin-bottom: 24px;">Today, we deliver complete digital solutions — websites, SEO, branding, ads, and more — at affordable monthly packages that fit every budget.</p>
-                            <a href="about.html" class="btn btn-primary">Learn More About Us <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://rajagency.in/about-us/" class="btn btn-primary">Learn More About Us <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -741,85 +741,85 @@ ul { list-style: none; padding: 0; margin: 0; }
                             <div class="service-card-icon"><i class="fas fa-code"></i></div>
                             <h3>Website Development</h3>
                             <p>Business websites, portfolio sites, and high-converting landing pages.</p>
-                        <a href="services.html" class="service-card-cta">Build Your Website →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Build Your Website →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="150">
                             <div class="service-card-icon"><i class="fas fa-search"></i></div>
                             <h3>SEO Services</h3>
                             <p>Increase rankings, traffic, and online visibility with proven SEO strategies.</p>
-                        <a href="services.html" class="service-card-cta">Boost Your Rankings →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Boost Your Rankings →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="200">
                             <div class="service-card-icon"><i class="fas fa-hashtag"></i></div>
                             <h3>Social Media Marketing</h3>
                             <p>Instagram &amp; Facebook management with engaging content creation.</p>
-                        <a href="services.html" class="service-card-cta">Grow on Social Media →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Grow on Social Media →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="250">
                             <div class="service-card-icon"><i class="fas fa-ad"></i></div>
                             <h3>Google &amp; Meta Ads</h3>
                             <p>ROI-driven campaigns across Google, Facebook, and Instagram to generate quality leads.</p>
-                        <a href="services.html" class="service-card-cta">Run High-ROI Ads →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Run High-ROI Ads →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="100">
                             <div class="service-card-icon"><i class="fas fa-paint-brush"></i></div>
                             <h3>Graphic Designing</h3>
                             <p>Creative designs, promotional posts, and festival creatives.</p>
-                        <a href="services.html" class="service-card-cta">Get Creative Designs →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Get Creative Designs →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="150">
                             <div class="service-card-icon"><i class="fas fa-bullhorn"></i></div>
                             <h3>Branding Solutions</h3>
                             <p>Logo design, brand identity, and complete branding solutions.</p>
-                        <a href="services.html" class="service-card-cta">Build Your Brand →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Build Your Brand →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="200">
                             <div class="service-card-icon"><i class="fas fa-users"></i></div>
                             <h3>Lead Generation</h3>
                             <p>Conversion-focused marketing campaigns for qualified leads.</p>
-                        <a href="services.html" class="service-card-cta">Generate More Leads →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Generate More Leads →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="250">
                             <div class="service-card-icon"><i class="fas fa-video"></i></div>
                             <h3>Video Editing</h3>
                             <p>Professional editing for businesses and YouTube creators.</p>
-                        <a href="services.html" class="service-card-cta">Edit Your Videos →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Edit Your Videos →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="300">
                             <div class="service-card-icon"><i class="fas fa-store"></i></div>
                             <h3>Google Business Profile</h3>
                             <p>Setup and management of your Google Business listing.</p>
-                        <a href="services.html" class="service-card-cta">Optimize Your Listing →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Optimize Your Listing →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="100">
                             <div class="service-card-icon"><i class="fas fa-tools"></i></div>
                             <h3>Website Maintenance</h3>
                             <p>Regular updates, security checks, and performance monitoring.</p>
-                        <a href="services.html" class="service-card-cta">Keep Your Site Secure →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Keep Your Site Secure →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="150">
                             <div class="service-card-icon"><i class="fas fa-chart-bar"></i></div>
                             <h3>Competitor Analysis</h3>
                             <p>Research competitors and market trends for strategic advantage.</p>
-                        <a href="services.html" class="service-card-cta">Outperform Competitors →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Outperform Competitors →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="200">
                             <div class="service-card-icon"><i class="fas fa-rocket"></i></div>
                             <h3>Landing Page Optimization</h3>
                             <p>Improve conversions and maximize campaign performance.</p>
-                        <a href="services.html" class="service-card-cta">Increase Conversions →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Increase Conversions →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="250">
                             <div class="service-card-icon"><i class="fas fa-plane"></i></div>
                             <h3>Drone Shoot Services</h3>
                             <p>Professional aerial video and photography for businesses.</p>
-                        <a href="services.html" class="service-card-cta">Book Aerial Shoot →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Book Aerial Shoot →</a>
                         </div>
                         <div class="service-card stagger-item" data-delay="300">
                             <div class="service-card-icon"><i class="fas fa-file-alt"></i></div>
                             <h3>Brochure Design</h3>
                             <p>Creative marketing materials and business brochures.</p>
-                        <a href="services.html" class="service-card-cta">Design Your Brochure →</a>
+                        <a href="https://rajagency.in/services/" class="service-card-cta">Design Your Brochure →</a>
                         </div>
                     </div>
                 </div>
@@ -1025,22 +1025,22 @@ ul { list-style: none; padding: 0; margin: 0; }
                 <div class="footer-col footer-links">
                     <h4 class="footer-heading">Quick Links</h4>
                     <ul class="footer-menu-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="https://rajagency.in/">Home</a></li>
+                        <li><a href="https://rajagency.in/about-us/">About Us</a></li>
+                        <li><a href="https://rajagency.in/services/">Services</a></li>
+                        <li><a href="https://rajagency.in/contact-us/">Contact Us</a></li>
+                        
                     </ul>
                 </div>
                 <div class="footer-col footer-services">
                     <h4 class="footer-heading">Services</h4>
                     <ul class="footer-menu-list">
-                        <li><a href="services.html">Website Development</a></li>
-                        <li><a href="services.html">SEO Services</a></li>
-                        <li><a href="services.html">Social Media Marketing</a></li>
-                        <li><a href="services.html">Google Ads Management</a></li>
-                        <li><a href="services.html">Lead Generation</a></li>
-                        <li><a href="services.html">Branding Solutions</a></li>
+                        <li><a href="https://rajagency.in/services/">Website Development</a></li>
+                        <li><a href="https://rajagency.in/services/">SEO Services</a></li>
+                        <li><a href="https://rajagency.in/services/">Social Media Marketing</a></li>
+                        <li><a href="https://rajagency.in/services/">Google Ads Management</a></li>
+                        <li><a href="https://rajagency.in/services/">Lead Generation</a></li>
+                        <li><a href="https://rajagency.in/services/">Branding Solutions</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-contact">
@@ -1058,8 +1058,8 @@ ul { list-style: none; padding: 0; margin: 0; }
             <div class="container footer-bottom-inner">
                 <p>&copy; 2026 Raj Marketing Agency. All Rights Reserved.</p>
                 <div class="footer-bottom-links">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="https://rajagency.in/privacy-policy/">Privacy Policy</a>
+                    <a href="https://rajagency.in/terms-conditions/">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -1230,7 +1230,7 @@ e.preventDefault();
 var name=encodeURIComponent(document.getElementById('hero-name').value.trim());
 var phone=encodeURIComponent(document.getElementById('hero-phone').value.trim());
 var source=encodeURIComponent(document.querySelector('#heroForm input[name="source"]').value);
-var url='https://script.google.com/macros/s/AKfycbyPnY_8qwiXehipzKTCrncve9JftL79rRUDQ1zMQBw0qb2qPAb7YzT0VqXI6x4SYNEA/exec';
+var url='https://script.google.com/macros/s/AKfycby67_2AubQx8299AgTdop_5f4AlGOZT4GwcnjLn1lQhARMiWByfuJ7Bm0yRvqVMEhEr/exec';
 var qs='?name='+name+'&phone='+phone+'&source='+source;
 fetch(url+qs).then(function(){window.location.href='thank-you.html';}).catch(function(){window.location.href='thank-you.html';});
 });
