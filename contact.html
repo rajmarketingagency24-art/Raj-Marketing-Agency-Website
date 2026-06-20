@@ -967,7 +967,7 @@ var email=encodeURIComponent(emailVal);
 var budget=encodeURIComponent(document.getElementById('budget').value);
 var message=encodeURIComponent(document.getElementById('message').value.trim());
 var source=encodeURIComponent(document.getElementById('source').value);
-var url='https://script.google.com/macros/s/AKfycbynhvEP5N_85pQtQiVVG5gB78vqYBw2mlKUguiZ_WzzpLhhGu53ZfbRN6vV-GToKOQx2g/exec';
+var url='https://script.google.com/macros/s/AKfycbybTtgPosziLD2lRlVu42V2hCCXn4T0yKpAkvuS2-n3ZdTm8NbS2xmNbnHvb4zMjIiH/exec';
 var qs='?name='+name+'&phone='+phone+'&email='+email+'&budget='+budget+'&message='+message+'&source='+source+'&formName=Contact';
 fetch(url+qs).then(function(r){return r.text();}).then(function(t){if(t==='OK'){window.location.href='https://rajagency.in/thank-you';}else{alert(t);btn.textContent='Send Message';btn.disabled=false;}}).catch(function(){alert('Network error. Please try again.');btn.textContent='Send Message';btn.disabled=false;});
 });
