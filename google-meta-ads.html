@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google &amp; Meta Ads Management - Raj Marketing Agency</title>
+    <meta name="description" content="ROI-driven Google Ads and Meta Ads management in Sangareddy, Telangana. Campaign optimization, lead generation, and conversion-focused advertising.">
+    <meta name="keywords" content="Google Ads Services in Sangareddy, Meta Ads Agency, Facebook Ads, Instagram Ads, PPC Management, Lead Generation Ads">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/*=============================================
+   RAJ MARKETING AGENCY - THEME STYLES
+   =============================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --raj-blue: #1e293b;
+    --raj-blue-dark: #0f172a;
+    --raj-blue-light: #e2e8f0;
+    --raj-blue-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    --raj-dark: #111520;
+    --raj-dark-gray: #334155;
+    --raj-gray: #64748b;
+    --raj-light-gray: #f8fafc;
+    --raj-white: #ffffff;
+    --raj-accent: #EB595F;
+    --raj-accent-light: #fecaca;
+    --raj-whatsapp: #25d366;
+    --raj-warning: #f59e0b;
+    --raj-transition: all 0.3s ease;
+    --raj-shadow: 0 10px 40px rgba(30, 41, 59, 0.1);
+    --raj-shadow-hover: 0 20px 60px rgba(30, 41, 59, 0.2);
+    --raj-radius: 12px;
+    --raj-radius-sm: 8px;
+    --raj-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --raj-font-heading: 'Libre Baskerville', Georgia, serif;
+    --raj-container: 1200px;
+}
+
+/*=============================================
+   RESET & BASE
+   =============================================*/
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--raj-font); font-size: 16px; line-height: 1.7; color: var(--raj-dark-gray); background: var(--raj-white); overflow-x: hidden; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--raj-font-heading); }
+a { color: var(--raj-blue); text-decoration: none; transition: var(--raj-transition); }
+a:hover { color: var(--raj-blue-dark); }
+img { max-width: 100%; height: auto; display: block; }
+ul { list-style: none; padding: 0; margin: 0; }
+.container { max-width: var(--raj-container); margin: 0 auto; padding: 0 20px; }
+.screen-reader-text { border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; }
+.section-padding { padding: 100px 0; }
+.section-padding-sm { padding: 60px 0; }
+.text-center { text-align: center; }
+
+/*=============================================
+   SECTION TITLES
+   =============================================*/
+.section-header { margin-bottom: 60px; }
+.section-subtitle { display: inline-block; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: var(--raj-accent); margin-bottom: 12px; position: relative; }
+.section-subtitle::after { content: ''; display: block; width: 40px; height: 3px; background: var(--raj-accent); margin: 8px auto 0; border-radius: 2px; }
+.text-center .section-subtitle::after { margin-left: auto; margin-right: auto; }
+.section-title { font-size: 42px; font-weight: 800; color: var(--raj-dark-gray); line-height: 1.2; margin-bottom: 16px; }
+.section-title span { color: var(--raj-accent); }
+.section-description { font-size: 18px; color: var(--raj-gray); max-width: 700px; line-height: 1.8; }
+.section-header.text-center .section-description { margin: 0 auto; }
+
+/*=============================================
+   BUTTONS
+   =============================================*/
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; font-size: 15px; font-weight: 600; border-radius: 50px; border: none; cursor: pointer; transition: var(--raj-transition); text-decoration: none; line-height: 1; }
+.btn-primary { background: var(--raj-accent); color: var(--raj-white); box-shadow: 0 8px 30px rgba(235, 89, 95, 0.3); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(235, 89, 95, 0.4); color: var(--raj-white); }
+.btn-secondary { background: var(--raj-white); color: var(--raj-blue); border: 2px solid var(--raj-blue); }
+.btn-secondary:hover { background: var(--raj-blue); color: var(--raj-white); transform: translateY(-3px); }
+.btn-whatsapp { background: var(--raj-whatsapp); color: var(--raj-white); box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3); }
+.btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4); color: var(--raj-white); }
+.btn-phone { background: var(--raj-dark); color: var(--raj-white); }
+.btn-phone:hover { background: var(--raj-blue); color: var(--raj-white); transform: translateY(-3px); }
+.btn-lg { padding: 20px 40px; font-size: 17px; }
+.btn-sm { padding: 12px 24px; font-size: 13px; }
+.btn-group { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+
+/*=============================================
+   HEADER
+   =============================================*/
+.site-header { position: relative; top: 0; left: 0; right: 0; z-index: 1000; background: var(--raj-white); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); transition: var(--raj-transition); }
+.header-top-bar { background: var(--raj-dark); padding: 8px 0; display: none; }
+@media (min-width: 768px) { .header-top-bar { display: block; } }
+.header-top-inner { display: flex; justify-content: space-between; align-items: center; }
+.header-contact-info { display: flex; gap: 24px; align-items: center; }
+.header-contact-info span { font-size: 13px; color: rgba(255, 255, 255, 0.8); display: flex; align-items: center; gap: 6px; }
+.header-contact-info a { color: rgba(255, 255, 255, 0.8); }
+.header-contact-info a:hover { color: var(--raj-white); }
+.header-contact-info i { color: var(--raj-blue); font-size: 12px; }
+.header-social { display: flex; gap: 12px; }
+.header-social a { color: rgba(255, 255, 255, 0.7); font-size: 15px; transition: var(--raj-transition); }
+.header-social a:hover { color: var(--raj-white); transform: translateY(-2px); }
+
+.header-main { padding: 20px 0; }
+.header-main-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+
+.site-branding { flex-shrink: 0; }
+.logo-text { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-mark { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; background: var(--raj-blue-gradient); color: var(--raj-white); font-size: 22px; font-weight: 900; border-radius: var(--raj-radius-sm); }
+.logo-name { font-size: 22px; font-weight: 700; color: var(--raj-dark); }
+.logo-highlight { color: var(--raj-blue); }
+
+.site-logo { height: 55px; width: auto; display: block; }
+.footer-site-logo { height: 70px; width: auto; display: block; }
+.main-navigation { flex: 1; display: flex; justify-content: center; }
+.main-navigation .menu { display: flex; gap: 4px; }
+.main-navigation .menu-item { position: relative; }
+.main-navigation .menu-item a { display: block; padding: 8px 16px; font-size: 14px; font-weight: 500; color: var(--raj-dark-gray); border-radius: var(--raj-radius-sm); transition: var(--raj-transition); }
+.main-navigation .menu-item a:hover, .main-navigation .menu-item.current-menu-item a { color: var(--raj-blue); background: var(--raj-blue-light); }
+.main-navigation .sub-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; min-width: 220px; padding: 8px 0; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); z-index: 999; }
+.main-navigation .menu-item-has-children:hover .sub-menu { display: block; }
+.main-navigation .sub-menu .menu-item a { padding: 10px 20px; font-size: 13px; white-space: nowrap; border-radius: 0; }
+.main-navigation .sub-menu .menu-item a:hover { background: var(--raj-light-gray); }
+.main-navigation .sub-menu .menu-item:first-child a { border-radius: 12px 12px 0 0; }
+.main-navigation .sub-menu .menu-item:last-child a { border-radius: 0 0 12px 12px; }
+.menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+.hamburger-line { width: 28px; height: 3px; background: var(--raj-dark); border-radius: 3px; transition: var(--raj-transition); }
+
+.header-cta { display: flex; gap: 8px; flex-shrink: 0; margin-left: auto; }
+.cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 22px; border-radius: 50px; font-size: 13px; font-weight: 600; transition: var(--raj-transition); text-decoration: none; }
+.cta-btn-primary { background: var(--raj-accent); color: var(--raj-white); box-shadow: 0 4px 15px rgba(203, 15, 9, 0.3); }
+.cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(203, 15, 9, 0.4); color: var(--raj-white); }
+.cta-btn-phone { background: var(--raj-light-gray); color: var(--raj-dark); }
+.cta-btn-phone:hover { background: var(--raj-dark); color: var(--raj-white); }
+
+@media (max-width: 991px) {
+    .header-cta { display: none; }
+    .main-navigation .menu { display: none; }
+    .menu-toggle { display: flex; }
+    .main-navigation.active .menu { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--raj-white); padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); z-index: 100; }
+    .main-navigation.active .menu-item a { padding: 14px 20px; border-bottom: 1px solid var(--raj-light-gray); }
+    .main-navigation.active .sub-menu { display: none; position: static; box-shadow: none; padding: 0; border-radius: 0; background: transparent; }
+    .main-navigation.active .menu-item-has-children.open .sub-menu { display: block; }
+    .main-navigation.active .sub-menu .menu-item a { padding: 10px 20px 10px 40px; font-size: 13px; }
+}
+
+/*=============================================
+   MOBILE OVERLAY
+   =============================================*/
+.mobile-menu-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 998; }
+.mobile-menu-overlay.active { display: block; }
+
+/*=============================================
+   HERO SECTION
+   =============================================*/
+.hero-section { width: 100%; aspect-ratio: 1200 / 620; max-height: 620px; color: var(--raj-dark); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: space-between; padding: 60px; }
+.hero-section::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.05) 100%); z-index: 1; pointer-events: none; }
+.hero-bg-img { position: absolute; inset: 0; background: var(--raj-light-gray) url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80') center center / cover no-repeat; }
+.hero-left { width: 52%; z-index: 2; }
+.hero-left h1 { font-size: 44px; line-height: 1.3; margin-bottom: 25px; font-weight: 800; color: #fff; }
+.hero-blue { color: #fff; }
+.hero-left p { color: #fff; line-height: 1.8; font-size: 18px; margin-bottom: 35px; }
+.hero-btn { display: inline-block; background: var(--raj-accent); padding: 16px 35px; border-radius: 50px; text-decoration: none; color: #fff !important; font-weight: 600; transition: var(--raj-transition); }
+.hero-btn:hover { background: #d43e44; transform: translateY(-2px); color: #fff !important; }
+.hero-right { width: 40%; position: relative; z-index: 2; display: flex; flex-direction: column; gap: 18px; }
+.page-hero-simple { justify-content: center; text-align: center; }
+.page-hero-simple .hero-center { width: 100%; z-index: 2; }
+.page-hero-simple .hero-center h1 { font-size: 56px; font-weight: 800; color: #fff; margin: 0; font-family: var(--raj-font-heading); text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+.hero-form-wrapper { background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,.2); }
+.hero-form-title { font-size: 22px; font-weight: 700; color: var(--raj-blue); margin-bottom: 6px; font-family: var(--raj-font-heading); }
+.hero-form-subtitle { font-size: 13px; color: var(--raj-gray); margin-bottom: 18px; }
+.hero-form-wrapper .form-group { margin-bottom: 12px; }
+.hero-form-wrapper input, .hero-form-wrapper select, .hero-form-wrapper textarea { width: 100%; padding: 12px 16px; border: 1.5px solid #e2e8f0; border-radius: 10px; font-size: 14px; font-family: var(--raj-font-body); transition: var(--raj-transition); background: #fff; }
+.hero-form-wrapper input:focus, .hero-form-wrapper select:focus, .hero-form-wrapper textarea:focus { outline: none; border-color: var(--raj-accent); box-shadow: 0 0 0 3px rgba(235, 89, 95, 0.1); }
+.hero-form-wrapper textarea { resize: vertical; min-height: 60px; }
+.hero-form-safe { font-size: 11px; color: var(--raj-gray); text-align: center; margin-top: 12px; line-height: 1.5; }
+@media (max-width: 991px) {
+    .hero-section { aspect-ratio: auto; max-height: none; padding: 120px 30px 60px; flex-direction: column; gap: 40px; }
+    .hero-left { width: 100%; text-align: center; }
+    .hero-left h1 { font-size: 36px; }
+    .hero-left p { font-size: 16px; }
+    .hero-right { width: 100%; max-width: 420px; }
+}
+@media (max-width: 575px) {
+    .hero-section { padding: 100px 20px 40px; }
+    .hero-left h1 { font-size: 28px; }
+    .hero-form-wrapper { padding: 20px; }
+}
+
+/*=============================================
+   CLIENTS BAR
+   =============================================*/
+.clients-bar { padding: 40px 0; background: var(--raj-white); border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05); }
+.clients-bar-text { text-align: center; font-size: 13px; color: var(--raj-gray); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 20px; }
+.clients-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.client-item { font-size: 14px; font-weight: 600; color: var(--raj-gray); opacity: 0.6; display: flex; align-items: center; gap: 8px; }
+
+/*=============================================
+   ABOUT PREVIEW
+   =============================================*/
+.about-preview { background: var(--raj-white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-image-wrapper { position: relative; }
+.about-image-box { background: var(--raj-light-gray); border-radius: 20px; padding: 0; min-height: 400px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.about-image-box .about-image-content { text-align: center; width: 100%; height: 100%; min-height: 400px; }
+.about-image-box i { font-size: 100px; color: var(--raj-blue); opacity: 0.2; }
+.about-experience-badge { position: absolute; bottom: -20px; right: -20px; background: var(--raj-accent); color: var(--raj-white); padding: 24px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(203, 15, 9, 0.3); }
+.msme-badge { display: flex; align-items: center; justify-content: center; gap: 14px; background: var(--raj-white); border: 1px solid rgba(0,0,0,0.08); border-radius: var(--raj-radius); padding: 14px 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); margin-top: 20px; }
+.msme-logo { width: 44px; height: auto; flex-shrink: 0; }
+.msme-info { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.msme-label { font-size: 11px; color: var(--raj-gray); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.msme-number { font-size: 15px; font-weight: 700; color: var(--raj-dark); letter-spacing: 0.3px; }
+.about-experience-badge .number { font-size: 42px; font-weight: 900; display: block; line-height: 1; }
+.about-experience-badge .text { font-size: 12px; font-weight: 500; opacity: 0.9; margin-top: 4px; }
+.about-content .section-header { margin-bottom: 24px; }
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+.about-feature { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--raj-light-gray); border-radius: var(--raj-radius-sm); }
+.about-feature i { color: var(--raj-accent); font-size: 16px; }
+.about-feature span { font-size: 14px; font-weight: 500; color: var(--raj-dark); }
+@media (max-width: 991px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-features { grid-template-columns: 1fr; }
+}
+
+/*=============================================
+   SERVICES STYLES (Shared)
+   =============================================*/
+.services-section { background: var(--raj-light-gray); }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.service-card { background: var(--raj-white); border-radius: var(--raj-radius); padding: 32px 24px; text-align: center; transition: var(--raj-transition); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: relative; overflow: hidden; cursor: default; }
+.service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--raj-blue-gradient); transform: scaleX(0); transition: var(--raj-transition); transform-origin: left; }
+.service-card:hover { transform: translateY(-8px); box-shadow: var(--raj-shadow-hover); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-card-icon { width: 70px; height: 70px; background: var(--raj-blue-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; transition: var(--raj-transition); }
+.service-card:hover .service-card-icon { background: var(--raj-blue-gradient); }
+.service-card-icon i { font-size: 30px; color: var(--raj-blue); transition: var(--raj-transition); }
+.service-card:hover .service-card-icon i { color: var(--raj-white); }
+.service-card h3 { font-size: 17px; font-weight: 700; color: var(--raj-dark); margin-bottom: 8px; }
+.service-card p { font-size: 14px; color: var(--raj-gray); line-height: 1.6; }
+@media (max-width: 991px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575px) { .services-grid { grid-template-columns: 1fr; } }
+
+/*=============================================
+   WHY CHOOSE US
+   =============================================*/
+.why-choose-section { background: var(--raj-white); }
+.why-choose-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.why-choose-item { text-align: center; padding: 40px 30px; border-radius: var(--raj-radius); transition: var(--raj-transition); background: var(--raj-light-gray); }
+.why-choose-item:hover { transform: translateY(-5px); box-shadow: var(--raj-shadow); }
+.why-choose-icon { width: 64px; height: 64px; background: var(--raj-blue-gradient); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.why-choose-icon i { font-size: 28px; color: var(--raj-white); }
+.why-choose-item h3 { font-size: 18px; font-weight: 700; color: var(--raj-dark); margin-bottom: 8px; }
+.why-choose-item p { font-size: 14px; color: var(--raj-gray); }
+@media (max-width: 991px) { .why-choose-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575px) { .why-choose-grid { grid-template-columns: 1fr; } }
+
+/*=============================================
+   WORK PROCESS
+   =============================================*/
+.work-process-section { background: var(--raj-light-gray); }
+.process-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; position: relative; }
+.process-grid::before { content: ''; position: absolute; top: 50px; left: 5%; right: 5%; height: 3px; background: linear-gradient(90deg, var(--raj-blue), var(--raj-accent)); transform: translateY(-50%); z-index: 0; }
+.process-step { text-align: center; position: relative; z-index: 1; }
+.process-number { width: 60px; height: 60px; background: var(--raj-blue-gradient); color: var(--raj-white); font-size: 22px; font-weight: 800; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 8px 25px rgba(0,82,204,0.3); position: relative; }
+.process-step h3 { font-size: 16px; font-weight: 700; color: var(--raj-dark); margin-bottom: 6px; }
+.process-step p { font-size: 13px; color: var(--raj-gray); }
+@media (max-width: 991px) {
+    .process-grid { grid-template-columns: repeat(3, 1fr); }
+    .process-grid::before { display: none; }
+}
+@media (max-width: 575px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/*=============================================
+   CTA SECTION
+   =============================================*/
+.cta-section { background: var(--raj-blue-gradient); padding: 100px 0; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="90" cy="10" r="40" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="90" r="30" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="50" r="60" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center; background-size: cover; }
+.cta-content { position: relative; z-index: 1; text-align: center; max-width: 700px; margin: 0 auto; }
+.cta-content h2 { font-size: 44px; font-weight: 800; color: var(--raj-white); margin-bottom: 16px; }
+.cta-content p { font-size: 18px; color: rgba(255,255,255,0.9); margin-bottom: 32px; }
+.cta-content .btn-primary { background: var(--raj-white); color: var(--raj-accent); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+.cta-content .btn-primary:hover { background: var(--raj-accent); color: var(--raj-white); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+.cta-content .btn-secondary { border-color: var(--raj-white); color: var(--raj-white); }
+.cta-content .btn-secondary:hover { background: var(--raj-white); color: var(--raj-accent); }
+
+/*=============================================
+   PAGE HEADER (Inner Pages)
+   =============================================*/
+.page-header-section { background: var(--raj-dark); padding: 140px 0 80px; position: relative; overflow: hidden; text-align: center; }
+.page-header-section::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,82,204,0.2) 0%, transparent 100%); }
+.page-header-content { position: relative; z-index: 1; }
+.page-header-content h1 { font-size: 48px; font-weight: 800; color: var(--raj-white); margin-bottom: 12px; }
+.page-header-content p { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; }
+.breadcrumbs { margin-top: 16px; font-size: 14px; color: rgba(255,255,255,0.6); }
+.breadcrumbs a { color: rgba(255,255,255,0.8); }
+.breadcrumbs a:hover { color: var(--raj-white); }
+
+/*=============================================
+   ABOUT PAGE
+   =============================================*/
+.about-page-intro { background: var(--raj-white); }
+.about-page-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.mission-vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 60px; }
+.mission-box, .vision-box { padding: 40px; border-radius: var(--raj-radius); background: var(--raj-light-gray); transition: var(--raj-transition); }
+.mission-box:hover, .vision-box:hover { transform: translateY(-5px); box-shadow: var(--raj-shadow); }
+.mission-box .icon, .vision-box .icon { width: 60px; height: 60px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.mission-box .icon { background: var(--raj-blue-gradient); }
+.vision-box .icon { background: var(--raj-accent); }
+.mission-box .icon i, .vision-box .icon i { font-size: 26px; color: var(--raj-white); }
+.mission-box h3, .vision-box h3 { font-size: 22px; font-weight: 700; color: var(--raj-dark); margin-bottom: 12px; }
+.mission-box p, .vision-box p { color: var(--raj-gray); line-height: 1.7; }
+
+.values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.value-item { text-align: center; padding: 32px 20px; background: var(--raj-white); border-radius: var(--raj-radius); box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: var(--raj-transition); }
+.value-item:hover { transform: translateY(-5px); box-shadow: var(--raj-shadow); }
+.value-item .icon { width: 56px; height: 56px; background: var(--raj-blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.value-item .icon i { font-size: 24px; color: var(--raj-blue); }
+.value-item h4 { font-size: 16px; font-weight: 700; color: var(--raj-dark); }
+
+.founder-section { background: var(--raj-light-gray); }
+.founder-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center; }
+.founder-image { width: 300px; height: 300px; background: linear-gradient(135deg, var(--raj-blue-light), var(--raj-blue)); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+.founder-image i { font-size: 120px; color: var(--raj-white); opacity: 0.8; }
+.founder-info h3 { font-size: 28px; font-weight: 800; color: var(--raj-dark); }
+.founder-info .founder-role { color: var(--raj-blue); font-weight: 600; font-size: 16px; margin-bottom: 16px; }
+.founder-info p { color: var(--raj-gray); line-height: 1.8; margin-bottom: 20px; }
+.founder-signature { font-size: 20px; font-weight: 700; color: var(--raj-dark); font-style: italic; }
+
+@media (max-width: 991px) {
+    .about-page-grid { grid-template-columns: 1fr; }
+    .mission-vision-grid { grid-template-columns: 1fr; }
+    .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .founder-grid { grid-template-columns: 1fr; text-align: center; }
+}
+@media (max-width: 575px) {
+    .values-grid { grid-template-columns: 1fr; }
+}
+
+/*=============================================
+   SERVICES PAGE
+   =============================================*/
+.services-page-section { background: var(--raj-light-gray); }
+.service-detail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.service-detail-item { background: var(--raj-white); border-radius: var(--raj-radius); overflow: hidden; transition: var(--raj-transition); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.service-detail-item:hover { transform: translateY(-8px); box-shadow: var(--raj-shadow-hover); }
+.service-detail-icon { padding: 32px 24px 0; text-align: center; }
+.service-detail-icon .icon-box { width: 70px; height: 70px; background: var(--raj-blue-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: var(--raj-transition); }
+.service-detail-item:hover .icon-box { background: var(--raj-blue-gradient); }
+.service-detail-icon .icon-box i { font-size: 30px; color: var(--raj-blue); transition: var(--raj-transition); }
+.service-detail-item:hover .icon-box i { color: var(--raj-white); }
+.service-detail-body { padding: 20px 24px 32px; text-align: center; }
+.service-detail-body h3 { font-size: 17px; font-weight: 700; color: var(--raj-dark); margin-bottom: 8px; }
+.service-detail-body p { font-size: 14px; color: var(--raj-gray); line-height: 1.6; }
+@media (max-width: 991px) { .service-detail-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575px) { .service-detail-grid { grid-template-columns: 1fr; } }
+
+/*=============================================
+   SERVICE DETAIL SECTIONS
+   =============================================*/
+.service-detail-section { padding: 80px 0; }
+.service-detail-section:nth-child(even) { background: var(--raj-light-gray); }
+.service-detail-section:nth-child(odd) { background: var(--raj-white); }
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.service-card-detailed { background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: var(--raj-transition); border: 1px solid rgba(0,0,0,0.04); display: flex; flex-direction: column; }
+.service-card-detailed:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+.service-card-detailed-icon { width: 48px; height: 48px; background: var(--raj-light-gray); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.service-card-detailed-icon i { font-size: 22px; color: var(--raj-accent); }
+.service-card-detailed h3 { font-size: 17px; font-weight: 700; color: var(--raj-dark); margin-bottom: 8px; }
+.service-card-detailed p { font-size: 13px; color: var(--raj-gray); line-height: 1.6; margin-bottom: 12px; flex-grow: 1; }
+.service-card-detailed ul { list-style: none; padding: 0; margin: 0; }
+.service-card-detailed ul li { padding: 5px 0 5px 22px; position: relative; font-size: 13px; color: var(--raj-dark-gray); border-bottom: 1px solid #f5f5f5; }
+.service-card-detailed ul li:last-child { border-bottom: none; }
+.service-card-detailed ul li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: var(--raj-accent); font-size: 11px; }
+.service-card-detailed .btn-primary { font-size: 13px; padding: 10px 16px; background: #11151F; box-shadow: none; }
+.service-card-detailed .btn-primary:hover { background: #1e293b; }
+@media (max-width: 1199px) {
+    .service-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 991px) {
+    .service-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 575px) {
+    .service-grid { grid-template-columns: 1fr; }
+}
+
+/*=============================================
+   CONTACT PAGE
+   =============================================*/
+.contact-section { background: var(--raj-white); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
+.contact-info-wrapper { display: flex; flex-direction: column; gap: 30px; }
+.contact-info-card { padding: 32px; background: var(--raj-light-gray); border-radius: var(--raj-radius); transition: var(--raj-transition); }
+.contact-info-card:hover { transform: translateY(-5px); box-shadow: var(--raj-shadow); }
+.contact-info-card .icon { width: 56px; height: 56px; background: var(--raj-blue-gradient); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.contact-info-card .icon i { font-size: 24px; color: var(--raj-white); }
+.contact-info-card h3 { font-size: 18px; font-weight: 700; color: var(--raj-dark); margin-bottom: 8px; }
+.contact-info-card p { font-size: 15px; color: var(--raj-gray); display: block; }
+.contact-info-card a:not(.btn) { font-size: 15px; color: var(--raj-gray); display: block; }
+.contact-info-card a:not(.btn):hover { color: var(--raj-blue); }
+
+.contact-form-wrapper { background: var(--raj-white); border-radius: var(--raj-radius); padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.05); }
+.contact-form-wrapper h3 { font-size: 28px; font-weight: 800; color: var(--raj-dark); margin-bottom: 8px; }
+.contact-form-wrapper .form-subtitle { color: var(--raj-gray); margin-bottom: 32px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--raj-dark); margin-bottom: 6px; }
+.form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px 18px; border: 2px solid #e0e0e0; border-radius: var(--raj-radius-sm); font-size: 15px; font-family: var(--raj-font); transition: var(--raj-transition); background: var(--raj-white); color: var(--raj-dark-gray); }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--raj-accent); box-shadow: 0 0 0 4px rgba(203, 15, 9, 0.1); }
+.form-group textarea { min-height: 140px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.contact-map-section { padding: 60px 0 0; width: 100%; }
+.contact-map-wrapper { width: 100%; min-height: 400px; background: var(--raj-light-gray); display: flex; align-items: center; justify-content: center; }
+.contact-map-placeholder { text-align: center; padding: 40px; }
+.contact-map-placeholder i { font-size: 60px; color: var(--raj-blue); opacity: 0.3; margin-bottom: 16px; }
+.contact-map-placeholder p { color: var(--raj-gray); }
+.contact-map-embed { width: 100%; }
+.contact-map-embed iframe { display: block; width: 100%; }
+@media (max-width: 991px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+}
+
+/*=============================================
+   PRIVACY POLICY PAGE
+   =============================================*/
+.privacy-content { max-width: 900px; margin: 0 auto; padding: 60px 0; }
+.privacy-content .last-updated { color: var(--raj-gray); font-size: 14px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0; }
+.privacy-section { margin-bottom: 40px; }
+.privacy-section h2 { font-size: 24px; font-weight: 700; color: var(--raj-dark); margin-bottom: 12px; }
+.privacy-section h2 .section-number { color: var(--raj-blue); margin-right: 8px; }
+.privacy-section p { color: var(--raj-gray); line-height: 1.8; margin-bottom: 12px; }
+.privacy-section ul { list-style: disc; padding-left: 24px; margin-bottom: 12px; }
+.privacy-section ul li { color: var(--raj-gray); line-height: 1.8; margin-bottom: 6px; }
+
+/*=============================================
+   FOOTER
+   =============================================*/
+.site-footer { background: var(--raj-white); color: var(--raj-dark-gray); position: relative; border-top: 1px solid rgba(0,0,0,0.06); }
+.footer-wave-shape { display: none; }
+.footer-main { padding: 80px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.footer-logo .logo-mark { width: 38px; height: 38px; font-size: 18px; }
+.footer-logo .logo-name { font-size: 20px; color: var(--raj-dark); }
+.footer-tagline { font-size: 14px; line-height: 1.8; margin-bottom: 20px; color: var(--raj-gray); }
+.footer-social { display: flex; gap: 12px; }
+.footer-social a { width: 40px; height: 40px; background: var(--raj-light-gray); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--raj-gray); font-size: 16px; transition: var(--raj-transition); }
+.footer-social a:hover { background: var(--raj-blue); color: var(--raj-white); transform: translateY(-3px); }
+.footer-heading { font-size: 18px; font-weight: 700; color: var(--raj-dark); margin-bottom: 24px; position: relative; padding-bottom: 12px; }
+.footer-heading::after { content: ''; position: absolute; bottom: 0; left: 0; width: 30px; height: 3px; background: var(--raj-accent); border-radius: 2px; }
+.footer-menu-list li { margin-bottom: 12px; }
+.footer-menu-list a { color: var(--raj-gray); font-size: 14px; transition: var(--raj-transition); }
+.footer-menu-list a:hover { color: var(--raj-blue); padding-left: 5px; }
+.footer-contact-list li { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 14px; color: var(--raj-gray); }
+.footer-contact-list li i { width: 20px; color: var(--raj-blue); font-size: 14px; }
+.footer-contact-list a { color: var(--raj-gray); }
+.footer-contact-list a:hover { color: var(--raj-blue); }
+.footer-bottom { border-top: 1px solid rgba(0,0,0,0.06); padding: 24px 0; }
+.footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; }
+.footer-bottom p { font-size: 14px; color: var(--raj-gray); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { font-size: 13px; color: var(--raj-gray); }
+.footer-bottom-links a:hover { color: var(--raj-blue); }
+@media (max-width: 991px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 575px) { .footer-grid { grid-template-columns: 1fr; } }
+
+/*=============================================
+   FLOATING CTA
+   =============================================*/
+.floating-cta { position: fixed; bottom: 30px; right: 30px; z-index: 999; display: flex; flex-direction: column; gap: 12px; }
+.float-whatsapp, .float-call { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; font-size: 14px; font-weight: 600; color: var(--raj-white); text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.2); transition: var(--raj-transition); cursor: pointer; }
+.float-whatsapp { background: var(--raj-whatsapp); }
+.float-call { background: var(--raj-accent); }
+.float-whatsapp:hover, .float-call:hover { transform: scale(1.05); color: var(--raj-white); }
+.float-whatsapp i, .float-call i { font-size: 26px; }
+@media (max-width: 575px) {
+    .floating-cta { right: 15px; bottom: 15px; }
+}
+
+/*=============================================
+   PRICING
+   =============================================*/
+.pricing-section { background: var(--raj-light-gray); }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; align-items: start; }
+.pricing-card { background: #fff; border-radius: 20px; padding: 40px 30px; text-align: center; position: relative; transition: var(--raj-transition); border: 2px solid transparent; box-shadow: 0 5px 30px rgba(0,0,0,0.05); }
+.pricing-card:hover { transform: translateY(-8px); box-shadow: 0 15px 50px rgba(0,0,0,0.1); }
+.pricing-featured { border-color: var(--raj-accent); box-shadow: 0 10px 40px rgba(203, 15, 9, 0.12); transform: scale(1.05); }
+.pricing-featured:hover { transform: scale(1.05) translateY(-8px); }
+.pricing-badge { display: inline-block; padding: 6px 24px; background: #11151F; color: #fff; font-size: 14px; font-weight: 700; border-radius: 50px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.12); }
+.pricing-amount { font-size: 48px; font-weight: 800; color: var(--raj-dark); line-height: 1; margin-bottom: 4px; font-family: 'Inter', sans-serif; }
+.pricing-amount .currency { font-size: 28px; vertical-align: super; margin-right: 2px; }
+.pricing-period { font-size: 14px; color: var(--raj-gray); margin-bottom: 30px; }
+.pricing-features { list-style: none; padding: 0; margin: 0 0 30px; text-align: left; }
+.pricing-features li { padding: 10px 0 10px 28px; position: relative; font-size: 15px; color: var(--raj-dark); border-bottom: 1px solid #f0f0f0; line-height: 1.5; }
+.pricing-features li:last-child { border-bottom: none; }
+.pricing-features li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; top: 10px; color: var(--raj-blue); font-size: 14px; }
+.pricing-card .btn-primary { box-shadow: none; }
+@media (max-width: 991px) {
+    .pricing-grid { grid-template-columns: 1fr; gap: 24px; }
+    .pricing-featured { transform: none; }
+    .pricing-featured:hover { transform: translateY(-8px); }
+}
+
+.service-card-cta { display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--raj-accent); text-decoration: none; transition: var(--raj-transition); }
+.service-card-cta:hover { color: #c2410c; gap: 6px; }
+.service-card-cta::after { content: ' →'; transition: var(--raj-transition); }
+.service-card-cta:hover::after { margin-left: 4px; }
+
+/*=============================================
+   ANIMATIONS
+   =============================================*/
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in-left.visible { opacity: 1; transform: translateX(0); }
+.fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in-right.visible { opacity: 1; transform: translateX(0); }
+.fade-in-scale { opacity: 0; transform: scale(0.9); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in-scale.visible { opacity: 1; transform: scale(1); }
+.stagger-item { opacity: 0; transform: translateY(30px); }
+.stagger-item.visible { animation: staggerFadeIn 0.5s ease forwards; }
+@keyframes staggerFadeIn { to { opacity: 1; transform: translateY(0); } }
+[data-delay="100"] { transition-delay: 0.1s; }
+[data-delay="200"] { transition-delay: 0.2s; }
+[data-delay="300"] { transition-delay: 0.3s; }
+[data-delay="400"] { transition-delay: 0.4s; }
+[data-delay="500"] { transition-delay: 0.5s; }
+
+/*=============================================
+   RESPONSIVE
+   =============================================*/
+@media (max-width: 1200px) {
+    .hero-title { font-size: 46px; }
+    .section-title { font-size: 34px; }
+}
+@media (max-width: 991px) {
+    .header-cta { display: none; }
+    .hero-title { font-size: 38px; }
+    .section-title { font-size: 30px; }
+    .section-padding { padding: 60px 0; }
+    .cta-content h2 { font-size: 32px; }
+}
+@media (max-width: 575px) {
+    .hero-title { font-size: 28px; }
+    .hero-subtitle { font-size: 15px; }
+    .section-title { font-size: 26px; }
+    .section-description { font-size: 15px; }
+    .btn { padding: 14px 24px; font-size: 14px; }
+    .btn-lg { padding: 16px 28px; font-size: 15px; }
+    .page-header-content h1 { font-size: 30px; }
+    .footer-bottom-inner { flex-direction: column; gap: 12px; text-align: center; }
+}
+
+/*=============================================
+   UNLOCK PRICING
+   =============================================*/
+.service-price-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px dashed #e2e8f0; }
+.price-strike { font-size: 15px; font-weight: 600; color: #94a3b8; text-decoration: line-through; }
+.unlock-pricing-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: linear-gradient(135deg, #1e293b, #334155); color: #fbbf24; border: none; border-radius: 50px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.unlock-pricing-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(30,41,59,0.3); }
+.unlock-pricing-btn i { font-size: 14px; transition: all 0.3s; }
+.unlock-pricing-btn.shaking i { animation: lockShake 0.5s ease; }
+@keyframes lockShake { 0%,100%{transform:rotate(0)} 20%{transform:rotate(-12deg)} 40%{transform:rotate(12deg)} 60%{transform:rotate(-8deg)} 80%{transform:rotate(8deg)} }
+.unlock-pricing-btn.unlocked { background: #059669; color: #fff; }
+.unlock-pricing-btn.unlocked i { animation: unlockBounce 0.5s ease; }
+@keyframes unlockBounce { 0%{transform:scale(1)} 50%{transform:scale(1.3)} 100%{transform:scale(1)} }
+.pricing-popup-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px); }
+.pricing-popup-overlay.active { display: flex; }
+.pricing-popup { background: #fff; border-radius: 24px; padding: 40px; max-width: 480px; width: 100%; position: relative; animation: popupIn 0.3s ease; max-height: 90vh; overflow-y: auto; }
+@keyframes popupIn { from{opacity:0;transform:scale(0.9) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
+.popup-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; background: var(--raj-light-gray); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--raj-gray); transition: all 0.3s; z-index: 1; }
+.popup-close:hover { background: var(--raj-accent); color: #fff; }
+.pricing-popup .hero-form-wrapper { padding: 0; }
+.pricing-popup .hero-form-title { font-size: 24px; }
+
+</style>
+</head>
+<body>
+<div id="page" class="site">
+
+    <!-- HEADER -->
+    <header id="masthead" class="site-header">
+        <div class="header-main">
+            <div class="container header-main-inner">
+                <div class="site-branding">
+                    <a href="https://rajagency.in/" rel="home" class="logo-text">
+                        <img src="https://rajagency.in/wp-content/uploads/2025/04/Raj-300x200.png" alt="Raj Marketing Agency" class="site-logo">
+                    </a>
+                </div>
+                <nav id="site-navigation" class="main-navigation">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                    <ul id="primary-menu" class="menu">
+                        <li class="menu-item"><a href="https://rajagency.in/">Home</a></li>
+                        <li class="menu-item"><a href="https://rajagency.in/about-us/">About Us</a></li>
+                        <li class="menu-item menu-item-has-children current-menu-item"><a href="https://rajagency.in/services/">Services</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="https://rajagency.in/website-development/">Website Development</a></li>
+                                <li class="menu-item"><a href="https://rajagency.in/seo-services/">SEO Services</a></li>
+                                <li class="menu-item"><a href="https://rajagency.in/google-meta-ads/">Google &amp; Meta Ads</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="https://rajagency.in/contact-us/">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="tel:+918121781089" class="cta-btn cta-btn-phone"><i class="fas fa-phone-alt"></i> +91 81217 81089</a>
+                    <a href="https://rajagency.in/contact-us/" class="cta-btn cta-btn-primary">Get Free Consultation</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay"></div>
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+
+            <style>
+                .ads-hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); padding: 140px 0 80px; position: relative; overflow: hidden; }
+                .ads-hero::before { content: ''; position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(235,89,95,0.05)" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom center / cover no-repeat; pointer-events: none; }
+                .ads-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+                .ads-hero h1 { font-size: 48px; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 20px; }
+                .ads-hero h1 span { color: #EB595F; }
+                .ads-hero p { color: #94a3b8; font-size: 18px; line-height: 1.8; margin-bottom: 30px; }
+                .ads-hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+                .ads-hero-badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 8px 18px; border-radius: 50px; font-size: 13px; color: #e2e8f0; font-weight: 500; }
+                .ads-hero-badge i { color: #EB595F; margin-right: 6px; }
+                .ads-hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+                .ads-hero-illustration { text-align: center; }
+                .ads-hero-illustration img { max-width: 100%; border-radius: 16px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
+                .section-pad { padding: 80px 0; }
+                .section-pad.bg-light { background: #f8fafc; }
+                .section-label { display: inline-block; font-size: 12px; font-weight: 700; color: #EB595F; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+                .section-title-lg { font-size: 36px; font-weight: 800; color: #1e293b; margin-bottom: 16px; }
+                .section-title-lg span { color: #EB595F; }
+                .section-desc { color: #64748b; font-size: 16px; line-height: 1.7; max-width: 600px; }
+                .text-center { text-align: center; }
+                .mx-auto { margin-left: auto; margin-right: auto; }
+                .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 40px; }
+                .feature-card { background: #fff; border-radius: 16px; padding: 32px 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s ease; border: 1px solid #f1f5f9; }
+                .feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+                .feature-card-icon { width: 56px; height: 56px; background: linear-gradient(135deg, #EB595F, #f87171); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+                .feature-card-icon i { font-size: 24px; color: #fff; }
+                .feature-card h3 { font-size: 18px; font-weight: 700; color: #1e293b; margin-bottom: 10px; }
+                .feature-card p { font-size: 14px; color: #64748b; line-height: 1.7; }
+                .services-tabs { margin-top: 40px; }
+                .services-tab-header { display: flex; gap: 0; margin-bottom: 0; border-radius: 12px 12px 0 0; overflow: hidden; }
+                .services-tab-btn { flex: 1; padding: 16px 24px; font-size: 15px; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s; background: #f1f5f9; color: #64748b; }
+                .services-tab-btn.active { background: #1e293b; color: #fff; }
+                .services-tab-btn:not(.active):hover { background: #e2e8f0; }
+                .services-tab-content { display: none; background: #fff; border: 1px solid #f1f5f9; border-top: none; border-radius: 0 0 16px 16px; padding: 40px; }
+                .services-tab-content.active { display: block; }
+                .service-grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+                .service-mini-card { background: #f8fafc; border-radius: 14px; padding: 24px; transition: all 0.3s; border: 1px solid #f1f5f9; }
+                .service-mini-card:hover { background: #fff; box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-3px); }
+                .service-mini-card-icon { width: 44px; height: 44px; background: linear-gradient(135deg, #1e293b, #334155); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+                .service-mini-card-icon i { font-size: 20px; color: #fff; }
+                .service-mini-card h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 8px; }
+                .service-mini-card p { font-size: 13px; color: #64748b; line-height: 1.6; }
+                .service-mini-card .benefits-list { list-style: none; padding: 0; margin: 12px 0 0; }
+                .service-mini-card .benefits-list li { font-size: 12px; color: #EB595F; padding: 3px 0; }
+                .service-mini-card .benefits-list li i { margin-right: 6px; }
+                .industry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin-top: 40px; }
+                .industry-item { background: #fff; border: 1px solid #f1f5f9; border-radius: 12px; padding: 24px 16px; text-align: center; transition: all 0.3s; }
+                .industry-item:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-color: #EB595F; }
+                .industry-item i { font-size: 32px; color: #EB595F; margin-bottom: 12px; }
+                .industry-item h4 { font-size: 14px; font-weight: 600; color: #1e293b; margin: 0; }
+                .timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 20px; margin-top: 40px; position: relative; }
+                .timeline-step { text-align: center; position: relative; padding: 24px 16px; background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; }
+                .timeline-step-num { width: 48px; height: 48px; background: linear-gradient(135deg, #EB595F, #f87171); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 18px; font-weight: 800; color: #fff; }
+                .timeline-step h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 8px; }
+                .timeline-step p { font-size: 13px; color: #64748b; line-height: 1.5; margin: 0; }
+                .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 40px; }
+                .checklist-item { display: flex; align-items: center; gap: 12px; background: #fff; padding: 16px 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; }
+                .checklist-item i { color: #22c55e; font-size: 18px; }
+                .checklist-item span { font-size: 14px; font-weight: 500; color: #1e293b; }
+                .benefits-grid-xl { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+                .benefit-card { background: #fff; border-radius: 16px; padding: 32px 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; border: 1px solid #f1f5f9; position: relative; overflow: hidden; }
+                .benefit-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #EB595F, #f87171); }
+                .benefit-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+                .benefit-card-icon { width: 52px; height: 52px; background: linear-gradient(135deg, #1e293b, #334155); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+                .benefit-card-icon i { font-size: 22px; color: #fff; }
+                .benefit-card h3 { font-size: 18px; font-weight: 700; color: #1e293b; margin-bottom: 8px; }
+                .benefit-card p { font-size: 14px; color: #64748b; line-height: 1.7; margin: 0; }
+                .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+                .case-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; transition: all 0.3s; }
+                .case-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+                .case-card .case-industry { font-size: 12px; color: #EB595F; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+                .case-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+                .case-stat { text-align: center; }
+                .case-stat .value { font-size: 24px; font-weight: 800; color: #1e293b; }
+                .case-stat .label { font-size: 12px; color: #64748b; }
+                .case-stat .value.accent { color: #EB595F; }
+                .case-card .case-result { font-size: 14px; color: #64748b; line-height: 1.6; border-top: 1px solid #f1f5f9; padding-top: 16px; margin-top: 8px; }
+                .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+                .testimonial-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; }
+                .testimonial-stars { color: #f59e0b; margin-bottom: 14px; font-size: 14px; }
+                .testimonial-text { font-size: 14px; color: #475569; line-height: 1.8; margin-bottom: 20px; font-style: italic; }
+                .testimonial-author { display: flex; align-items: center; gap: 14px; }
+                .testimonial-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #1e293b, #334155); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 18px; }
+                .testimonial-name { font-size: 14px; font-weight: 700; color: #1e293b; }
+                .testimonial-business { font-size: 12px; color: #64748b; }
+                .tools-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 40px; }
+                .tool-item { background: #fff; border: 1px solid #f1f5f9; border-radius: 12px; padding: 20px 28px; display: flex; align-items: center; gap: 12px; transition: all 0.3s; }
+                .tool-item:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+                .tool-item i { font-size: 28px; color: #EB595F; }
+                .tool-item span { font-size: 14px; font-weight: 600; color: #1e293b; }
+                .faq-grid { max-width: 800px; margin: 40px auto 0; }
+                .faq-item { background: #fff; border: 1px solid #f1f5f9; border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+                .faq-question { padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 15px; font-weight: 600; color: #1e293b; transition: all 0.3s; }
+                .faq-question:hover { background: #f8fafc; }
+                .faq-question i { transition: transform 0.3s; color: #EB595F; }
+                .faq-item.active .faq-question i { transform: rotate(180deg); }
+                .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+                .faq-answer-inner { padding: 0 24px 20px; font-size: 14px; color: #64748b; line-height: 1.7; }
+                .faq-item.active .faq-answer { max-height: 300px; }
+                .cta-premium { background: linear-gradient(135deg, #0f172a, #1e293b); padding: 80px 0; text-align: center; }
+                .cta-premium h2 { font-size: 40px; font-weight: 800; color: #fff; margin-bottom: 16px; }
+                .cta-premium p { color: #94a3b8; font-size: 18px; max-width: 600px; margin: 0 auto 32px; }
+                .cta-premium .btn-group { justify-content: center; display: flex; gap: 16px; flex-wrap: wrap; }
+                @media (max-width: 991px) {
+                    .ads-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+                    .ads-hero h1 { font-size: 34px; }
+                    .section-title-lg { font-size: 28px; }
+                    .ads-hero { padding: 120px 20px 60px; }
+                    .services-tab-header { flex-direction: column; border-radius: 12px; }
+                    .services-tab-content { padding: 24px; }
+                }
+                @media (max-width: 575px) {
+                    .ads-hero h1 { font-size: 28px; }
+                    .section-title-lg { font-size: 24px; }
+                    .ads-hero-badges { gap: 8px; }
+                    .ads-hero-badge { font-size: 11px; padding: 6px 14px; }
+                }
+                .scroll-fade { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+                .scroll-fade.visible { opacity: 1; transform: translateY(0); }
+                .btn-primary.ads-btn { background: #EB595F; box-shadow: 0 8px 30px rgba(235,89,95,0.3); }
+                .btn-primary.ads-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(235,89,95,0.4); }
+                .btn-whatsapp.ads-btn { background: #25D366; color: #fff; box-shadow: 0 8px 30px rgba(37,211,102,0.3); }
+                .btn-whatsapp.ads-btn:hover { background: #1da851; transform: translateY(-3px); color: #fff; }
+            </style>
+
+            <!-- HERO -->
+            <section class="ads-hero">
+                <div class="container">
+                    <div class="ads-hero-grid">
+                        <div>
+                            <h1>Grow Your Business with High-Converting <span>Google &amp; Meta Ads</span></h1>
+                            <p>Generate more leads, increase sales, and maximize ROI with performance-driven advertising campaigns managed by Raj Agency.</p>
+                            <div class="ads-hero-badges">
+                                <span class="ads-hero-badge"><i class="fas fa-check-circle"></i> Google Ads Experts</span>
+                                <span class="ads-hero-badge"><i class="fas fa-check-circle"></i> Meta Ads Specialists</span>
+                                <span class="ads-hero-badge"><i class="fas fa-check-circle"></i> ROI-Focused Strategies</span>
+                                <span class="ads-hero-badge"><i class="fas fa-check-circle"></i> Transparent Reporting</span>
+                            </div>
+                            <div class="ads-hero-btns">
+                                <a href="https://rajagency.in/contact-us/" class="btn btn-primary ads-btn">Get Free Consultation <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://wa.me/918121781089" target="_blank" rel="noopener" class="btn btn-whatsapp ads-btn"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                            </div>
+                        </div>
+                        <div class="ads-hero-illustration">
+                            <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=600&q=80" alt="Digital Advertising">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHY CHOOSE -->
+            <section class="section-pad bg-light">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="section-label">Why Choose Us</span>
+                        <h2 class="section-title-lg">Why Choose <span>Raj Agency</span></h2>
+                        <p class="section-desc mx-auto">We combine data-driven strategies with creative excellence to deliver advertising campaigns that actually perform.</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card scroll-fade">
+                            <div class="feature-card-icon"><i class="fas fa-chess-board"></i></div>
+                            <h3>Strategic Campaign Planning</h3>
+                            <p>Every campaign starts with a deep dive into your business goals, target audience, and competitive landscape to build a winning strategy.</p>
+                        </div>
+                        <div class="feature-card scroll-fade">
+                            <div class="feature-card-icon"><i class="fas fa-users-gear"></i></div>
+                            <h3>Audience Research &amp; Targeting</h3>
+                            <p>We identify and segment your ideal customers using advanced targeting options across Google and Meta platforms.</p>
+                        </div>
+                        <div class="feature-card scroll-fade">
+                            <div class="feature-card-icon"><i class="fas fa-bullseye"></i></div>
+                            <h3>Conversion-Focused Ads</h3>
+                            <p>From ad copy to creative design, every element is optimized to drive clicks, leads, and sales — not just impressions.</p>
+                        </div>
+                        <div class="feature-card scroll-fade">
+                            <div class="feature-card-icon"><i class="fas fa-arrow-trend-up"></i></div>
+                            <h3>Continuous Optimization</h3>
+                            <p>We monitor, test, and refine campaigns daily to improve performance and maximize your return on ad spend.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES -->
+            <section class="section-pad">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="section-label">Our Services</span>
+                        <h2 class="section-title-lg">Ads Management <span>Services</span></h2>
+                        <p class="section-desc mx-auto">Comprehensive ad campaign management across Google and Meta platforms to reach your business goals.</p>
+                    </div>
+                    <div class="services-tabs">
+                        <div class="services-tab-header">
+                            <button class="services-tab-btn active" data-tab="google">Google Ads Services</button>
+                            <button class="services-tab-btn" data-tab="meta">Meta Ads Services</button>
+                        </div>
+                        <div class="services-tab-content active" id="tab-google">
+                            <div class="service-grid-cards">
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fas fa-magnifying-glass"></i></div>
+                                    <h4>Search Ads</h4>
+                                    <p>Appear at the top of Google search results when potential customers search for your products or services.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> High-intent traffic</li>
+                                        <li><i class="fas fa-check"></i> Pay per click only</li>
+                                    </ul>
+                                </div>
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fas fa-images"></i></div>
+                                    <h4>Display Ads</h4>
+                                    <p>Visually engaging banner ads across millions of websites to build brand awareness and retarget visitors.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> Massive reach</li>
+                                        <li><i class="fas fa-check"></i> Visual storytelling</li>
+                                    </ul>
+                                </div>
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fas fa-video"></i></div>
+                                    <h4>YouTube Ads</h4>
+                                    <p>Reach customers with video ads before, during, or after YouTube content that matches your target audience.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> Engaging format</li>
+                                        <li><i class="fas fa-check"></i> Precise targeting</li>
+                                    </ul>
+                                </div>
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fas fa-cart-shopping"></i></div>
+                                    <h4>Shopping Ads</h4>
+                                    <p>Showcase your products with images, prices, and details directly in Google Search results.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> Product visibility</li>
+                                        <li><i class="fas fa-check"></i> Higher conversion intent</li>
+                                    </ul>
+                                </div>
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                                    <h4>Performance Max</h4>
+                                    <p>Google's AI-powered campaign that optimizes across all channels — Search, Display, YouTube, and more.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> AI-driven optimization</li>
+                                        <li><i class="fas fa-check"></i> Full-funnel reach</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-tab-content" id="tab-meta">
+                            <div class="service-grid-cards">
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fas fa-users"></i></div>
+                                    <h4>Facebook Lead Gen Ads</h4>
+                                    <p>Capture leads directly within Facebook with instant form ads that make it easy for customers to connect.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> Lower cost per lead</li>
+                                        <li><i class="fas fa-check"></i> Mobile-optimized</li>
+                                    </ul>
+                                </div>
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fab fa-instagram"></i></div>
+                                    <h4>Instagram Ads</h4>
+                                    <p>Visually stunning ads that appear in feeds, stories, reels, and explore to engage your target audience.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> High engagement</li>
+                                        <li><i class="fas fa-check"></i> Visual-first platform</li>
+                                    </ul>
+                                </div>
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fas fa-globe"></i></div>
+                                    <h4>Website Conversion Ads</h4>
+                                    <p>Drive traffic to your website and optimize for purchases, sign-ups, and other valuable actions.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> Action-driven</li>
+                                        <li><i class="fas fa-check"></i> Full funnel tracking</li>
+                                    </ul>
+                                </div>
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fas fa-rotate-left"></i></div>
+                                    <h4>Remarketing Ads</h4>
+                                    <p>Re-engage visitors who didn't convert with targeted ads across Facebook and Instagram.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> Higher conversion rates</li>
+                                        <li><i class="fas fa-check"></i> Warm audience targeting</li>
+                                    </ul>
+                                </div>
+                                <div class="service-mini-card">
+                                    <div class="service-mini-card-icon"><i class="fas fa-layer-group"></i></div>
+                                    <h4>E-commerce Catalog Ads</h4>
+                                    <p>Automatically show products from your catalog to people who have shown interest in similar items.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check"></i> Dynamic product ads</li>
+                                        <li><i class="fas fa-check"></i> Automated targeting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INDUSTRIES -->
+            <section class="section-pad bg-light">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="section-label">Industries</span>
+                        <h2 class="section-title-lg">Industries <span>We Serve</span></h2>
+                        <p class="section-desc mx-auto">We've helped businesses across diverse industries achieve measurable growth through paid advertising.</p>
+                    </div>
+                    <div class="industry-grid">
+                        <div class="industry-item scroll-fade"><i class="fas fa-building"></i><h4>Real Estate</h4></div>
+                        <div class="industry-item scroll-fade"><i class="fas fa-heart-pulse"></i><h4>Healthcare</h4></div>
+                        <div class="industry-item scroll-fade"><i class="fas fa-graduation-cap"></i><h4>Education</h4></div>
+                        <div class="industry-item scroll-fade"><i class="fas fa-utensils"></i><h4>Restaurants</h4></div>
+                        <div class="industry-item scroll-fade"><i class="fas fa-tshirt"></i><h4>Fashion Brands</h4></div>
+                        <div class="industry-item scroll-fade"><i class="fas fa-spa"></i><h4>Beauty Salons</h4></div>
+                        <div class="industry-item scroll-fade"><i class="fas fa-dumbbell"></i><h4>Gyms &amp; Fitness</h4></div>
+                        <div class="industry-item scroll-fade"><i class="fas fa-plane"></i><h4>Travel Agencies</h4></div>
+                        <div class="industry-item scroll-fade"><i class="fas fa-store"></i><h4>Local Businesses</h4></div>
+                        <div class="industry-item scroll-fade"><i class="fas fa-rocket"></i><h4>Startups &amp; SMEs</h4></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROCESS -->
+            <section class="section-pad">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="section-label">Our Process</span>
+                        <h2 class="section-title-lg">How We <span>Work</span></h2>
+                        <p class="section-desc mx-auto">A proven 5-step process to launch and optimize high-performing ad campaigns.</p>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-step scroll-fade"><div class="timeline-step-num">1</div><h4>Business Analysis</h4><p>Understand your goals, audience, and competition to build the right strategy.</p></div>
+                        <div class="timeline-step scroll-fade"><div class="timeline-step-num">2</div><h4>Strategy Planning</h4><p>Design a custom ad plan with the right platforms, targeting, and budget allocation.</p></div>
+                        <div class="timeline-step scroll-fade"><div class="timeline-step-num">3</div><h4>Campaign Setup</h4><p>Build and configure campaigns with compelling ad copy, creatives, and tracking.</p></div>
+                        <div class="timeline-step scroll-fade"><div class="timeline-step-num">4</div><h4>Launch &amp; Optimization</h4><p>Go live with continuous monitoring and data-driven adjustments for peak performance.</p></div>
+                        <div class="timeline-step scroll-fade"><div class="timeline-step-num">5</div><h4>Reporting &amp; Scaling</h4><p>Transparent reports with insights and recommendations to scale winning campaigns.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHAT YOU GET -->
+            <section class="section-pad bg-light">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="section-label">What's Included</span>
+                        <h2 class="section-title-lg">What You <span>Get</span></h2>
+                        <p class="section-desc mx-auto">Everything you need for successful ad campaigns, all included in our service.</p>
+                    </div>
+                    <div class="checklist-grid">
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Campaign Setup</span></div>
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Audience Research</span></div>
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Keyword Research</span></div>
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Ad Copywriting</span></div>
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Creative Suggestions</span></div>
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Meta Pixel Setup</span></div>
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Conversion Tracking</span></div>
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Weekly Reports</span></div>
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Monthly Reports</span></div>
+                        <div class="checklist-item scroll-fade"><i class="fas fa-circle-check"></i><span>Continuous Optimization</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BENEFITS -->
+            <section class="section-pad">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="section-label">Benefits</span>
+                        <h2 class="section-title-lg">Why Invest in <span>Paid Ads</span></h2>
+                        <p class="section-desc mx-auto">See real, measurable results that drive your business forward.</p>
+                    </div>
+                    <div class="benefits-grid-xl">
+                        <div class="benefit-card scroll-fade"><div class="benefit-card-icon"><i class="fas fa-users"></i></div><h3>Generate Quality Leads</h3><p>Attract prospects who are actively searching for what you offer and convert them into qualified leads.</p></div>
+                        <div class="benefit-card scroll-fade"><div class="benefit-card-icon"><i class="fas fa-chart-line"></i></div><h3>Increase Website Traffic</h3><p>Drive targeted traffic to your website instantly and scale as your campaigns perform better.</p></div>
+                        <div class="benefit-card scroll-fade"><div class="benefit-card-icon"><i class="fas fa-cart-plus"></i></div><h3>Boost Sales</h3><p>Turn clicks into customers with conversion-optimized campaigns focused on driving revenue.</p></div>
+                        <div class="benefit-card scroll-fade"><div class="benefit-card-icon"><i class="fas fa-crosshairs"></i></div><h3>Reach Targeted Audiences</h3><p>Laser-focused targeting ensures your ads are seen by the people most likely to buy from you.</p></div>
+                        <div class="benefit-card scroll-fade"><div class="benefit-card-icon"><i class="fas fa-bullhorn"></i></div><h3>Improve Brand Awareness</h3><p>Build recognition and trust with consistent, high-visibility advertising across platforms.</p></div>
+                        <div class="benefit-card scroll-fade"><div class="benefit-card-icon"><i class="fas fa-gauge-high"></i></div><h3>Track Performance Accurately</h3><p>Know exactly what's working with detailed analytics, conversion tracking, and transparent reporting.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS -->
+            <section class="section-pad">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="section-label">Testimonials</span>
+                        <h2 class="section-title-lg">What Our <span>Clients Say</span></h2>
+                        <p class="section-desc mx-auto">Hear from businesses that have transformed their advertising with Raj Agency.</p>
+                    </div>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card scroll-fade">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Raj Agency transformed our Google Ads campaigns. Our cost per lead dropped by 40% and we're getting consistent inquiries every day. Highly recommended!"</p>
+                            <div class="testimonial-author"><div class="testimonial-avatar">RK</div><div><div class="testimonial-name">Ravi Kumar</div><div class="testimonial-business">Srinivasa Constructions</div></div></div>
+                        </div>
+                        <div class="testimonial-card scroll-fade">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"We were struggling with Meta Ads before partnering with Raj Agency. They completely revamped our strategy and we saw a 3x increase in online orders within weeks."</p>
+                            <div class="testimonial-author"><div class="testimonial-avatar">PM</div><div><div class="testimonial-name">Priya Mehta</div><div class="testimonial-business">Trendy Fashion Hub</div></div></div>
+                        </div>
+                        <div class="testimonial-card scroll-fade">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"The team at Raj Agency is incredibly professional. Their monthly reports are detailed and transparent, and the results speak for themselves. Best decision we made!"</p>
+                            <div class="testimonial-author"><div class="testimonial-avatar">AS</div><div><div class="testimonial-name">Dr. Anjali Sharma</div><div class="testimonial-business">City Care Clinic</div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOOLS -->
+            <section class="section-pad bg-light">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="section-label">Tools We Use</span>
+                        <h2 class="section-title-lg">Platforms &amp; <span>Tools</span></h2>
+                        <p class="section-desc mx-auto">We leverage industry-leading tools to build, manage, and optimize your campaigns.</p>
+                    </div>
+                    <div class="tools-grid">
+                        <div class="tool-item"><i class="fab fa-google"></i><span>Google Ads</span></div>
+                        <div class="tool-item"><i class="fas fa-chart-bar"></i><span>Google Analytics 4</span></div>
+                        <div class="tool-item"><i class="fas fa-tag"></i><span>Google Tag Manager</span></div>
+                        <div class="tool-item"><i class="fab fa-facebook"></i><span>Meta Ads Manager</span></div>
+                        <div class="tool-item"><i class="fas fa-code"></i><span>Meta Pixel</span></div>
+                        <div class="tool-item"><i class="fas fa-chart-pie"></i><span>Looker Studio</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="section-pad">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="section-label">FAQ</span>
+                        <h2 class="section-title-lg">Frequently Asked <span>Questions</span></h2>
+                        <p class="section-desc mx-auto">Got questions? We've got answers about our Google &amp; Meta Ads services.</p>
+                    </div>
+                    <div class="faq-grid">
+                        <div class="faq-item active">
+                            <div class="faq-question">How much budget is required for Google Ads? <i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><div class="faq-answer-inner">The minimum budget depends on your industry, location, and goals. For local businesses in Sangareddy, we typically recommend starting with ₹15,000–₹25,000 per month for Google Search Ads. We'll help you find the right budget that balances visibility with ROI.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Which is better: Google Ads or Meta Ads? <i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><div class="faq-answer-inner">Both platforms serve different purposes. Google Ads captures high-intent users actively searching for your services, while Meta Ads excels at building brand awareness and targeting users based on interests and behaviors. We often recommend a combined approach for the best results.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">How long does it take to see results? <i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><div class="faq-answer-inner">Google Ads can start generating clicks and leads within 24–48 hours of campaign launch. Meta Ads typically need 3–7 days for the algorithm to optimize delivery. Significant improvements in cost-per-lead and ROI usually stabilize within 2–4 weeks of active optimization.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Do you provide reports? <i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><div class="faq-answer-inner">Yes! We provide weekly performance snapshots and detailed monthly reports with key metrics including impressions, clicks, conversions, cost-per-lead, ROI analysis, and actionable recommendations for improvement.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Can you optimize existing campaigns? <i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><div class="faq-answer-inner">Absolutely. We perform a comprehensive audit of your existing campaigns — analyzing targeting, ad copy, keywords, bidding strategies, and conversion tracking — then implement optimizations to improve performance and reduce wasted spend.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FINAL CTA -->
+            <section class="cta-premium">
+                <div class="container">
+                    <h2>Ready to Scale Your Business?</h2>
+                    <p>Let's create high-performing advertising campaigns that deliver measurable growth.</p>
+                    <div class="btn-group">
+                        <a href="https://rajagency.in/contact-us/" class="btn btn-primary ads-btn btn-lg">Book Free Consultation <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://rajagency.in/contact-us/" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.1); color: #fff; border: 2px solid rgba(255,255,255,0.2);">Contact Raj Agency</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+</div>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+
+        // Services Tabs
+        document.querySelectorAll('.services-tab-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.services-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+                document.querySelectorAll('.services-tab-content').forEach(function(c) { c.classList.remove('active'); });
+                this.classList.add('active');
+                document.getElementById('tab-' + this.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Scroll Reveal
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.scroll-fade').forEach(function(el) {
+            revealObserver.observe(el);
+        });
+    </script>
+
+    <!-- UNLOCK PRICING POPUP -->
+    <div class="pricing-popup-overlay" id="pricingPopup">
+        <div class="pricing-popup">
+            <button class="popup-close" onclick="closePricingPopup()"><i class="fas fa-times"></i></button>
+            <div class="hero-form-wrapper" style="box-shadow:none;border:none;">
+                <h3 class="hero-form-title">Unlock <span style="color:var(--raj-accent);">Pricing</span></h3>
+                <p class="hero-form-subtitle">Enter your details to see our exclusive pricing.</p>
+                <form id="unlockForm">
+                    <input type="hidden" name="source" value="Unlock Pricing">
+                    <div class="form-group">
+                        <input type="text" id="unlock-name" name="name" placeholder="Your Name" required pattern="[A-Za-z\s]+" oninput="this.value=this.value.replace(/[^A-Za-z\s]/g,'')" title="Only letters and spaces allowed">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="unlock-phone" name="phone" placeholder="Phone Number" required pattern="(?!.*(\d)\1{8})\d{10}" maxlength="10" oninput="this.value=this.value.replace(/\D/g,'')" title="Enter a valid 10-digit mobile number (repeated digits not allowed)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="unlock-service" name="service" placeholder="Service Interested In" readonly style="background:#f1f5f9;font-weight:600;color:var(--raj-dark);">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg submit-btn" style="width:100%;justify-content:center;">Get Pricing →</button>
+                    <p class="hero-form-safe">&#10003; Your details are safe. By submitting this form, you agree to the <a href="https://rajagency.in/privacy-policy/" style="color:var(--raj-accent);text-decoration:underline;">privacy policy</a> &amp; terms and conditions.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- FOOTER -->
+    <footer id="colophon" class="site-footer">
+        <div class="footer-wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="https://rajagency.in/wp-content/uploads/2025/04/Raj.png" alt="Raj Marketing Agency" class="footer-site-logo">
+                    </div>
+                    <p class="footer-tagline">Grow Your Business with Result-Driven Digital Marketing. Based in Sangareddy, Telangana, we help businesses increase leads, sales, and online visibility.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/918121781089" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-menu-list">
+                        <li><a href="https://rajagency.in/">Home</a></li>
+                        <li><a href="https://rajagency.in/about-us/">About Us</a></li>
+                        <li><a href="https://rajagency.in/services/">Services</a></li>
+                        <li><a href="https://rajagency.in/careers/">Careers</a></li>
+                        <li><a href="https://rajagency.in/contact-us/">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-services">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-menu-list">
+                        <li><a href="https://rajagency.in/website-development/">Website Development</a></li>
+                        <li><a href="https://rajagency.in/seo-services/">SEO Services</a></li>
+                        <li><a href="https://rajagency.in/services/">Social Media Marketing</a></li>
+                        <li><a href="https://rajagency.in/google-meta-ads/">Google &amp; Meta Ads</a></li>
+                        <li><a href="https://rajagency.in/services/">Lead Generation</a></li>
+                        <li><a href="https://rajagency.in/services/">Branding Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone-alt"></i> +91 81217 81089</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:sales@rajagency.in">sales@rajagency.in</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:srikanth@rajagency.in">srikanth@rajagency.in</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Sangareddy, Telangana, India</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Raj Marketing Agency. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="https://rajagency.in/privacy-policy/">Privacy Policy</a>
+                    <a href="https://rajagency.in/terms-conditions/">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-cta">
+        <a href="https://wa.me/918121781089" target="_blank" rel="noopener" class="float-whatsapp" aria-label="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+918121781089" class="float-call" aria-label="Call Now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+(function($) {
+    'use strict';
+
+    $(document).ready(function() {
+
+        // Mobile menu toggle
+        $('.menu-toggle').on('click', function() {
+            $(this).toggleClass('active');
+            $('#site-navigation').toggleClass('active');
+            $('.mobile-menu-overlay').toggleClass('active');
+        });
+
+        $('.mobile-menu-overlay').on('click', function() {
+            $(this).removeClass('active');
+            $('.menu-toggle').removeClass('active');
+            $('#site-navigation').removeClass('active');
+        });
+
+        // Header scroll effect
+        var header = $('.site-header');
+        var lastScroll = 0;
+
+        $(window).on('scroll', function() {
+            var scroll = $(this).scrollTop();
+
+            if (scroll > 100) {
+                header.addClass('header-scrolled');
+            } else {
+                header.removeClass('header-scrolled');
+            }
+
+            if (scroll > lastScroll && scroll > 300) {
+                header.addClass('header-hidden');
+            } else {
+                header.removeClass('header-hidden');
+            }
+
+            lastScroll = scroll;
+        });
+
+        // Smooth scroll for anchor links
+        $('a[href*="#"]:not([href="#"])').on('click', function() {
+            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 800);
+                    return false;
+                }
+            }
+        });
+
+        // Scroll animations with Intersection Observer
+        var animateElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale, .stagger-item');
+
+        if (animateElements.length > 0) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+
+                        if (entry.target.classList.contains('stagger-item')) {
+                            var siblings = $(entry.target).closest('.stagger-container').find('.stagger-item');
+                            siblings.each(function(index) {
+                                var self = this;
+                                setTimeout(function() {
+                                    $(self).addClass('visible');
+                                }, index * 100);
+                            });
+                        }
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            animateElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        }
+
+        // Service card hover effect
+        $('.service-card, .service-detail-item').on('mouseenter', function() {
+            $(this).find('.service-card-icon, .icon-box').addClass('animate');
+        }).on('mouseleave', function() {
+            $(this).find('.service-card-icon, .icon-box').removeClass('animate');
+        });
+
+        // Counter animation
+        function animateCounters() {
+            $('.counter-number').each(function() {
+                var $this = $(this);
+                var target = parseInt($this.data('target'));
+                var current = 0;
+                var increment = Math.ceil(target / 60);
+                var timer = setInterval(function() {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    $this.text(current.toLocaleString());
+                }, 25);
+            });
+        }
+
+        var counterObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        var counterSection = document.querySelector('.hero-stats');
+        if (counterSection) {
+            counterObserver.observe(counterSection);
+        }
+
+        // Mobile sub-menu toggle
+        $('.menu-item-has-children > a').on('click', function(e) {
+            if ($(window).width() <= 991) {
+                e.preventDefault();
+                $(this).parent().toggleClass('open');
+            }
+        });
+
+        // Reset sub-menus on window resize
+        $(window).on('resize', function() {
+            if ($(window).width() > 991) {
+                $('.menu-item-has-children').removeClass('open');
+            }
+        });
+
+        // Form submission - loading state
+        $('#contact-form').on('submit', function() {
+            var $submitBtn = $(this).find('button[type="submit"]');
+            $submitBtn.text('Sending...').prop('disabled', true);
+        });
+
+        // Unlock Pricing
+        function getStrikePrice(serviceName) {
+            var prices = {
+                'Website Development': '₹ 50,000',
+                'SEO Services': '₹ 35,000',
+                'Social Media Marketing': '₹ 25,000',
+                'Google & Meta Ads': '₹ 30,000',
+                'Google &amp; Meta Ads': '₹ 30,000',
+                'Graphic Designing': '₹ 20,000',
+                'Branding Solutions': '₹ 40,000',
+                'Lead Generation': '₹ 25,000',
+                'Video Editing': '₹ 15,000',
+                'Google Business Profile': '₹ 10,000',
+                'Website Maintenance': '₹ 8,000/mo',
+                'Competitor Analysis': '₹ 15,000',
+                'Landing Page Optimization': '₹ 12,000',
+                'Drone Shoot Services': '₹ 25,000',
+                'Brochure Design': '₹ 8,000'
+            };
+            return prices[serviceName] || '₹ 25,000';
+        }
+
+        function openPricingPopup(serviceName) {
+            $('#unlock-service').val(serviceName);
+            $('#pricingPopup').addClass('active');
+            $('body').css('overflow', 'hidden');
+        }
+
+        function closePricingPopup() {
+            $('#pricingPopup').removeClass('active');
+            $('body').css('overflow', '');
+        }
+
+        $('.service-card-detailed').each(function() {
+            var $card = $(this);
+            var serviceName = $card.find('h3').first().text().trim();
+            var strikePrice = getStrikePrice(serviceName);
+            var $oldBtn = $card.find('a.btn-primary');
+            var $priceRow = $('<div class="service-price-row">');
+            $priceRow.append('<span class="price-strike">' + strikePrice + '</span>');
+            var $unlockBtn = $('<button class="unlock-pricing-btn" data-service="' + serviceName + '"><i class="fas fa-lock"></i> Unlock Pricing</button>');
+            $priceRow.append($unlockBtn);
+            $oldBtn.replaceWith($priceRow);
+        });
+
+        $(document).on('click', '.unlock-pricing-btn', function() {
+            var $btn = $(this);
+            var serviceName = $btn.data('service');
+            $btn.addClass('shaking');
+            setTimeout(function() {
+                $btn.removeClass('shaking');
+                $btn.find('i').removeClass('fa-lock').addClass('fa-unlock');
+                $btn.addClass('unlocked');
+                setTimeout(function() {
+                    $btn.find('i').removeClass('fa-unlock').addClass('fa-lock');
+                    $btn.removeClass('unlocked');
+                    openPricingPopup(serviceName);
+                }, 600);
+            }, 500);
+        });
+
+        $(document).on('click', '#pricingPopup', function(e) {
+            if ($(e.target).is('#pricingPopup')) {
+                closePricingPopup();
+            }
+        });
+
+        $(document).on('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePricingPopup();
+            }
+        });
+
+        $('#unlockForm').on('submit', async function(e) {
+            e.preventDefault();
+            var name = encodeURIComponent($('#unlock-name').val().trim());
+            var phone = encodeURIComponent($('#unlock-phone').val().trim());
+            var service = encodeURIComponent($('#unlock-service').val().trim());
+            var source = encodeURIComponent($('#unlockForm input[name="source"]').val());
+            var qs = 'name=' + name + '&phone=' + phone + '&service=' + service + '&source=' + source + '&formName=Unlock+Pricing';
+            var $btn = $(this).find('button[type="submit"]');
+            $btn.text('Submitting...').prop('disabled', true);
+            try{var r=await fetch('https://rajagency.in/api/submit.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:qs});var d=await r.json();window.location.href='https://rajagency.in/thank-you';}catch(err){window.location.href='https://rajagency.in/thank-you';}
+        });
+
+    });
+
+})(jQuery);
+</script>
+</body>
+</html>
