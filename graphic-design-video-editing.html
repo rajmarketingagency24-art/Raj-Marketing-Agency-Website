@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphic Design & Video Editing Services - Raj Marketing Agency</title>
+<meta name="description" content="Raj Marketing Agency offers professional graphic design and video editing services including social media creatives, branding, reels, corporate videos, and more.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+:root {
+    --raj-blue: #1e293b;
+    --raj-blue-dark: #0f172a;
+    --raj-blue-light: #e2e8f0;
+    --raj-blue-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    --raj-dark: #111520;
+    --raj-dark-gray: #334155;
+    --raj-gray: #64748b;
+    --raj-light-gray: #f8fafc;
+    --raj-white: #ffffff;
+    --raj-accent: #EB595F;
+    --raj-accent-light: #fecaca;
+    --raj-whatsapp: #25d366;
+    --raj-transition: all 0.3s ease;
+    --raj-shadow: 0 10px 40px rgba(30, 41, 59, 0.1);
+    --raj-shadow-hover: 0 20px 60px rgba(30, 41, 59, 0.2);
+    --raj-radius: 16px;
+    --raj-radius-sm: 8px;
+    --raj-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --raj-font-heading: 'Libre Baskerville', Georgia, serif;
+    --raj-container: 1200px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--raj-font); font-size: 16px; line-height: 1.7; color: var(--raj-dark-gray); background: var(--raj-white); overflow-x: hidden; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--raj-font-heading); color: var(--raj-dark); line-height: 1.3; }
+a { color: var(--raj-blue); text-decoration: none; transition: var(--raj-transition); }
+img { max-width: 100%; height: auto; display: block; }
+ul { list-style: none; padding: 0; margin: 0; }
+.container { max-width: var(--raj-container); margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 90px 0; }
+.section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+.section-subtitle { display: inline-block; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: var(--raj-accent); margin-bottom: 12px; position: relative; }
+.section-subtitle::after { content: ''; display: block; width: 40px; height: 3px; background: var(--raj-accent); margin: 8px auto 0; border-radius: 2px; }
+.section-title { font-size: clamp(26px,3.5vw,38px); margin-bottom: 16px; }
+.section-title span { color: var(--raj-accent); }
+.section-desc { font-size: 16px; color: var(--raj-gray); line-height: 1.8; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 50px; font-size: 15px; font-weight: 600; border: none; cursor: pointer; transition: var(--raj-transition); text-decoration: none; font-family: var(--raj-font); position: relative; overflow: hidden; }
+.btn-primary { background: var(--raj-accent); color: var(--raj-white); }
+.btn-primary:hover { background: #c73e44; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(235,89,95,0.3); color: var(--raj-white); }
+.btn-secondary { background: transparent; color: var(--raj-white); border: 2px solid rgba(255,255,255,0.35); }
+.btn-secondary:hover { background: var(--raj-white); color: var(--raj-blue); transform: translateY(-2px); }
+.btn-outline { background: transparent; color: var(--raj-blue); border: 2px solid var(--raj-blue); }
+.btn-outline:hover { background: var(--raj-blue); color: var(--raj-white); transform: translateY(-2px); }
+.btn-whatsapp { background: var(--raj-whatsapp); color: var(--raj-white); }
+.btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,211,102,0.3); color: var(--raj-white); }
+/* Ripple effect */
+.ripple { position: relative; overflow: hidden; }
+.ripple::after { content: ''; position: absolute; border-radius: 50%; background: rgba(255,255,255,0.4); width: 100px; height: 100px; margin-top: -50px; margin-left: -50px; top: 50%; left: 50%; transform: scale(0); opacity: 0; pointer-events: none; }
+.ripple:active::after { animation: rippleAnim 0.5s ease-out; }
+@keyframes rippleAnim { from { transform: scale(0); opacity: 0.5; } to { transform: scale(4); opacity: 0; } }
+/* Fade animations */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-left.visible { opacity: 1; transform: translateX(0); }
+.fade-right { opacity: 0; transform: translateX(40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-right.visible { opacity: 1; transform: translateX(0); }
+.fade-scale { opacity: 0; transform: scale(0.9); transition: opacity 0.5s ease, transform 0.5s ease; }
+.fade-scale.visible { opacity: 1; transform: scale(1); }
+.stagger > * { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.stagger.visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(2) { transition-delay: 0.08s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(3) { transition-delay: 0.16s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(4) { transition-delay: 0.24s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(5) { transition-delay: 0.32s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(6) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(7) { transition-delay: 0.48s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(8) { transition-delay: 0.56s; opacity: 1; transform: translateY(0); }
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--raj-blue) 0%, #0f172a 70%); padding: 120px 0 100px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(235,89,95,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(235,89,95,0.06) 0%, transparent 50%); pointer-events: none; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; position: relative; z-index: 1; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(235,89,95,0.15); color: var(--raj-accent); font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 50px; margin-bottom: 20px; border: 1px solid rgba(235,89,95,0.25); }
+.hero h1 { font-size: clamp(30px,4vw,48px); color: var(--raj-white); line-height: 1.15; margin-bottom: 16px; }
+.hero h1 span { color: var(--raj-accent); }
+.hero p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 540px; margin-bottom: 30px; line-height: 1.8; }
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-image-area { display: flex; align-items: center; justify-content: center; }
+.hero-visual { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 40px; text-align: center; width: 100%; backdrop-filter: blur(10px); }
+.hero-visual i { font-size: 80px; color: var(--raj-accent); opacity: 0.6; margin-bottom: 16px; }
+.hero-visual p { color: rgba(255,255,255,0.4); font-size: 14px; margin: 0; max-width: none; }
+/* About */
+.about-section { background: var(--raj-white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.about-image { background: var(--raj-light-gray); border-radius: var(--raj-radius); min-height: 300px; display: flex; align-items: center; justify-content: center; }
+.about-image i { font-size: 80px; color: var(--raj-blue); opacity: 0.15; }
+.about-content h2 { font-size: clamp(24px,3vw,34px); margin-bottom: 18px; }
+.about-content h2 span { color: var(--raj-accent); }
+.about-content p { color: var(--raj-gray); margin-bottom: 16px; }
+.about-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 24px; }
+.about-stat { text-align: center; padding: 16px; background: var(--raj-light-gray); border-radius: var(--raj-radius-sm); }
+.about-stat-num { font-size: 28px; font-weight: 800; color: var(--raj-accent); font-family: var(--raj-font-heading); }
+.about-stat-label { font-size: 13px; color: var(--raj-gray); margin-top: 4px; }
+/* Services */
+.services-section { background: var(--raj-light-gray); }
+.services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.service-card { background: var(--raj-white); border-radius: var(--raj-radius); padding: 32px 26px; text-align: center; transition: var(--raj-transition); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: relative; overflow: hidden; cursor: default; }
+.service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--raj-blue-gradient); transform: scaleX(0); transition: var(--raj-transition); transform-origin: left; }
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover { transform: translateY(-8px); box-shadow: var(--raj-shadow-hover); }
+.service-card .s-icon { width: 64px; height: 64px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; font-size: 26px; transition: var(--raj-transition); }
+.service-card:hover .s-icon { transform: scale(1.1) rotate(-5deg); }
+.service-card h3 { font-size: 17px; margin-bottom: 10px; }
+.service-card p { font-size: 14px; color: var(--raj-gray); line-height: 1.6; margin: 0; }
+/* Video Editing */
+.video-section { background: var(--raj-white); }
+.video-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.video-card { background: var(--raj-light-gray); border-radius: var(--raj-radius); padding: 32px 26px; text-align: center; transition: var(--raj-transition); cursor: default; }
+.video-card:hover { transform: scale(1.04); box-shadow: var(--raj-shadow); }
+.video-card .v-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--raj-accent-light); color: var(--raj-accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; font-size: 24px; transition: var(--raj-transition); }
+.video-card:hover .v-icon { background: var(--raj-accent); color: var(--raj-white); }
+.video-card h3 { font-size: 17px; margin-bottom: 10px; }
+.video-card p { font-size: 14px; color: var(--raj-gray); line-height: 1.6; margin: 0; }
+/* Industries */
+.industries-section { background: var(--raj-light-gray); }
+.industries-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.industry-card { background: var(--raj-white); border-radius: var(--raj-radius); padding: 28px 20px; text-align: center; transition: var(--raj-transition); box-shadow: 0 2px 8px rgba(0,0,0,0.04); cursor: default; }
+.industry-card:hover { transform: translateY(-6px); box-shadow: var(--raj-shadow); }
+.industry-card i { font-size: 36px; color: var(--raj-accent); margin-bottom: 12px; transition: var(--raj-transition); }
+.industry-card:hover i { transform: scale(1.2); }
+.industry-card h4 { font-size: 15px; margin-bottom: 6px; }
+.industry-card p { font-size: 13px; color: var(--raj-gray); margin: 0; }
+/* Process */
+.process-section { background: var(--raj-white); }
+.process-timeline { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; position: relative; margin-top: 50px; }
+.process-timeline::before { content: ''; position: absolute; top: 44px; left: 8%; right: 8%; height: 3px; background: linear-gradient(90deg, var(--raj-blue), var(--raj-accent)); z-index: 0; }
+.process-step { text-align: center; position: relative; z-index: 1; }
+.process-step .step-num { width: 56px; height: 56px; margin: 0 auto 20px; background: var(--raj-blue-gradient); color: var(--raj-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; font-family: var(--raj-font-heading); box-shadow: 0 6px 20px rgba(30,41,59,0.2); transition: var(--raj-transition); }
+.process-step:hover .step-num { transform: scale(1.1); }
+.process-step h4 { font-size: 16px; margin-bottom: 8px; }
+.process-step p { font-size: 14px; color: var(--raj-gray); margin: 0; max-width: 220px; margin: 0 auto; }
+/* Why Choose */
+.why-section { background: var(--raj-blue); }
+.why-section .section-subtitle { color: var(--raj-accent); }
+.why-section .section-title { color: var(--raj-white); }
+.why-section .section-desc { color: rgba(255,255,255,0.6); }
+.why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 40px; }
+.why-item { display: flex; align-items: center; gap: 14px; padding: 20px 22px; background: rgba(255,255,255,0.06); border-radius: var(--raj-radius); border: 1px solid rgba(255,255,255,0.08); transition: var(--raj-transition); cursor: default; }
+.why-item:hover { background: rgba(255,255,255,0.1); transform: translateX(4px); }
+.why-item i { font-size: 20px; color: var(--raj-accent); flex-shrink: 0; }
+.why-item span { font-size: 15px; color: rgba(255,255,255,0.9); font-weight: 500; }
+/* Portfolio */
+.portfolio-section { background: var(--raj-light-gray); }
+.portfolio-filters { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+.filter-btn { padding: 10px 22px; border-radius: 50px; border: 2px solid var(--raj-blue-light); background: var(--raj-white); font-size: 13px; font-weight: 600; color: var(--raj-dark); cursor: pointer; transition: var(--raj-transition); font-family: var(--raj-font); }
+.filter-btn:hover, .filter-btn.active { background: var(--raj-blue); color: var(--raj-white); border-color: var(--raj-blue); }
+.portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.portfolio-item { border-radius: var(--raj-radius); overflow: hidden; position: relative; aspect-ratio: 4/3; cursor: pointer; }
+.portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--raj-transition); }
+.portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,41,59,0.85), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; opacity: 0; transition: var(--raj-transition); }
+.portfolio-item:hover .portfolio-overlay { opacity: 1; }
+.portfolio-item:hover img { transform: scale(1.08); }
+.portfolio-overlay h4 { color: var(--raj-white); font-size: 16px; margin-bottom: 4px; }
+.portfolio-overlay p { color: rgba(255,255,255,0.6); font-size: 13px; margin: 0; }
+.portfolio-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 14px; color: var(--raj-gray); }
+.portfolio-placeholder i { font-size: 36px; margin-bottom: 8px; opacity: 0.4; }
+/* Stats */
+.stats-section { background: var(--raj-blue-gradient); padding: 80px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 30px; }
+.stat-item { text-align: center; padding: 30px; border-radius: var(--raj-radius); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); transition: var(--raj-transition); }
+.stat-item:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+.stat-number { font-size: 42px; font-weight: 800; color: var(--raj-white); font-family: var(--raj-font-heading); line-height: 1; }
+.stat-number span { color: var(--raj-accent); }
+.stat-label { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px; }
+/* FAQ */
+.faq-section { background: var(--raj-white); padding: 90px 0; }
+.faq-list { max-width: 700px; margin: 40px auto 0; }
+.faq-item { background: var(--raj-light-gray); border-radius: var(--raj-radius); margin-bottom: 12px; overflow: hidden; transition: var(--raj-transition); }
+.faq-question { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: none; border: none; cursor: pointer; font-size: 15px; font-weight: 600; color: var(--raj-dark); text-align: left; font-family: var(--raj-font); transition: var(--raj-transition); }
+.faq-question:hover { color: var(--raj-accent); }
+.faq-question i { transition: transform 0.3s ease; font-size: 14px; color: var(--raj-gray); }
+.faq-item.active .faq-question i { transform: rotate(180deg); color: var(--raj-accent); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 24px; }
+.faq-item.active .faq-answer { max-height: 250px; padding: 0 24px 20px; }
+.faq-answer p { font-size: 14px; color: var(--raj-gray); line-height: 1.7; margin: 0; }
+/* CTA */
+.cta-section { background: linear-gradient(135deg, var(--raj-blue) 0%, #0f172a 100%); padding: 90px 0; text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="90" cy="10" r="40" fill="rgba(255,255,255,0.03)"/><circle cx="10" cy="90" r="30" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat; background-size: cover; }
+.cta-section .container { position: relative; z-index: 1; }
+.cta-section h2 { color: var(--raj-white); font-size: clamp(26px,3vw,36px); margin-bottom: 16px; }
+.cta-section p { color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 32px; font-size: 17px; }
+.cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+/* Footer */
+.footer { background: var(--raj-dark); padding: 50px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.footer h4 { color: var(--raj-white); font-size: 15px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+.footer p, .footer a { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 2; display: block; }
+.footer a:hover { color: var(--raj-accent); }
+.footer-brand .logo-text { font-family: var(--raj-font-heading); font-size: 22px; color: var(--raj-white); margin-bottom: 10px; display: block; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; margin-top: 40px; text-align: center; }
+.footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.35); margin: 0; }
+/* Responsive */
+@media (max-width: 991px) {
+    .hero { padding: 80px 0 60px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    .hero p { margin: 0 auto 30px; }
+    .hero-buttons { justify-content: center; }
+    .about-grid { grid-template-columns: 1fr; }
+    .services-grid, .video-grid { grid-template-columns: repeat(2,1fr); }
+    .industries-grid { grid-template-columns: repeat(2,1fr); }
+    .process-timeline { grid-template-columns: repeat(2,1fr); gap: 30px; }
+    .process-timeline::before { display: none; }
+    .why-grid { grid-template-columns: repeat(2,1fr); }
+    .portfolio-grid { grid-template-columns: repeat(2,1fr); }
+    .stats-grid { grid-template-columns: repeat(2,1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 567px) {
+    .section-padding { padding: 50px 0; }
+    .hero { padding: 50px 0 40px; }
+    .hero-buttons { flex-direction: column; }
+    .hero-buttons .btn { width: 100%; justify-content: center; }
+    .services-grid, .video-grid { grid-template-columns: 1fr; }
+    .industries-grid { grid-template-columns: 1fr; }
+    .process-timeline { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; }
+    .why-grid { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stat-number { font-size: 30px; }
+    .stat-item { padding: 20px; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+    .cta-buttons { flex-direction: column; }
+    .cta-buttons .btn { width: 100%; justify-content: center; }
+    .about-image { min-height: 200px; }
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--raj-light-gray); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="fade-left">
+                <div class="hero-badge"><i class="fas fa-palette"></i> Raj Marketing Agency</div>
+                <h1>Graphic Design &amp; <span>Video Editing</span> Services</h1>
+                <p>Creative visual solutions for businesses that want to stand out. We create stunning graphics and engaging videos that help brands attract customers and grow.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary ripple"><i class="fas fa-calendar-check"></i> Get Free Consultation</a>
+                    <a href="#portfolio" class="btn btn-secondary ripple"><i class="fas fa-folder-open"></i> Our Work</a>
+                </div>
+            </div>
+            <div class="hero-image-area fade-right">
+                <div class="hero-visual">
+                    <i class="fas fa-paint-brush"></i>
+                    <p><i class="fas fa-circle" style="font-size:6px;color:var(--raj-accent);"></i> Creative Design <span style="margin:0 12px;opacity:0.3;">|</span> <i class="fas fa-circle" style="font-size:6px;color:var(--raj-accent);"></i> Video Editing <span style="margin:0 12px;opacity:0.3;">|</span> <i class="fas fa-circle" style="font-size:6px;color:var(--raj-accent);"></i> Motion Graphics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section section-padding">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image fade-left">
+                <i class="fas fa-palette"></i>
+            </div>
+            <div class="about-content fade-right">
+                <span class="section-subtitle">Why It Matters</span>
+                <h2>Why Professional <span>Visual Content</span> Matters</h2>
+                <p>In today's digital world, visuals are the first thing your audience notices. High-quality graphics and videos grab attention, convey your message instantly, and build a strong brand identity.</p>
+                <p>Businesses that invest in professional design and video content see higher engagement, better conversion rates, and stronger customer trust. Whether it's a social media post, a corporate video, or a real estate walkthrough, quality visuals make the difference between being ignored and being remembered.</p>
+                <div class="about-stats">
+                    <div class="about-stat"><div class="about-stat-num">80%</div><div class="about-stat-label">More Engagement</div></div>
+                    <div class="about-stat"><div class="about-stat-num">3x</div><div class="about-stat-label">Higher Recall</div></div>
+                    <div class="about-stat"><div class="about-stat-num">40%</div><div class="about-stat-label">Better CTR</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GRAPHIC DESIGN SERVICES -->
+<section class="services-section section-padding">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">What We Offer</span>
+            <h2 class="section-title">Graphic <span>Design</span> Services</h2>
+            <p class="section-desc">From social media creatives to print materials, we design visuals that capture attention and communicate your brand story.</p>
+        </div>
+        <div class="services-grid stagger">
+            <div class="service-card"><div class="s-icon" style="background:#dbeafe;color:#3b82f6;"><i class="fab fa-instagram"></i></div><h3>Social Media Creatives</h3><p>Eye-catching posts, stories, and ad creatives for Instagram, Facebook, LinkedIn, and more.</p></div>
+            <div class="service-card"><div class="s-icon" style="background:#fef3c7;color:#d97706;"><i class="fas fa-file-alt"></i></div><h3>Brochures &amp; Flyers</h3><p>Professionally designed print and digital brochures, flyers, and marketing collateral.</p></div>
+            <div class="service-card"><div class="s-icon" style="background:#fce7f3;color:#db2777;"><i class="fas fa-tag"></i></div><h3>Branding Design</h3><p>Complete brand identity including logos, color palettes, typography, and brand guidelines.</p></div>
+            <div class="service-card"><div class="s-icon" style="background:#e0f2fe;color:#0284c7;"><i class="fas fa-building"></i></div><h3>Real Estate Marketing Designs</h3><p>Project brochures, property flyers, site plan visuals, and sales collateral for real estate.</p></div>
+            <div class="service-card"><div class="s-icon" style="background:#ede9fe;color:#7c3aed;"><i class="fas fa-laptop"></i></div><h3>Website &amp; Digital Banners</h3><p>Website banners, hero images, email headers, and digital ad creatives for online campaigns.</p></div>
+            <div class="service-card"><div class="s-icon" style="background:#d1fae5;color:#059669;"><i class="fas fa-print"></i></div><h3>Print Design</h3><p>Business cards, letterheads, banners, hoardings, and large-format print-ready designs.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO EDITING SERVICES -->
+<section class="video-section section-padding">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Video Services</span>
+            <h2 class="section-title">Video <span>Editing</span> Services</h2>
+            <p class="section-desc">Engaging, high-quality video content that tells your brand story and captures your audience's attention.</p>
+        </div>
+        <div class="video-grid stagger">
+            <div class="video-card"><div class="v-icon"><i class="fas fa-film"></i></div><h3>Social Media Reels</h3><p>Trending, fast-paced reels optimized for Instagram, Facebook, and YouTube Shorts.</p></div>
+            <div class="video-card"><div class="v-icon"><i class="fas fa-video"></i></div><h3>Corporate Videos</h3><p>Brand films, company profiles, interview videos, and internal communication content.</p></div>
+            <div class="video-card"><div class="v-icon"><i class="fas fa-drone"></i></div><h3>Real Estate Videos</h3><p>Property walkthroughs, drone footage editing, project tours, and agent introduction videos.</p></div>
+            <div class="video-card"><div class="v-icon"><i class="fab fa-youtube"></i></div><h3>YouTube Video Editing</h3><p>Complete YouTube editing including intros, transitions, captions, thumbnails, and color grading.</p></div>
+            <div class="video-card"><div class="v-icon"><i class="fas fa-ad"></i></div><h3>Promotional Videos</h3><p>Product demos, service explainers, testimonial videos, and ad spots for digital campaigns.</p></div>
+            <div class="video-card"><div class="v-icon"><i class="fas fa-magic"></i></div><h3>Motion Graphics</h3><p>Animated logos, typography animations, explainer animations, and visual effects.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries-section section-padding">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Industries</span>
+            <h2 class="section-title">Industries We <span>Serve</span></h2>
+            <p class="section-desc">We work with businesses across diverse industries to create impactful visual content.</p>
+        </div>
+        <div class="industries-grid stagger">
+            <div class="industry-card"><i class="fas fa-building"></i><h4>Real Estate</h4><p>Property visuals, project brochures, drone videos</p></div>
+            <div class="industry-card"><i class="fas fa-hard-hat"></i><h4>Construction</h4><p>Project portfolios, site progress videos, company profiles</p></div>
+            <div class="industry-card"><i class="fas fa-rocket"></i><h4>Startups</h4><p>Brand identity, pitch decks, social media creatives</p></div>
+            <div class="industry-card"><i class="fas fa-store"></i><h4>Retail</h4><p>Product catalogs, promotional videos, ad creatives</p></div>
+            <div class="industry-card"><i class="fas fa-heartbeat"></i><h4>Healthcare</h4><p>Patient education materials, clinic branding, video content</p></div>
+            <div class="industry-card"><i class="fas fa-graduation-cap"></i><h4>Education</h4><p>Course promos, tutorial videos, institutional branding</p></div>
+            <div class="industry-card"><i class="fas fa-utensils"></i><h4>Restaurants</h4><p>Menu design, food videography, social media content</p></div>
+            <div class="industry-card"><i class="fas fa-briefcase"></i><h4>Corporate</h4><p>Brand films, internal comms, event coverage, presentations</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section section-padding">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Our Process</span>
+            <h2 class="section-title">How We <span>Work</span></h2>
+            <p class="section-desc">A streamlined 4-step process to deliver high-quality design and video content on time.</p>
+        </div>
+        <div class="process-timeline stagger">
+            <div class="process-step"><div class="step-num">01</div><h4>Requirement Discussion</h4><p>We understand your goals, brand, and target audience to plan the perfect creative approach.</p></div>
+            <div class="process-step"><div class="step-num">02</div><h4>Content Creation</h4><p>Our team designs and edits high-quality visuals and videos based on the brief.</p></div>
+            <div class="process-step"><div class="step-num">03</div><h4>Review &amp; Revisions</h4><p>You review the work and we make revisions until you are completely satisfied.</p></div>
+            <div class="process-step"><div class="step-num">04</div><h4>Final Delivery</h4><p>We deliver the final assets in your preferred formats, optimized for any platform.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why-section section-padding">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Why Choose Us</span>
+            <h2 class="section-title">Why Raj Marketing Agency</h2>
+            <p class="section-desc">We combine creativity with strategy to deliver visual content that drives real results.</p>
+        </div>
+        <div class="why-grid stagger">
+            <div class="why-item"><i class="fas fa-check-circle"></i><span>Creative Designs</span></div>
+            <div class="why-item"><i class="fas fa-check-circle"></i><span>High-Quality Video Editing</span></div>
+            <div class="why-item"><i class="fas fa-check-circle"></i><span>Fast Delivery</span></div>
+            <div class="why-item"><i class="fas fa-check-circle"></i><span>Affordable Pricing</span></div>
+            <div class="why-item"><i class="fas fa-check-circle"></i><span>Real Estate Marketing Experience</span></div>
+            <div class="why-item"><i class="fas fa-check-circle"></i><span>Dedicated Support</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio-section section-padding" id="portfolio">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Portfolio</span>
+            <h2 class="section-title">Our Recent <span>Work</span></h2>
+            <p class="section-desc">Browse through our portfolio of design and video projects across various categories.</p>
+        </div>
+        <div class="portfolio-filters fade-in" id="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="social">Social Media</button>
+            <button class="filter-btn" data-filter="brochure">Brochures</button>
+            <button class="filter-btn" data-filter="logo">Logos</button>
+            <button class="filter-btn" data-filter="reels">Reels</button>
+            <button class="filter-btn" data-filter="drone">Drone</button>
+            <button class="filter-btn" data-filter="property">Property</button>
+        </div>
+        <div class="portfolio-grid stagger" id="portfolioGrid">
+            <div class="portfolio-item" data-cat="social"><div class="portfolio-placeholder" style="background:#dbeafe;"><i class="fab fa-instagram" style="color:#3b82f6;"></i><span>Social Media Post</span></div><div class="portfolio-overlay"><h4>Social Media Creative</h4><p>Instagram &amp; Facebook campaign design</p></div></div>
+            <div class="portfolio-item" data-cat="brochure"><div class="portfolio-placeholder" style="background:#fef3c7;"><i class="fas fa-file-alt" style="color:#d97706;"></i><span>Brochure Design</span></div><div class="portfolio-overlay"><h4>Real Estate Brochure</h4><p>Project brochure for a luxury apartment</p></div></div>
+            <div class="portfolio-item" data-cat="logo"><div class="portfolio-placeholder" style="background:#fce7f3;"><i class="fas fa-tag" style="color:#db2777;"></i><span>Logo Design</span></div><div class="portfolio-overlay"><h4>Brand Logo</h4><p>Logo design for a startup company</p></div></div>
+            <div class="portfolio-item" data-cat="reels"><div class="portfolio-placeholder" style="background:#e0f2fe;"><i class="fas fa-film" style="color:#0284c7;"></i><span>Reel Editing</span></div><div class="portfolio-overlay"><h4>Instagram Reel</h4><p>Trending reel for a real estate client</p></div></div>
+            <div class="portfolio-item" data-cat="drone"><div class="portfolio-placeholder" style="background:#ede9fe;"><i class="fas fa-drone" style="color:#7c3aed;"></i><span>Drone Footage</span></div><div class="portfolio-overlay"><h4>Drone Video Edit</h4><p>Aerial footage of a construction project</p></div></div>
+            <div class="portfolio-item" data-cat="property"><div class="portfolio-placeholder" style="background:#d1fae5;"><i class="fas fa-building" style="color:#059669;"></i><span>Property Video</span></div><div class="portfolio-overlay"><h4>Property Tour</h4><p>Walkthrough video for a villa project</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item fade-scale"><div class="stat-number"><span class="counter" data-target="100">0</span>+</div><div class="stat-label">Projects Completed</div></div>
+            <div class="stat-item fade-scale"><div class="stat-number"><span class="counter" data-target="50">0</span>+</div><div class="stat-label">Happy Clients</div></div>
+            <div class="stat-item fade-scale"><div class="stat-number"><span class="counter" data-target="5">0</span>+</div><div class="stat-label">Years Experience</div></div>
+            <div class="stat-item fade-scale"><div class="stat-number"><span class="counter" data-target="1000">0</span>+</div><div class="stat-label">Creatives Delivered</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">FAQ</span>
+            <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item fade-in"><button class="faq-question">Do you provide both design and video services? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes, we offer both graphic design and video editing services. Whether you need social media creatives, branding materials, corporate videos, or real estate walkthroughs, our team handles all aspects of visual content creation.</p></div></div>
+            <div class="faq-item fade-in"><button class="faq-question">Can you edit drone footage? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Absolutely! We specialize in editing drone footage for real estate, construction, and landscape projects. Our team can color grade, stabilize, add music, and create stunning aerial montages from your raw drone footage.</p></div></div>
+            <div class="faq-item fade-in"><button class="faq-question">Do you create Instagram Reels? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes, we create trending, high-engagement Instagram Reels optimized for reach and conversions. Our reels include captions, transitions, music sync, and CTAs tailored to your brand and target audience.</p></div></div>
+            <div class="faq-item fade-in"><button class="faq-question">How long does delivery take? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Typical delivery times range from 24 to 72 hours for most design projects. Video projects may take 3–7 days depending on complexity. Rush delivery is available for urgent requirements.</p></div></div>
+            <div class="faq-item fade-in"><button class="faq-question">Do you offer revisions? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes, we offer revisions on all our projects. Your satisfaction is our priority. We work with you until the final output meets your expectations. The number of revisions depends on the package you choose.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+    <div class="container">
+        <h2 class="fade-in">Bring Your Ideas to Life</h2>
+        <p class="fade-in">From social media creatives to promotional videos, Raj Marketing Agency helps businesses create a powerful visual presence that drives results.</p>
+        <div class="cta-buttons fade-in">
+            <a href="tel:+918121781089" class="btn btn-secondary ripple"><i class="fas fa-phone-alt"></i> Call Now</a>
+            <a href="https://wa.me/918121781089?text=Hi!%20I%20need%20graphic%20design%20and%20video%20editing%20services" class="btn btn-secondary ripple"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            <a href="https://rajagency.in/contact-us/" class="btn btn-primary ripple"><i class="fas fa-paper-plane"></i> Request Free Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="logo-text">Raj Marketing Agency</span>
+                <p>Graphic Design &amp; Video Editing Services. We create stunning visuals that help brands grow and connect with their audience.</p>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <a href="#">Graphic Design</a>
+                <a href="#">Video Editing</a>
+                <a href="#">Social Media Creatives</a>
+                <a href="#">Branding</a>
+                <a href="#">Real Estate Marketing</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <a href="tel:+918121781089">+91 81217 81089</a>
+                <a href="mailto:info@rajagency.in">info@rajagency.in</a>
+                <a href="https://rajagency.in">www.rajagency.in</a>
+                <a href="https://rajagency.in/contact-us/">Get a Quote</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Raj Marketing Agency. All rights reserved. | Graphic Design &amp; Video Editing Services</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Scroll animations
+var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in, .fade-left, .fade-right, .fade-scale, .stagger').forEach(function(el) {
+    io.observe(el);
+});
+// Counter animation
+var counterStarted = false;
+var co = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+        if (e.isIntersecting && !counterStarted) {
+            counterStarted = true;
+            animateCounters();
+        }
+    });
+}, { threshold: 0.3 });
+var statsSection = document.querySelector('.stats-section');
+if (statsSection) co.observe(statsSection);
+function animateCounters() {
+    document.querySelectorAll('.counter').forEach(function(el) {
+        var target = parseInt(el.getAttribute('data-target'));
+        var current = 0;
+        var inc = Math.ceil(target / 60);
+        var timer = setInterval(function() {
+            current += inc;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = current;
+        }, 25);
+    });
+}
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var item = this.parentElement;
+        var isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(f) { f.classList.remove('active'); });
+        if (!isActive) { item.classList.add('active'); }
+    });
+});
+// Portfolio Filter
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.portfolio-item').forEach(function(item) {
+            if (filter === 'all' || item.getAttribute('data-cat') === filter) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

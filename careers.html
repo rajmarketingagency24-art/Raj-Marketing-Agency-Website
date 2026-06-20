@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers - Join Raj Marketing Agency</title>
+<meta name="description" content="Build your career with Raj Marketing Agency. We are hiring Digital Marketing Executives, Graphic Designers, Video Editors, and Interns. Apply now.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+:root {
+    --raj-blue: #1e293b;
+    --raj-blue-dark: #0f172a;
+    --raj-blue-light: #e2e8f0;
+    --raj-blue-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    --raj-dark: #111520;
+    --raj-dark-gray: #334155;
+    --raj-gray: #64748b;
+    --raj-light-gray: #f8fafc;
+    --raj-white: #ffffff;
+    --raj-accent: #EB595F;
+    --raj-accent-light: #fecaca;
+    --raj-whatsapp: #25d366;
+    --raj-warning: #f59e0b;
+    --raj-transition: all 0.3s ease;
+    --raj-shadow: 0 10px 40px rgba(30,41,59,0.1);
+    --raj-shadow-hover: 0 20px 60px rgba(30,41,59,0.2);
+    --raj-radius: 12px;
+    --raj-radius-sm: 8px;
+    --raj-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --raj-font-heading: 'Libre Baskerville', Georgia, serif;
+    --raj-container: 1200px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--raj-font); font-size: 16px; line-height: 1.7; color: var(--raj-dark-gray); background: var(--raj-white); overflow-x: hidden; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--raj-font-heading); color: var(--raj-dark); line-height: 1.3; }
+a { color: var(--raj-blue); text-decoration: none; transition: var(--raj-transition); }
+img { max-width: 100%; height: auto; display: block; }
+ul { list-style: none; padding: 0; margin: 0; }
+.container { max-width: var(--raj-container); margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 90px 0; }
+.section-header { text-align: center; max-width: 680px; margin: 0 auto 50px; }
+.section-subtitle { display: inline-block; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: var(--raj-accent); margin-bottom: 12px; position: relative; }
+.section-subtitle::after { content: ''; display: block; width: 36px; height: 3px; background: var(--raj-accent); margin: 8px auto 0; border-radius: 2px; }
+.section-title { font-size: clamp(24px,3vw,36px); margin-bottom: 14px; }
+.section-title span { color: var(--raj-accent); }
+.section-desc { font-size: 16px; color: var(--raj-gray); max-width: 580px; margin: 0 auto; line-height: 1.8; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; border-radius: 50px; font-size: 15px; font-weight: 600; border: none; cursor: pointer; transition: var(--raj-transition); text-decoration: none; font-family: var(--raj-font); position: relative; overflow: hidden; }
+.btn-primary { background: var(--raj-accent); color: var(--raj-white); }
+.btn-primary:hover { background: #c73e44; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(235,89,95,0.3); color: var(--raj-white); }
+.btn-secondary { background: transparent; color: var(--raj-white); border: 2px solid rgba(255,255,255,0.35); }
+.btn-secondary:hover { background: var(--raj-white); color: var(--raj-blue); transform: translateY(-2px); }
+.btn-outline { background: transparent; color: var(--raj-blue); border: 2px solid var(--raj-blue); }
+.btn-outline:hover { background: var(--raj-blue); color: var(--raj-white); transform: translateY(-2px); }
+.btn-sm { padding: 12px 24px; font-size: 13px; }
+/* Header */
+.site-header { position: relative; top: 0; left: 0; right: 0; z-index: 1000; background: var(--raj-white); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); transition: var(--raj-transition); }
+.header-main { padding: 15px 0; }
+.header-main-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.site-branding { flex-shrink: 0; }
+.logo-text { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.site-logo { height: 55px; width: auto; display: block; }
+.main-navigation { flex: 1; display: flex; justify-content: center; }
+.main-navigation .menu { display: flex; gap: 8px; }
+.main-navigation .menu-item { position: relative; }
+.main-navigation .menu-item a { display: block; padding: 10px 18px; font-size: 14px; font-weight: 500; color: var(--raj-dark-gray); border-radius: var(--raj-radius-sm); transition: var(--raj-transition); }
+.main-navigation .menu-item a:hover, .main-navigation .menu-item.current-menu-item a { color: var(--raj-blue); background: var(--raj-blue-light); }
+.main-navigation .sub-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; min-width: 220px; padding: 8px 0; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); z-index: 999; }
+.main-navigation .menu-item-has-children:hover .sub-menu { display: block; }
+.main-navigation .sub-menu .menu-item a { padding: 10px 20px; font-size: 13px; white-space: nowrap; border-radius: 0; }
+.main-navigation .sub-menu .menu-item a:hover { background: var(--raj-light-gray); }
+.main-navigation .sub-menu .menu-item:first-child a { border-radius: 12px 12px 0 0; }
+.main-navigation .sub-menu .menu-item:last-child a { border-radius: 0 0 12px 12px; }
+.menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+.hamburger-line { width: 28px; height: 3px; background: var(--raj-dark); border-radius: 3px; transition: var(--raj-transition); }
+.header-cta { display: flex; gap: 10px; flex-shrink: 0; }
+.cta-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; transition: var(--raj-transition); text-decoration: none; }
+.cta-btn-primary { background: var(--raj-accent); color: var(--raj-white); box-shadow: 0 4px 15px rgba(203, 15, 9, 0.3); }
+.cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(203, 15, 9, 0.4); color: var(--raj-white); }
+.cta-btn-phone { background: var(--raj-light-gray); color: var(--raj-dark); }
+.cta-btn-phone:hover { background: var(--raj-dark); color: var(--raj-white); }
+.mobile-menu-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 998; }
+.mobile-menu-overlay.active { display: block; }
+@media (max-width: 991px) {
+    .header-cta { display: none; }
+    .main-navigation .menu { display: none; }
+    .menu-toggle { display: flex; }
+    .main-navigation.active .menu { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--raj-white); padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); z-index: 100; }
+    .main-navigation.active .menu-item a { padding: 14px 20px; border-bottom: 1px solid var(--raj-light-gray); }
+    .main-navigation.active .sub-menu { display: none; position: static; box-shadow: none; padding: 0; border-radius: 0; background: transparent; }
+    .main-navigation.active .menu-item-has-children.open .sub-menu { display: block; }
+    .main-navigation.active .sub-menu .menu-item a { padding: 10px 20px 10px 40px; font-size: 13px; }
+}
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-left.visible { opacity: 1; transform: translateX(0); }
+.fade-right { opacity: 0; transform: translateX(40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-right.visible { opacity: 1; transform: translateX(0); }
+.stagger > * { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.stagger.visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(2) { transition-delay: 0.08s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(3) { transition-delay: 0.16s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(4) { transition-delay: 0.24s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(5) { transition-delay: 0.32s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(6) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(7) { transition-delay: 0.48s; opacity: 1; transform: translateY(0); }
+.stagger.visible > *:nth-child(8) { transition-delay: 0.56s; opacity: 1; transform: translateY(0); }
+/* Hero Section */
+.hero-section { width: 100%; aspect-ratio: 1200 / 620; max-height: 620px; color: var(--raj-dark); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: space-between; padding: 60px; }
+.hero-section::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.05) 100%); z-index: 1; pointer-events: none; }
+.hero-section::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.35); z-index: 1; pointer-events: none; }
+.hero-bg-img { position: absolute; inset: 0; background: var(--raj-light-gray) url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80') center center / cover no-repeat; }
+.page-hero-simple { justify-content: center; text-align: center; }
+.page-hero-simple .hero-center { width: 100%; z-index: 2; }
+.page-hero-simple .hero-center h1 { font-size: 56px; font-weight: 800; color: #fff; margin: 0 0 16px; font-family: var(--raj-font-heading); text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+.careers-hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(235,89,95,0.2); color: var(--raj-accent); font-size: 13px; font-weight: 600; padding: 7px 18px; border-radius: 50px; margin-bottom: 20px; border: 1px solid rgba(235,89,95,0.3); text-transform: uppercase; letter-spacing: 1px; backdrop-filter: blur(4px); }
+.careers-hero-subtitle { color: rgba(255,255,255,0.85); font-size: 17px; max-width: 620px; margin: 0 auto 30px; line-height: 1.8; }
+.careers-hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+/* Why Join */
+.why-join { background: var(--raj-white); }
+.benefits-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 40px; }
+.benefit-card { text-align: center; padding: 28px 20px; background: var(--raj-light-gray); border-radius: var(--raj-radius); transition: var(--raj-transition); cursor: default; border: 1px solid transparent; }
+.benefit-card:hover { transform: translateY(-6px); box-shadow: var(--raj-shadow); border-color: var(--raj-blue-light); }
+.benefit-card .b-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 22px; transition: var(--raj-transition); }
+.benefit-card:hover .b-icon { transform: scale(1.1) rotate(-5deg); }
+.benefit-card h4 { font-size: 15px; margin-bottom: 6px; }
+.benefit-card p { font-size: 13px; color: var(--raj-gray); margin: 0; }
+/* Openings */
+.openings { background: var(--raj-light-gray); }
+.jobs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.job-card { background: var(--raj-white); border-radius: var(--raj-radius); padding: 36px 30px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); transition: var(--raj-transition); border: 1px solid var(--raj-blue-light); position: relative; overflow: hidden; }
+.job-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--raj-blue-gradient); transform: scaleX(0); transform-origin: left; transition: var(--raj-transition); }
+.job-card:hover::before { transform: scaleX(1); }
+.job-card:hover { transform: translateY(-4px); box-shadow: var(--raj-shadow); }
+.job-card .job-badge { display: inline-block; background: var(--raj-accent-light); color: var(--raj-accent); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 50px; margin-bottom: 14px; }
+.job-card h3 { font-size: 18px; margin-bottom: 4px; }
+.job-card .exp { font-size: 13px; color: var(--raj-gray); margin-bottom: 18px; }
+.job-card h4 { font-size: 14px; color: var(--raj-dark); margin: 16px 0 10px; font-family: var(--raj-font); font-weight: 700; }
+.job-card ul { margin-bottom: 10px; }
+.job-card ul li { font-size: 14px; color: var(--raj-dark-gray); padding: 5px 0 5px 22px; position: relative; }
+.job-card ul li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: var(--raj-accent); font-size: 11px; }
+.job-card .comp { margin: 16px 0 20px; padding: 12px 16px; background: #f0fdf4; border-radius: var(--raj-radius-sm); font-size: 14px; font-weight: 600; color: #059669; display: inline-block; }
+/* Internships */
+.internship-section { background: var(--raj-white); }
+.intern-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.intern-card { background: var(--raj-light-gray); border-radius: var(--raj-radius); padding: 32px 28px; transition: var(--raj-transition); border: 1px solid transparent; cursor: default; }
+.intern-card:hover { transform: translateY(-4px); box-shadow: var(--raj-shadow); border-color: var(--raj-blue-light); }
+.intern-card .intern-icon { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; transition: var(--raj-transition); }
+.intern-card:hover .intern-icon { transform: scale(1.1); }
+.intern-card h3 { font-size: 17px; margin-bottom: 12px; }
+.intern-card h4 { font-size: 13px; color: var(--raj-gray); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; font-family: var(--raj-font); }
+.intern-card ul { margin-bottom: 14px; }
+.intern-card ul li { font-size: 13px; color: var(--raj-dark-gray); padding: 4px 0 4px 20px; position: relative; }
+.intern-card ul li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: var(--raj-accent); font-size: 10px; }
+.intern-card .intern-benefits { background: rgba(235,89,95,0.06); border-radius: var(--raj-radius-sm); padding: 14px 16px; margin-top: 12px; }
+.intern-card .intern-benefits p { font-size: 13px; color: var(--raj-dark); margin: 0; }
+.intern-card .intern-benefits p i { color: var(--raj-accent); margin-right: 6px; }
+/* Schedule */
+.schedule-section { background: var(--raj-light-gray); }
+.schedule-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.schedule-card { background: var(--raj-white); border-radius: var(--raj-radius); padding: 28px 22px; text-align: center; transition: var(--raj-transition); box-shadow: 0 2px 8px rgba(0,0,0,0.04); cursor: default; }
+.schedule-card:hover { transform: translateY(-6px); box-shadow: var(--raj-shadow); }
+.schedule-card i { font-size: 32px; color: var(--raj-accent); margin-bottom: 12px; transition: var(--raj-transition); }
+.schedule-card:hover i { transform: scale(1.2); }
+.schedule-card h4 { font-size: 14px; color: var(--raj-gray); margin-bottom: 6px; font-family: var(--raj-font); font-weight: 500; }
+.schedule-card p { font-size: 16px; font-weight: 700; color: var(--raj-dark); margin: 0; }
+/* Salary */
+.salary-section { background: var(--raj-white); }
+.salary-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.salary-card { background: var(--raj-light-gray); border-radius: var(--raj-radius); padding: 30px 22px; text-align: center; transition: var(--raj-transition); cursor: default; }
+.salary-card:hover { transform: translateY(-6px); box-shadow: var(--raj-shadow); }
+.salary-card .s-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 22px; transition: var(--raj-transition); }
+.salary-card:hover .s-icon { transform: scale(1.1); }
+.salary-card h4 { font-size: 15px; margin-bottom: 6px; }
+.salary-card p { font-size: 13px; color: var(--raj-gray); margin: 0; }
+/* Form */
+.form-section { background: var(--raj-light-gray); }
+.form-wrapper { max-width: 680px; margin: 0 auto; background: var(--raj-white); border-radius: var(--raj-radius); padding: 50px 40px; box-shadow: var(--raj-shadow); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--raj-dark); margin-bottom: 6px; }
+.form-group .required { color: var(--raj-accent); }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 18px; border: 2px solid var(--raj-blue-light); border-radius: var(--raj-radius-sm); font-size: 14px; font-family: var(--raj-font); transition: var(--raj-transition); background: var(--raj-white); color: var(--raj-dark-gray); outline: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--raj-accent); box-shadow: 0 0 0 4px rgba(235,89,95,0.08); }
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-group .file-note { font-size: 12px; color: var(--raj-gray); margin-top: 4px; }
+/* CTA */
+@media (max-width: 991px) {
+    .hero-section { aspect-ratio: auto; max-height: none; padding: 120px 30px 60px; flex-direction: column; gap: 40px; }
+    .page-hero-simple .hero-center h1 { font-size: 38px; }
+}
+@media (max-width: 575px) {
+    .hero-section { padding: 100px 20px 40px; }
+    .page-hero-simple .hero-center h1 { font-size: 28px; }
+}
+.cta-section { background: var(--raj-blue-gradient); padding: 80px 0; text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="90" cy="10" r="40" fill="rgba(255,255,255,0.03)"/><circle cx="10" cy="90" r="30" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat; background-size: cover; }
+.cta-section .container { position: relative; z-index: 1; }
+.cta-section h2 { color: var(--raj-white); font-size: clamp(24px,3vw,34px); margin-bottom: 12px; }
+.cta-section p { color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 30px; font-size: 17px; }
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+/* Footer */
+.site-footer { background: var(--raj-white); color: var(--raj-dark-gray); position: relative; border-top: 1px solid rgba(0,0,0,0.06); }
+.footer-wave-shape { display: none; }
+.footer-main { padding: 80px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.footer-site-logo { height: 70px; width: auto; display: block; }
+.footer-tagline { font-size: 14px; line-height: 1.8; margin-bottom: 20px; color: var(--raj-gray); }
+.footer-social { display: flex; gap: 12px; }
+.footer-social a { width: 40px; height: 40px; background: var(--raj-light-gray); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--raj-gray); font-size: 16px; transition: var(--raj-transition); }
+.footer-social a:hover { background: var(--raj-blue); color: var(--raj-white); transform: translateY(-3px); }
+.footer-heading { font-size: 18px; font-weight: 700; color: var(--raj-dark); margin-bottom: 24px; position: relative; padding-bottom: 12px; }
+.footer-heading::after { content: ''; position: absolute; bottom: 0; left: 0; width: 30px; height: 3px; background: var(--raj-accent); border-radius: 2px; }
+.footer-menu-list li { margin-bottom: 12px; }
+.footer-menu-list a { color: var(--raj-gray); font-size: 14px; transition: var(--raj-transition); }
+.footer-menu-list a:hover { color: var(--raj-blue); padding-left: 5px; }
+.footer-contact-list li { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 14px; color: var(--raj-gray); }
+.footer-contact-list li i { width: 20px; color: var(--raj-blue); font-size: 14px; }
+.footer-contact-list a { color: var(--raj-gray); }
+.footer-contact-list a:hover { color: var(--raj-blue); }
+.footer-bottom { border-top: 1px solid rgba(0,0,0,0.06); padding: 24px 0; }
+.footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; }
+.footer-bottom p { font-size: 14px; color: var(--raj-gray); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { font-size: 13px; color: var(--raj-gray); }
+.footer-bottom-links a:hover { color: var(--raj-blue); }
+/* Floating CTA */
+.floating-cta { position: fixed; bottom: 30px; right: 30px; z-index: 999; display: flex; flex-direction: column; gap: 12px; }
+.float-whatsapp, .float-call { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; font-size: 14px; font-weight: 600; color: var(--raj-white); text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.2); transition: var(--raj-transition); cursor: pointer; }
+.float-whatsapp { background: var(--raj-whatsapp); }
+.float-call { background: var(--raj-accent); }
+.float-whatsapp:hover, .float-call:hover { transform: scale(1.05); color: var(--raj-white); }
+.float-whatsapp i, .float-call i { font-size: 26px; }
+/* Responsive */
+@media (max-width: 991px) {
+    .careers-hero { padding: 60px 0 50px; }
+    .benefits-grid { grid-template-columns: repeat(2,1fr); }
+    .schedule-grid, .salary-grid { grid-template-columns: repeat(2,1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 767px) {
+    .section-padding { padding: 50px 0; }
+    .jobs-grid, .intern-grid { grid-template-columns: 1fr; }
+    .form-wrapper { padding: 30px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 567px) {
+    .benefits-grid { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; }
+    .schedule-grid, .salary-grid { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; }
+    .careers-hero .hero-btns { flex-direction: column; }
+    .careers-hero .hero-btns .btn { width: 100%; justify-content: center; }
+    .cta-btns { flex-direction: column; }
+    .cta-btns .btn { width: 100%; justify-content: center; }
+    .job-card { padding: 24px 18px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom-inner { flex-direction: column; gap: 12px; text-align: center; }
+    .floating-cta { right: 15px; bottom: 15px; }
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--raj-light-gray); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+</style>
+</head>
+<body>
+<div id="page" class="site">
+
+<!-- HEADER -->
+<header id="masthead" class="site-header">
+    <div class="header-main">
+        <div class="container header-main-inner">
+            <div class="site-branding">
+                <a href="https://rajagency.in/" rel="home" class="logo-text">
+                    <img src="https://rajagency.in/wp-content/uploads/2025/04/Raj-300x200.png" alt="Raj Marketing Agency" class="site-logo">
+                </a>
+            </div>
+            <nav id="site-navigation" class="main-navigation">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul id="primary-menu" class="menu">
+                    <li class="menu-item"><a href="https://rajagency.in/">Home</a></li>
+                    <li class="menu-item"><a href="https://rajagency.in/about-us/">About Us</a></li>
+                    <li class="menu-item menu-item-has-children"><a href="https://rajagency.in/services/">Services</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="https://rajagency.in/website-development/">Website Development</a></li>
+                            <li class="menu-item"><a href="https://rajagency.in/seo-services/">SEO Services</a></li>
+                            <li class="menu-item"><a href="https://rajagency.in/google-meta-ads/">Google &amp; Meta Ads</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item current-menu-item"><a href="https://rajagency.in/careers/">Careers</a></li>
+                    <li class="menu-item"><a href="https://rajagency.in/contact-us/">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="tel:+918121781089" class="cta-btn cta-btn-phone"><i class="fas fa-phone-alt"></i> +91 81217 81089</a>
+                <a href="https://rajagency.in/contact-us/" class="cta-btn cta-btn-primary">Get Free Consultation</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="mobile-menu-overlay"></div>
+
+<!-- HERO -->
+<section class="hero-section page-hero-simple" id="careers-hero">
+    <div class="hero-bg-img" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80')"></div>
+    <div class="hero-center fade-in">
+        <div class="careers-hero-badge"><i class="fas fa-rocket"></i> We're Hiring</div>
+        <h1>Build Your Career With <span style="color:var(--raj-accent);">Raj Marketing Agency</span></h1>
+        <p class="careers-hero-subtitle">Join a creative team passionate about digital marketing, design, and business growth. Work on real projects, learn continuously, and grow your career with us.</p>
+        <div class="careers-hero-btns">
+            <a href="#openings" class="btn btn-primary"><i class="fas fa-briefcase"></i> View Openings</a>
+            <a href="#apply-form" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- WHY JOIN -->
+<section class="why-join section-padding">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Why Join Us</span>
+            <h2 class="section-title">Why Work at <span>Raj Marketing Agency</span>?</h2>
+            <p class="section-desc">We believe in creating an environment where talent thrives, creativity flourishes, and careers grow.</p>
+        </div>
+        <div class="benefits-grid stagger">
+            <div class="benefit-card"><div class="b-icon" style="background:#dbeafe;color:#3b82f6;"><i class="fas fa-calendar-alt"></i></div><h4>5 Days Working</h4><p>Monday – Friday work schedule for a healthy work-life balance.</p></div>
+            <div class="benefit-card"><div class="b-icon" style="background:#fef3c7;color:#d97706;"><i class="fas fa-umbrella-beach"></i></div><h4>Weekend Holidays</h4><p>Saturday &amp; Sunday off to recharge and relax.</p></div>
+            <div class="benefit-card"><div class="b-icon" style="background:#fce7f3;color:#db2777;"><i class="fas fa-wallet"></i></div><h4>Competitive Salary</h4><p>Market-competitive compensation based on skills and experience.</p></div>
+            <div class="benefit-card"><div class="b-icon" style="background:#d1fae5;color:#059669;"><i class="fas fa-chart-line"></i></div><h4>Performance Incentives</h4><p>Earn attractive incentives and bonuses based on your performance.</p></div>
+            <div class="benefit-card"><div class="b-icon" style="background:#ede9fe;color:#7c3aed;"><i class="fas fa-arrow-up"></i></div><h4>Career Growth</h4><p>Clear growth path with regular reviews, training, and promotions.</p></div>
+            <div class="benefit-card"><div class="b-icon" style="background:#e0f2fe;color:#0284c7;"><i class="fas fa-smile"></i></div><h4>Friendly Environment</h4><p>Supportive team culture where your ideas are heard and valued.</p></div>
+            <div class="benefit-card"><div class="b-icon" style="background:#fef3c7;color:#d97706;"><i class="fas fa-users"></i></div><h4>Real Client Work</h4><p>Hands-on experience with live projects and real client campaigns.</p></div>
+            <div class="benefit-card"><div class="b-icon" style="background:#fce7f3;color:#db2777;"><i class="fas fa-graduation-cap"></i></div><h4>Skill Development</h4><p>Continuous learning through workshops, courses, and mentoring.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- OPENINGS -->
+<section class="openings section-padding" id="openings">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Current Openings</span>
+            <h2 class="section-title">Join Our <span>Team</span></h2>
+            <p class="section-desc">Explore exciting career opportunities at Raj Marketing Agency and take the next step in your professional journey.</p>
+        </div>
+        <div class="jobs-grid stagger">
+            <div class="job-card">
+                <span class="job-badge"><i class="fas fa-bolt"></i> Full-Time</span>
+                <h3>Digital Marketing Executive</h3>
+                <p class="exp"><i class="fas fa-briefcase" style="color:var(--raj-gray);margin-right:6px;"></i> Experience Required: Minimum 1 Year</p>
+                <h4>Responsibilities:</h4>
+                <ul><li>SEO and website optimization</li><li>Social media marketing</li><li>Google Ads and Meta Ads management</li><li>Campaign analysis and reporting</li><li>Content planning and strategy</li></ul>
+                <h4>Requirements:</h4>
+                <ul><li>Minimum 1 year experience in digital marketing</li><li>Knowledge of SEO, Meta Ads, Google Ads, and social media platforms</li><li>Good communication skills</li></ul>
+                <div class="comp"><i class="fas fa-rupee-sign"></i> Salary + Attractive Incentives</div>
+                <a href="#apply-form" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Apply for This Position</a>
+            </div>
+            <div class="job-card">
+                <span class="job-badge"><i class="fas fa-bolt"></i> Full-Time</span>
+                <h3>Graphic Designer &amp; Video Editor</h3>
+                <p class="exp"><i class="fas fa-briefcase" style="color:var(--raj-gray);margin-right:6px;"></i> Experience Required: Minimum 1 Year</p>
+                <h4>Responsibilities:</h4>
+                <ul><li>Create social media creatives and branding materials</li><li>Design brochures, banners, and marketing assets</li><li>Edit promotional videos, reels, and advertisements</li><li>Collaborate with the marketing team on campaigns</li></ul>
+                <h4>Requirements:</h4>
+                <ul><li>Minimum 1 year experience</li><li>Proficiency in Photoshop, Illustrator, Canva, Premiere Pro, or After Effects</li><li>Creative mindset and attention to detail</li></ul>
+                <div class="comp"><i class="fas fa-rupee-sign"></i> Salary + Attractive Incentives</div>
+                <a href="#apply-form" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Apply for This Position</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INTERNSHIPS -->
+<section class="internship-section section-padding">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Internships</span>
+            <h2 class="section-title">Kickstart Your <span>Career</span></h2>
+            <p class="section-desc">Perfect for students and fresh graduates looking to gain real-world experience in digital marketing and design.</p>
+        </div>
+        <div class="intern-grid stagger">
+            <div class="intern-card">
+                <div class="intern-icon" style="background:#dbeafe;color:#3b82f6;"><i class="fas fa-chart-simple"></i></div>
+                <h3>Digital Marketing Intern</h3>
+                <h4>What You'll Learn</h4>
+                <ul><li>SEO Basics</li><li>Social Media Marketing</li><li>Google Ads &amp; Meta Ads</li><li>Content Marketing</li><li>Website Management</li></ul>
+                <div class="intern-benefits"><p><i class="fas fa-gift"></i> Stipend + Incentives &nbsp;|&nbsp; <i class="fas fa-certificate"></i> Internship Certificate &nbsp;|&nbsp; <i class="fas fa-briefcase"></i> Opportunity for Full-Time</p></div>
+            </div>
+            <div class="intern-card">
+                <div class="intern-icon" style="background:#fce7f3;color:#db2777;"><i class="fas fa-palette"></i></div>
+                <h3>Graphic Design &amp; Video Editing Intern</h3>
+                <h4>What You'll Learn</h4>
+                <ul><li>Social Media Design</li><li>Branding Concepts</li><li>Canva, Photoshop &amp; Illustrator</li><li>Video Editing for Reels and Ads</li><li>Working on Live Client Projects</li></ul>
+                <div class="intern-benefits"><p><i class="fas fa-gift"></i> Stipend + Incentives &nbsp;|&nbsp; <i class="fas fa-certificate"></i> Internship Certificate &nbsp;|&nbsp; <i class="fas fa-briefcase"></i> Opportunity for Full-Time</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule-section section-padding">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Work Schedule</span>
+            <h2 class="section-title">Our <span>Working Hours</span></h2>
+            <p class="section-desc">We value your time and maintain a structured schedule that supports productivity and work-life balance.</p>
+        </div>
+        <div class="schedule-grid stagger">
+            <div class="schedule-card"><i class="fas fa-calendar-check"></i><h4>Working Days</h4><p>Monday – Friday</p></div>
+            <div class="schedule-card"><i class="fas fa-calendar-week"></i><h4>Weekly Off</h4><p>Saturday &amp; Sunday</p></div>
+            <div class="schedule-card"><i class="fas fa-clock"></i><h4>Office Hours</h4><p>9:30 AM – 6:30 PM</p></div>
+            <div class="schedule-card"><i class="fas fa-map-marker-alt"></i><h4>Location</h4><p>Sangareddy</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- SALARY -->
+<section class="salary-section section-padding">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Compensation</span>
+            <h2 class="section-title">Salary &amp; Incentive <span>Structure</span></h2>
+            <p class="section-desc">We believe in rewarding talent and dedication with a compensation package that reflects your value.</p>
+        </div>
+        <div class="salary-grid stagger">
+            <div class="salary-card"><div class="s-icon" style="background:#dbeafe;color:#3b82f6;"><i class="fas fa-money-bill-wave"></i></div><h4>Fixed Monthly Salary</h4><p>Guaranteed base salary paid on time every month.</p></div>
+            <div class="salary-card"><div class="s-icon" style="background:#fef3c7;color:#d97706;"><i class="fas fa-trophy"></i></div><h4>Performance Incentives</h4><p>Earn additional bonuses based on your results and contributions.</p></div>
+            <div class="salary-card"><div class="s-icon" style="background:#d1fae5;color:#059669;"><i class="fas fa-arrow-trend-up"></i></div><h4>Growth Opportunities</h4><p>Regular promotions and salary hikes for top performers.</p></div>
+            <div class="salary-card"><div class="s-icon" style="background:#ede9fe;color:#7c3aed;"><i class="fas fa-book-open"></i></div><h4>Skill Development Support</h4><p>Access to learning resources, courses, and training programs.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="form-section section-padding" id="apply-form">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Apply Now</span>
+            <h2 class="section-title">Submit Your <span>Application</span></h2>
+            <p class="section-desc">Fill out the form below and our HR team will get back to you within 48 hours.</p>
+        </div>
+        <div class="form-wrapper fade-in">
+            <form id="careerForm" onsubmit="return handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group"><label>Full Name <span class="required">*</span></label><input type="text" id="cname" required placeholder="Enter your full name"></div>
+                    <div class="form-group"><label>Email Address <span class="required">*</span></label><input type="email" id="cemail" required placeholder="Enter your email"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Mobile Number <span class="required">*</span></label><input type="tel" id="cphone" required pattern="[0-9]{10}" maxlength="10" placeholder="Enter 10-digit mobile number" oninput="this.value=this.value.replace(/\D/g,'')"></div>
+                    <div class="form-group"><label>Position Applying For <span class="required">*</span></label>
+                        <select id="cposition" required>
+                            <option value="">Select a position</option>
+                            <option value="Digital Marketing Executive">Digital Marketing Executive</option>
+                            <option value="Graphic Designer & Video Editor">Graphic Designer &amp; Video Editor</option>
+                            <option value="Digital Marketing Internship">Digital Marketing Internship</option>
+                            <option value="Graphic Design & Video Editing Internship">Graphic Design &amp; Video Editing Internship</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Experience <span class="required">*</span></label><input type="text" id="cexp" required placeholder="e.g. 2 years, Fresher, etc."></div>
+                    <div class="form-group"><label>Resume Upload</label><input type="file" id="cresume" accept=".pdf,.doc,.docx"><div class="file-note">Accepted: PDF, DOC (Max 5MB)</div></div>
+                </div>
+                <div class="form-group"><label>Portfolio Link (optional)</label><input type="url" id="cportfolio" placeholder="https://your-portfolio-link.com"></div>
+                <div class="form-group"><label>Message <span class="required">*</span></label><textarea id="cmessage" required placeholder="Tell us why you'd be a great fit for this role..."></textarea></div>
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:16px;"><i class="fas fa-paper-plane"></i> Submit Application</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2 class="fade-in">Ready to Grow With Us?</h2>
+        <p class="fade-in">Become a part of Raj Marketing Agency and build a rewarding career in digital marketing, design, and creativity.</p>
+        <div class="cta-btns fade-in">
+            <a href="#openings" class="btn btn-primary"><i class="fas fa-briefcase"></i> View Openings</a>
+            <a href="#apply-form" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+            <a href="https://rajagency.in/contact-us/" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="colophon" class="site-footer">
+    <div class="footer-wave-shape">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <div class="footer-main">
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <div class="footer-logo">
+                    <img src="https://rajagency.in/wp-content/uploads/2025/04/Raj.png" alt="Raj Marketing Agency" class="footer-site-logo">
+                </div>
+                <p class="footer-tagline">Grow Your Business with Result-Driven Digital Marketing. Based in Sangareddy, Telangana, we help businesses increase leads, sales, and online visibility.</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/918121781089" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col footer-links">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-menu-list">
+                    <li><a href="https://rajagency.in/">Home</a></li>
+                    <li><a href="https://rajagency.in/about-us/">About Us</a></li>
+                    <li><a href="https://rajagency.in/services/">Services</a></li>
+                    <li><a href="https://rajagency.in/contact-us/">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-services">
+                <h4 class="footer-heading">Services</h4>
+                <ul class="footer-menu-list">
+                    <li><a href="https://rajagency.in/services/">Website Development</a></li>
+                    <li><a href="https://rajagency.in/services/">SEO Services</a></li>
+                    <li><a href="https://rajagency.in/services/">Social Media Marketing</a></li>
+                    <li><a href="https://rajagency.in/services/">Google Ads Management</a></li>
+                    <li><a href="https://rajagency.in/services/">Lead Generation</a></li>
+                    <li><a href="https://rajagency.in/services/">Branding Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-contact">
+                <h4 class="footer-heading">Contact Us</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-phone-alt"></i> +91 81217 81089</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:sales@rajagency.in">sales@rajagency.in</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:srikanth@rajagency.in">srikanth@rajagency.in</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Sangareddy, Telangana, India</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+            <p>&copy; 2026 Raj Marketing Agency. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="https://rajagency.in/privacy-policy/">Privacy Policy</a>
+                <a href="https://rajagency.in/terms-conditions/">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="floating-cta">
+    <a href="https://wa.me/918121781089" target="_blank" rel="noopener" class="float-whatsapp" aria-label="WhatsApp Us">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+918121781089" class="float-call" aria-label="Call Now">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+(function($) {
+    'use strict';
+    $(document).ready(function() {
+        $('.menu-toggle').on('click', function() {
+            $(this).toggleClass('active');
+            $('#site-navigation').toggleClass('active');
+            $('.mobile-menu-overlay').toggleClass('active');
+        });
+        $('.mobile-menu-overlay').on('click', function() {
+            $(this).removeClass('active');
+            $('.menu-toggle').removeClass('active');
+            $('#site-navigation').removeClass('active');
+        });
+        $('a[href*="#"]:not([href="#"])').on('click', function() {
+            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 800);
+                    return false;
+                }
+            }
+        });
+        var animateElements = document.querySelectorAll('.fade-in, .fade-left, .fade-right, .stagger');
+        if (animateElements.length > 0) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            animateElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        }
+        $('.menu-item-has-children > a').on('click', function(e) {
+            if ($(window).width() <= 991) {
+                e.preventDefault();
+                $(this).parent().toggleClass('open');
+            }
+        });
+        $(window).on('resize', function() {
+            if ($(window).width() > 991) {
+                $('.menu-item-has-children').removeClass('open');
+            }
+        });
+    });
+})(jQuery);
+function handleSubmit(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+    setTimeout(function() {
+        window.location.href = 'thank-you.html';
+    }, 1000);
+    return false;
+}
+</script>
+</body>
+</html>
