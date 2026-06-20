@@ -59,15 +59,15 @@ ul { list-style: none; padding: 0; margin: 0; }
 .btn-sm { padding: 12px 24px; font-size: 13px; }
 /* Header */
 .site-header { position: relative; top: 0; left: 0; right: 0; z-index: 1000; background: var(--raj-white); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); transition: var(--raj-transition); }
-.header-main { padding: 15px 0; }
+.header-main { padding: 20px 0; }
 .header-main-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .site-branding { flex-shrink: 0; }
 .logo-text { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .site-logo { height: 55px; width: auto; display: block; }
 .main-navigation { flex: 1; display: flex; justify-content: center; }
-.main-navigation .menu { display: flex; gap: 8px; }
+.main-navigation .menu { display: flex; gap: 4px; }
 .main-navigation .menu-item { position: relative; }
-.main-navigation .menu-item a { display: block; padding: 10px 18px; font-size: 14px; font-weight: 500; color: var(--raj-dark-gray); border-radius: var(--raj-radius-sm); transition: var(--raj-transition); }
+.main-navigation .menu-item a { display: block; padding: 8px 16px; font-size: 14px; font-weight: 500; color: var(--raj-dark-gray); border-radius: var(--raj-radius-sm); transition: var(--raj-transition); }
 .main-navigation .menu-item a:hover, .main-navigation .menu-item.current-menu-item a { color: var(--raj-blue); background: var(--raj-blue-light); }
 .main-navigation .sub-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; min-width: 220px; padding: 8px 0; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); z-index: 999; }
 .main-navigation .menu-item-has-children:hover .sub-menu { display: block; }
@@ -77,8 +77,8 @@ ul { list-style: none; padding: 0; margin: 0; }
 .main-navigation .sub-menu .menu-item:last-child a { border-radius: 0 0 12px 12px; }
 .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
 .hamburger-line { width: 28px; height: 3px; background: var(--raj-dark); border-radius: 3px; transition: var(--raj-transition); }
-.header-cta { display: flex; gap: 10px; flex-shrink: 0; }
-.cta-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; transition: var(--raj-transition); text-decoration: none; }
+.header-cta { display: flex; gap: 8px; flex-shrink: 0; margin-left: auto; }
+.cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 22px; border-radius: 50px; font-size: 13px; font-weight: 600; transition: var(--raj-transition); text-decoration: none; }
 .cta-btn-primary { background: var(--raj-accent); color: var(--raj-white); box-shadow: 0 4px 15px rgba(203, 15, 9, 0.3); }
 .cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(203, 15, 9, 0.4); color: var(--raj-white); }
 .cta-btn-phone { background: var(--raj-light-gray); color: var(--raj-dark); }
@@ -297,7 +297,6 @@ ul { list-style: none; padding: 0; margin: 0; }
                             <li class="menu-item"><a href="https://rajagency.in/google-meta-ads/">Google &amp; Meta Ads</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item current-menu-item"><a href="https://rajagency.in/careers/">Careers</a></li>
                     <li class="menu-item"><a href="https://rajagency.in/contact-us/">Contact Us</a></li>
                 </ul>
             </nav>
@@ -520,6 +519,7 @@ ul { list-style: none; padding: 0; margin: 0; }
                     <li><a href="https://rajagency.in/">Home</a></li>
                     <li><a href="https://rajagency.in/about-us/">About Us</a></li>
                     <li><a href="https://rajagency.in/services/">Services</a></li>
+                    <li><a href="https://rajagency.in/careers/">Careers</a></li>
                     <li><a href="https://rajagency.in/contact-us/">Contact Us</a></li>
                 </ul>
             </div>
@@ -555,6 +555,8 @@ ul { list-style: none; padding: 0; margin: 0; }
         </div>
     </div>
 </footer>
+
+<iframe id="careerFrame" name="careerFrame" style="display:none;"></iframe>
 
 <div class="floating-cta">
     <a href="https://wa.me/918121781089" target="_blank" rel="noopener" class="float-whatsapp" aria-label="WhatsApp Us">
@@ -620,16 +622,101 @@ ul { list-style: none; padding: 0; margin: 0; }
         });
     });
 })(jQuery);
+// ─── Replace with your deployed Careers Apps Script URL ───
+var CAREERS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxPxFBvr6tavN3iSM8MKI8cS9GrMQpdSmHaG26tdQagpVxpKxkUQBfrtcl_9JFjAuiiAQ/exec";
+
 function handleSubmit(e) {
     e.preventDefault();
+
+    var name     = document.getElementById('cname').value.trim();
+    var email    = document.getElementById('cemail').value.trim();
+    var phone    = document.getElementById('cphone').value.trim();
+    var position = document.getElementById('cposition').value;
+    var exp      = document.getElementById('cexp').value.trim();
+    var portfolio= document.getElementById('cportfolio').value.trim();
+    var message  = document.getElementById('cmessage').value.trim();
+    var fileInput = document.getElementById('cresume');
+
     var btn = e.target.querySelector('button[type="submit"]');
-    btn.textContent = 'Submitting...';
+    var errors = [];
+    if (!name)     errors.push('Full Name is required.');
+    if (!email)    errors.push('Email is required.');
+    if (!phone)    errors.push('Phone is required.');
+    if (!position) errors.push('Position is required.');
+    if (!exp)      errors.push('Experience is required.');
+    if (!message)  errors.push('Message is required.');
+
+    if (errors.length) {
+        alert(errors.join('\n'));
+        return false;
+    }
+
     btn.disabled = true;
-    setTimeout(function() {
-        window.location.href = 'thank-you.html';
-    }, 1000);
+    btn.textContent = 'Submitting...';
+
+    // Build hidden form for iframe POST (avoids CORS)
+    var f = document.createElement('form');
+    f.method = 'POST';
+    f.action = CAREERS_SCRIPT_URL;
+    f.target = 'careerFrame';
+    f.style.display = 'none';
+
+    function add(n, v) {
+        var i = document.createElement('input');
+        i.type = 'hidden';
+        i.name = n;
+        i.value = v || '';
+        f.appendChild(i);
+    }
+
+    add('name', name);
+    add('email', email);
+    add('phone', phone);
+    add('position', position);
+    add('experience', exp);
+    add('portfolio', portfolio);
+    add('message', message);
+    add('formName', 'Careers');
+
+    function submitForm() {
+        document.body.appendChild(f);
+        f.submit();
+        document.body.removeChild(f);
+    }
+
+    if (fileInput.files.length > 0) {
+        btn.textContent = 'Encoding file...';
+        var reader = new FileReader();
+        reader.onload = function(evt) {
+            add('resumeBase64', evt.target.result.split(',')[1]);
+            add('resumeName', fileInput.files[0].name);
+            submitForm();
+        };
+        reader.onerror = function() { btn.disabled = false; btn.textContent = 'Try Again'; alert('Failed to read file.'); };
+        reader.readAsDataURL(fileInput.files[0]);
+    } else {
+        add('resumeBase64', '');
+        add('resumeName', '');
+        submitForm();
+    }
+
     return false;
 }
+
+// Listen for postMessage from iframe
+window.addEventListener('message', function(evt) {
+    var btn = document.querySelector('#careerForm button[type="submit"]');
+    try {
+        var resp = JSON.parse(evt.data);
+        if (resp.success) {
+            window.location.href = 'https://rajagency.in/thank-you';
+        } else {
+            alert(resp.errors ? resp.errors.join('\n') : 'Submission failed.');
+            btn.disabled = false;
+            btn.textContent = 'Try Again';
+        }
+    } catch (_) {}
+});
 </script>
 </body>
 </html>
