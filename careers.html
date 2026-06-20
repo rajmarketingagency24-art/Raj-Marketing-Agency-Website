@@ -704,7 +704,9 @@ function handleSubmit(e) {
 }
 
 // Listen for postMessage from iframe
+var postMessageReceived = false;
 window.addEventListener('message', function(evt) {
+    postMessageReceived = true;
     var btn = document.querySelector('#careerForm button[type="submit"]');
     try {
         var resp = JSON.parse(evt.data);
@@ -713,10 +715,28 @@ window.addEventListener('message', function(evt) {
         } else {
             alert(resp.errors ? resp.errors.join('\n') : 'Submission failed.');
             btn.disabled = false;
-            btn.textContent = 'Try Again';
+            btn.textContent = 'Submit Application';
         }
     } catch (_) {}
 });
+
+// Fallback: if no postMessage after 12s, redirect anyway
+var submitTimer = null;
+function startFallbackTimer() {
+    clearTimeout(submitTimer);
+    submitTimer = setTimeout(function() {
+        if (!postMessageReceived) {
+            window.location.href = 'https://rajagency.in/thank-you';
+        }
+    }, 12000);
+}
+// Patch handleSubmit to start timer
+var origSubmit = handleSubmit;
+handleSubmit = function(e) {
+    postMessageReceived = false;
+    startFallbackTimer();
+    return origSubmit(e);
+};
 </script>
 </body>
 </html>

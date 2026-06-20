@@ -1117,7 +1117,7 @@ document.getElementById('heroForm') && document.getElementById('heroForm').addEv
     var source=encodeURIComponent(document.querySelector('#heroForm input[name="source"]').value);
     var url='https://script.google.com/macros/s/AKfycbynhvEP5N_85pQtQiVVG5gB78vqYBw2mlKUguiZ_WzzpLhhGu53ZfbRN6vV-GToKOQx2g/exec';
     var qs='?name='+name+'&phone='+phone+'&source='+source+'&formName=Hero';
-    fetch(url+qs).then(function(){window.location.href='https://rajagency.in/thank-you';}).catch(function(){window.location.href='https://rajagency.in/thank-you';});
+    fetch(url+qs).then(function(r){return r.text();}).then(function(t){if(t==='OK'){window.location.href='https://rajagency.in/thank-you';}else{alert(t);}}).catch(function(){alert('Network error. Please try again.');});
 });
 </script>
 <script>
@@ -1162,11 +1162,7 @@ $('#unlockForm').on('submit', function(e) {
     var qs = '?name=' + name + '&phone=' + phone + '&service=' + service + '&source=' + source + '&formName=Unlock+Pricing';
     var $btn = $(this).find('button[type="submit"]');
     $btn.text('Submitting...').prop('disabled', true);
-    fetch(url + qs).then(function() {
-        window.location.href = 'https://rajagency.in/thank-you';
-    }).catch(function() {
-        window.location.href = 'https://rajagency.in/thank-you';
-    });
+    fetch(url + qs).then(function(r){return r.text();}).then(function(t){if(t==='OK'){window.location.href='https://rajagency.in/thank-you';}else{alert(t);$btn.text('Unlock Pricing').prop('disabled',false);}}).catch(function(){alert('Network error. Please try again.');$btn.text('Unlock Pricing').prop('disabled',false);});
 });
 </script>
 </body>

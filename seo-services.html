@@ -1094,7 +1094,7 @@ ul { list-style: none; padding: 0; margin: 0; }
             var qs = '?name=' + name + '&phone=' + phone + '&service=' + service + '&source=' + source + '&formName=Unlock+Pricing';
             var $btn = $(this).find('button[type="submit"]');
             $btn.text('Submitting...').prop('disabled', true);
-            fetch(url + qs).then(function() { window.location.href = 'https://rajagency.in/thank-you'; }).catch(function() { window.location.href = 'https://rajagency.in/thank-you'; });
+            fetch(url + qs).then(function(r){return r.text();}).then(function(t){if(t==='OK'){window.location.href='https://rajagency.in/thank-you';}else{alert(t);$btn.text('Unlock Pricing').prop('disabled',false);}}).catch(function(){alert('Network error. Please try again.');$btn.text('Unlock Pricing').prop('disabled',false);});
         });
 </script>
 </body>
