@@ -508,8 +508,279 @@ ul { list-style: none; padding: 0; margin: 0; }
 .service-card-cta:hover::after { margin-left: 4px; }
 
 /*=============================================
-   ANIMATIONS
+   SEO SERVICES PAGE - PREMIUM OVERRIDES
    =============================================*/
+.seo-page { --seo-primary: var(--raj-blue); --seo-secondary: var(--raj-accent); --seo-bg: var(--raj-light-gray); --seo-white: var(--raj-white); --seo-text: var(--raj-gray); }
+
+/*=============================================
+   PREMIUM HERO
+   =============================================*/
+.seo-hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; background: var(--seo-primary) url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80') center center / cover no-repeat; padding: 140px 0 80px; }
+.seo-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(30,41,59,0.85) 0%, rgba(30,41,59,0.5) 50%, rgba(30,41,59,0.7) 100%); z-index: 1; pointer-events: none; }
+.seo-hero-bg { position: absolute; inset: 0; overflow: hidden; z-index: 2; }
+.seo-hero-bg::before { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(235,89,95,0.15) 0%, transparent 70%); top: -150px; right: -150px; animation: heroBlobA 8s ease-in-out infinite; }
+.seo-hero-bg::after { content: ''; position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(235,89,95,0.1) 0%, transparent 70%); bottom: -100px; left: -100px; animation: heroBlobB 10s ease-in-out infinite; }
+@keyframes heroBlobA { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(60px,-40px) scale(1.15)} }
+@keyframes heroBlobB { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-50px,30px) scale(1.2)} }
+.seo-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
+.seo-hero-tag { display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: rgba(235,89,95,0.12); border: 1px solid rgba(235,89,95,0.3); border-radius: 50px; font-size: 13px; font-weight: 600; color: var(--seo-secondary); margin-bottom: 24px; letter-spacing: 1px; text-transform: uppercase; }
+.seo-hero-tag i { font-size: 14px; }
+.seo-hero-title { font-size: 54px; font-weight: 900; color: var(--seo-white); line-height: 1.12; margin-bottom: 20px; font-family: 'Inter', sans-serif; }
+.seo-hero-title span { color: var(--seo-secondary); display: inline-block; }
+.seo-hero-title .word { display: inline-block; opacity: 0; transform: translateY(40px); animation: wordUp 0.6s ease forwards; }
+.seo-hero-title .word:nth-child(1) { animation-delay: 0.1s; }
+.seo-hero-title .word:nth-child(2) { animation-delay: 0.25s; }
+.seo-hero-title .word:nth-child(3) { animation-delay: 0.4s; }
+.seo-hero-title .word:nth-child(4) { animation-delay: 0.55s; }
+.seo-hero-title .word:nth-child(5) { animation-delay: 0.7s; }
+.seo-hero-title .word:nth-child(6) { animation-delay: 0.85s; }
+@keyframes wordUp { to { opacity: 1; transform: translateY(0); } }
+.seo-hero-desc { font-size: 18px; color: rgba(255,255,255,0.75); line-height: 1.8; margin-bottom: 32px; max-width: 540px; }
+.seo-hero-actions { display: flex; flex-wrap: wrap; gap: 16px; }
+.seo-hero-actions .btn { padding: 16px 36px; font-size: 15px; font-weight: 600; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.seo-hero-actions .btn-primary { background: var(--seo-secondary); color: var(--seo-white); box-shadow: 0 8px 32px rgba(235,89,95,0.35); }
+.seo-hero-actions .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(235,89,95,0.45); }
+.seo-hero-actions .btn-outline { background: transparent; color: var(--seo-white); border: 2px solid rgba(255,255,255,0.25); }
+.seo-hero-actions .btn-outline:hover { border-color: var(--seo-secondary); background: rgba(235,89,95,0.1); transform: translateY(-3px); }
+.seo-hero-stats { display: flex; gap: 40px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); }
+.seo-hero-stat-num { font-size: 28px; font-weight: 800; color: var(--seo-secondary); font-family: 'Inter', sans-serif; }
+.seo-hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+.seo-hero-right { position: relative; display: flex; justify-content: center; }
+.seo-hero-card { background: rgba(255,255,255,0.06); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 40px; width: 100%; max-width: 460px; }
+.seo-hero-card h3 { font-size: 22px; font-weight: 700; color: var(--seo-white); margin-bottom: 6px; font-family: 'Inter', sans-serif; }
+.seo-hero-card p { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+.seo-hero-card .form-group { margin-bottom: 14px; }
+.seo-hero-card input,.seo-hero-card select,.seo-hero-card textarea { width: 100%; padding: 14px 18px; background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; font-size: 14px; color: var(--seo-white); font-family: 'Inter', sans-serif; transition: all 0.3s; outline: none; }
+.seo-hero-card input::placeholder,.seo-hero-card select::placeholder,.seo-hero-card textarea::placeholder { color: rgba(255,255,255,0.35); }
+.seo-hero-card input:focus,.seo-hero-card select:focus,.seo-hero-card textarea:focus { border-color: var(--seo-secondary); box-shadow: 0 0 0 3px rgba(235,89,95,0.15); }
+.seo-hero-card select option { color: var(--seo-text); background: var(--seo-white); }
+.seo-hero-card textarea { resize: vertical; min-height: 70px; }
+.seo-hero-card .btn { width: 100%; justify-content: center; padding: 15px; }
+.seo-hero-card .safe-text { font-size: 11px; color: rgba(255,255,255,0.35); text-align: center; margin-top: 12px; }
+
+/*=============================================
+   SECTION TITLES (seo page)
+   =============================================*/
+.seo-section-header { text-align: center; margin-bottom: 56px; }
+.seo-section-tag { display: inline-block; padding: 6px 18px; background: rgba(235,89,95,0.1); border-radius: 50px; font-size: 12px; font-weight: 600; color: var(--seo-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+.seo-section-title { font-size: 40px; font-weight: 800; color: var(--seo-primary); line-height: 1.2; margin-bottom: 14px; font-family: 'Inter', sans-serif; }
+.seo-section-title span { color: var(--seo-secondary); }
+.seo-section-desc { font-size: 17px; color: var(--seo-text); opacity: 0.65; max-width: 620px; margin: 0 auto; line-height: 1.7; }
+
+/*=============================================
+   TRUST BAR
+   =============================================*/
+.seo-trust { padding: 40px 0; background: var(--seo-white); border-bottom: 1px solid rgba(0,0,0,0.04); }
+.seo-trust-label { text-align: center; font-size: 12px; font-weight: 600; color: var(--seo-text); opacity: 0.4; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+.seo-trust-logos { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; align-items: center; }
+.seo-trust-logo { font-size: 13px; font-weight: 700; color: var(--seo-text); opacity: 0.25; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; transition: opacity 0.3s; }
+.seo-trust-logo:hover { opacity: 0.5; }
+.seo-trust-logo i { margin-right: 6px; }
+
+/*=============================================
+   WHY SEO MATTERS
+   =============================================*/
+.seo-matters { padding: 100px 0; background: var(--seo-bg); }
+.seo-matters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.seo-matters-card { background: var(--seo-white); border-radius: 16px; padding: 32px 24px; text-align: center; transition: all 0.4s ease; box-shadow: 0 2px 12px rgba(0,0,0,0.04); position: relative; overflow: hidden; }
+.seo-matters-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--seo-secondary); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
+.seo-matters-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(30,41,59,0.08); }
+.seo-matters-card:hover::before { transform: scaleX(1); }
+.seo-matters-num { font-size: 42px; font-weight: 900; color: var(--seo-secondary); font-family: 'Inter', sans-serif; line-height: 1; margin-bottom: 8px; }
+.seo-matters-card p { font-size: 14px; color: var(--seo-text); opacity: 0.7; line-height: 1.6; }
+
+/*=============================================
+   SEO SERVICES GLASSMORPHISM
+   =============================================*/
+.seo-services-section { padding: 100px 0; background: var(--seo-bg); }
+.seo-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.seo-service-glass { background: rgba(255,255,255,0.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.8); border-radius: 20px; padding: 36px 28px; transition: all 0.4s ease; position: relative; overflow: hidden; }
+.seo-service-glass::after { content: ''; position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; background: radial-gradient(circle, rgba(235,89,95,0.04) 0%, transparent 70%); transition: all 0.5s ease; pointer-events: none; }
+.seo-service-glass:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(30,41,59,0.1); border-color: rgba(235,89,95,0.2); }
+.seo-service-glass:hover::after { top: -20%; right: -20%; }
+.seo-service-icon { width: 56px; height: 56px; background: rgba(235,89,95,0.1); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: all 0.4s ease; }
+.seo-service-glass:hover .seo-service-icon { background: var(--seo-secondary); }
+.seo-service-icon i { font-size: 24px; color: var(--seo-secondary); transition: all 0.4s ease; }
+.seo-service-glass:hover .seo-service-icon i { color: var(--seo-white); }
+.seo-service-glass h3 { font-size: 18px; font-weight: 700; color: var(--seo-primary); margin-bottom: 10px; font-family: 'Inter', sans-serif; }
+.seo-service-glass p { font-size: 14px; color: var(--seo-text); opacity: 0.65; line-height: 1.7; }
+.seo-service-glass .service-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--seo-secondary); text-decoration: none; }
+.seo-service-glass .service-link:hover { gap: 10px; }
+
+/*=============================================
+   SEO PROCESS
+   =============================================*/
+.seo-process { padding: 100px 0; background: var(--seo-primary); position: relative; overflow: hidden; }
+.seo-process::before { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(235,89,95,0.08) 0%, transparent 70%); top: -200px; right: -100px; }
+.seo-process .seo-section-title { color: var(--seo-white); }
+.seo-process .seo-section-desc { color: rgba(255,255,255,0.6); }
+.seo-process-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; position: relative; z-index: 2; }
+.seo-process-step { text-align: center; position: relative; }
+.seo-process-step:not(:last-child)::after { content: ''; position: absolute; top: 32px; left: 60%; right: -20px; height: 2px; background: linear-gradient(90deg, var(--seo-secondary), transparent); }
+.seo-process-num { width: 64px; height: 64px; background: rgba(235,89,95,0.15); border: 2px solid var(--seo-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 20px; font-weight: 800; color: var(--seo-secondary); transition: all 0.4s ease; font-family: 'Inter', sans-serif; }
+.seo-process-step:hover .seo-process-num { background: var(--seo-secondary); color: var(--seo-white); box-shadow: 0 0 30px rgba(235,89,95,0.3); }
+.seo-process-step h4 { font-size: 15px; font-weight: 700; color: var(--seo-white); margin-bottom: 6px; font-family: 'Inter', sans-serif; }
+.seo-process-step p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+/*=============================================
+   INDUSTRIES
+   =============================================*/
+.seo-industries { padding: 100px 0; background: var(--seo-white); }
+.seo-industries-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.seo-industry-item { padding: 28px 20px; text-align: center; background: var(--seo-bg); border-radius: 14px; transition: all 0.3s ease; cursor: default; }
+.seo-industry-item:hover { background: var(--seo-primary); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(30,41,59,0.12); }
+.seo-industry-item i { font-size: 30px; color: var(--seo-secondary); margin-bottom: 12px; display: block; transition: all 0.3s ease; }
+.seo-industry-item:hover i { color: var(--seo-white); }
+.seo-industry-item span { font-size: 14px; font-weight: 600; color: var(--seo-primary); transition: all 0.3s ease; }
+.seo-industry-item:hover span { color: var(--seo-white); }
+
+/*=============================================
+   WHY CHOOSE US
+   =============================================*/
+.seo-why { padding: 100px 0; background: var(--seo-bg); }
+.seo-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.seo-why-card { background: var(--seo-white); border-radius: 16px; padding: 36px 28px; transition: all 0.4s ease; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+.seo-why-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(30,41,59,0.08); }
+.seo-why-icon { width: 52px; height: 52px; background: var(--seo-primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.seo-why-icon i { font-size: 22px; color: var(--seo-white); }
+.seo-why-card h3 { font-size: 17px; font-weight: 700; color: var(--seo-primary); margin-bottom: 8px; font-family: 'Inter', sans-serif; }
+.seo-why-card p { font-size: 14px; color: var(--seo-text); opacity: 0.65; line-height: 1.7; }
+
+/*=============================================
+   COUNTERS
+   =============================================*/
+.seo-counters { padding: 80px 0; background: var(--seo-primary); position: relative; overflow: hidden; }
+.seo-counters::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='30'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.seo-counters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; position: relative; z-index: 2; }
+.seo-counter-item { text-align: center; }
+.seo-counter-num { font-size: 52px; font-weight: 900; color: var(--seo-secondary); font-family: 'Inter', sans-serif; line-height: 1; margin-bottom: 8px; }
+.seo-counter-label { font-size: 14px; color: rgba(255,255,255,0.6); font-weight: 500; }
+.seo-counter-plus { font-size: 32px; color: var(--seo-secondary); font-weight: 700; vertical-align: super; }
+
+/*=============================================
+   CASE STUDIES
+   =============================================*/
+.seo-cases { padding: 100px 0; background: var(--seo-white); }
+.seo-cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.seo-case-card { background: var(--seo-bg); border-radius: 20px; overflow: hidden; transition: all 0.4s ease; }
+.seo-case-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(30,41,59,0.1); }
+.seo-case-thumb { height: 200px; background: var(--seo-primary); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.seo-case-thumb i { font-size: 48px; color: rgba(235,89,95,0.2); }
+.seo-case-tag { position: absolute; top: 16px; left: 16px; padding: 4px 14px; background: var(--seo-secondary); color: var(--seo-white); font-size: 11px; font-weight: 700; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; }
+.seo-case-body { padding: 28px; }
+.seo-case-body h3 { font-size: 17px; font-weight: 700; color: var(--seo-primary); margin-bottom: 6px; font-family: 'Inter', sans-serif; }
+.seo-case-body p { font-size: 13px; color: var(--seo-text); opacity: 0.65; margin-bottom: 14px; line-height: 1.6; }
+.seo-case-result { display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; background: rgba(235,89,95,0.1); border-radius: 50px; font-size: 13px; font-weight: 700; color: var(--seo-secondary); }
+
+/*=============================================
+   TESTIMONIALS SLIDER
+   =============================================*/
+.seo-testimonials { padding: 100px 0; background: var(--seo-bg); }
+.seo-testi-wrapper { max-width: 800px; margin: 0 auto; position: relative; overflow: hidden; }
+.seo-testi-slider { display: flex; transition: transform 0.5s ease; }
+.seo-testi-slide { min-width: 100%; padding: 0 20px; }
+.seo-testi-card { background: var(--seo-white); border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+.seo-testi-stars { margin-bottom: 16px; }
+.seo-testi-stars i { color: #fbbf24; font-size: 18px; margin: 0 2px; }
+.seo-testi-text { font-size: 17px; color: var(--seo-text); opacity: 0.8; line-height: 1.8; font-style: italic; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.seo-testi-author { display: flex; align-items: center; justify-content: center; gap: 14px; }
+.seo-testi-avatar { width: 48px; height: 48px; background: var(--seo-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: var(--seo-white); }
+.seo-testi-name { font-size: 15px; font-weight: 700; color: var(--seo-primary); }
+.seo-testi-role { font-size: 12px; color: var(--seo-text); opacity: 0.5; }
+.seo-testi-nav { display: flex; justify-content: center; gap: 10px; margin-top: 28px; }
+.seo-testi-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--seo-text); opacity: 0.15; border: none; cursor: pointer; transition: all 0.3s; }
+.seo-testi-dot.active { opacity: 1; background: var(--seo-secondary); width: 28px; border-radius: 5px; }
+.seo-testi-arrows { display: flex; justify-content: center; gap: 12px; margin-top: 20px; }
+.seo-testi-arrow { width: 44px; height: 44px; border-radius: 50%; background: var(--seo-white); border: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; font-size: 16px; color: var(--seo-primary); }
+.seo-testi-arrow:hover { background: var(--seo-secondary); color: var(--seo-white); border-color: var(--seo-secondary); }
+
+/*=============================================
+   FAQ ACCORDION
+   =============================================*/
+.seo-faq { padding: 100px 0; background: var(--seo-white); }
+.seo-faq-list { max-width: 800px; margin: 0 auto; }
+.seo-faq-item { border-bottom: 1px solid rgba(0,0,0,0.06); padding: 0; }
+.seo-faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 22px 0; background: none; border: none; cursor: pointer; font-size: 16px; font-weight: 600; color: var(--seo-primary); text-align: left; font-family: 'Inter', sans-serif; transition: all 0.3s; }
+.seo-faq-q:hover { color: var(--seo-secondary); }
+.seo-faq-q i { font-size: 14px; transition: transform 0.3s ease; color: var(--seo-secondary); }
+.seo-faq-item.open .seo-faq-q i { transform: rotate(45deg); }
+.seo-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0; }
+.seo-faq-item.open .seo-faq-a { max-height: 400px; padding: 0 0 22px; }
+.seo-faq-a p { font-size: 14px; color: var(--seo-text); opacity: 0.65; line-height: 1.8; }
+
+/*=============================================
+   AUDIT CTA
+   =============================================*/
+.seo-audit { padding: 100px 0; background: var(--seo-primary); position: relative; overflow: hidden; }
+.seo-audit::before { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(235,89,95,0.1) 0%, transparent 70%); top: -200px; left: -200px; }
+.seo-audit::after { content: ''; position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(235,89,95,0.06) 0%, transparent 70%); bottom: -150px; right: -150px; }
+.seo-audit-content { position: relative; z-index: 2; text-align: center; max-width: 700px; margin: 0 auto; }
+.seo-audit-content h2 { font-size: 44px; font-weight: 900; color: var(--seo-white); margin-bottom: 16px; font-family: 'Inter', sans-serif; }
+.seo-audit-content h2 span { color: var(--seo-secondary); }
+.seo-audit-content p { font-size: 18px; color: rgba(255,255,255,0.65); margin-bottom: 36px; line-height: 1.8; }
+.seo-audit-content .btn-group { justify-content: center; }
+.seo-audit-content .btn-primary { background: var(--seo-secondary); color: var(--seo-white); box-shadow: 0 8px 32px rgba(235,89,95,0.35); padding: 18px 40px; font-size: 16px; }
+.seo-audit-content .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 44px rgba(235,89,95,0.45); }
+.seo-audit-content .btn-outline-light { background: transparent; color: var(--seo-white); border: 2px solid rgba(255,255,255,0.2); padding: 18px 40px; font-size: 16px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+.seo-audit-content .btn-outline-light:hover { border-color: var(--seo-secondary); background: rgba(235,89,95,0.1); transform: translateY(-3px); }
+
+/*=============================================
+   BACK TO TOP
+   =============================================*/
+.seo-back-top { position: fixed; bottom: 90px; right: 30px; z-index: 99; width: 48px; height: 48px; background: var(--seo-primary); color: var(--seo-white); border: none; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(30,41,59,0.2); }
+.seo-back-top.visible { opacity: 1; visibility: visible; }
+.seo-back-top:hover { background: var(--seo-secondary); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(235,89,95,0.3); }
+
+/*=============================================
+   RESPONSIVE - SEO PAGE
+   =============================================*/
+@media (max-width: 1199px) {
+    .seo-hero-title { font-size: 44px; }
+    .seo-process-grid { grid-template-columns: repeat(3, 1fr); }
+    .seo-process-step:not(:last-child)::after { display: none; }
+}
+@media (max-width: 991px) {
+    .seo-hero-grid { grid-template-columns: 1fr; }
+    .seo-hero { min-height: auto; padding: 120px 0 60px; }
+    .seo-hero-title { font-size: 38px; }
+    .seo-hero-stats { gap: 24px; flex-wrap: wrap; }
+    .seo-matters-grid { grid-template-columns: repeat(2, 1fr); }
+    .seo-services-grid { grid-template-columns: repeat(2, 1fr); }
+    .seo-process-grid { grid-template-columns: repeat(2, 1fr); }
+    .seo-industries-grid { grid-template-columns: repeat(2, 1fr); }
+    .seo-why-grid { grid-template-columns: repeat(2, 1fr); }
+    .seo-counters-grid { grid-template-columns: repeat(2, 1fr); }
+    .seo-cases-grid { grid-template-columns: repeat(2, 1fr); }
+    .seo-section-title { font-size: 32px; }
+    .seo-audit-content h2 { font-size: 34px; }
+}
+@media (max-width: 575px) {
+    .seo-hero-title { font-size: 30px; }
+    .seo-hero-desc { font-size: 16px; }
+    .seo-hero-stats { flex-direction: column; gap: 16px; }
+    .seo-hero-card { padding: 24px; }
+    .seo-matters-grid { grid-template-columns: 1fr; }
+    .seo-services-grid { grid-template-columns: 1fr; }
+    .seo-process-grid { grid-template-columns: 1fr; }
+    .seo-industries-grid { grid-template-columns: 1fr; }
+    .seo-why-grid { grid-template-columns: 1fr; }
+    .seo-counters-grid { grid-template-columns: repeat(2, 1fr); }
+    .seo-counter-num { font-size: 36px; }
+    .seo-cases-grid { grid-template-columns: 1fr; }
+    .seo-section-title { font-size: 26px; }
+    .seo-audit-content h2 { font-size: 28px; }
+    .seo-audit-content p { font-size: 16px; }
+    .seo-audit-content .btn-group { flex-direction: column; }
+    .seo-back-top { right: 15px; bottom: 75px; width: 40px; height: 40px; font-size: 15px; }
+    .seo-faq-q { font-size: 14px; }
+    .seo-testi-card { padding: 24px; }
+    .seo-testi-text { font-size: 15px; }
+    .seo-case-body { padding: 20px; }
+}
+
+/*=============================================
+   ANIMATIONS
+    =============================================*/
 .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -617,148 +888,454 @@ ul { list-style: none; padding: 0; margin: 0; }
     <div class="mobile-menu-overlay"></div>
 
     <div id="primary" class="content-area">
-        <main id="main" class="site-main">
+        <main id="main" class="site-main seo-page">
 
-            <!-- HERO SECTION -->
-            <section class="hero-section page-hero-simple" id="service-hero">
-                <div class="hero-bg-img" style="background-image:url('https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=1920&q=80')"></div>
-                <div class="hero-center">
-                    <h1>SEO Services</h1>
+            <!-- SECTION 1: HERO -->
+            <section class="hero-section" id="service-hero">
+                <div class="hero-bg-img" style="background-image:url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1920&q=80')"></div>
+                <div class="hero-left">
+                    <h1>SEO Services<br><span class="hero-blue">Rank Higher, Grow Faster</span></h1>
+                    <p>Result-driven SEO strategies that put your business on page one of Google. From local SEO to national campaigns — we drive traffic that converts into customers.</p>
+                    <a href="#seo-audit" class="hero-btn">Get Free SEO Audit <i class="fas fa-arrow-right" style="margin-left:6px;"></i></a>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-form-wrapper">
+                        <h3 class="hero-form-title">Get Free SEO Quote</h3>
+                        <p class="hero-form-subtitle">Fill in your details and we will suggest the best strategy.</p>
+                        <form id="seoHeroForm">
+                            <input type="hidden" name="source" value="SEO Hero Form">
+                            <div class="form-group">
+                                <input type="text" id="hero-name" name="name" placeholder="Your Name" required pattern="[A-Za-z\s]+" oninput="this.value=this.value.replace(/[^A-Za-z\s]/g,'')" title="Only letters and spaces allowed">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="hero-phone" name="phone" placeholder="Phone Number" required pattern="(?!.*(\d)\1{8})\d{10}" maxlength="10" oninput="this.value=this.value.replace(/\D/g,'')" title="Enter a valid 10-digit mobile number (repeated digits not allowed)">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg submit-btn" style="width:100%;justify-content:center;">Get Free Strategy Call</button>
+                            <p class="hero-form-safe">&#10003; Your details are safe. By submitting this form, you agree to the <a href="https://rajagency.in/privacy-policy/" style="color:var(--raj-accent);text-decoration:underline;">privacy policy</a> &amp; terms and conditions.</p>
+                        </form>
+                    </div>
                 </div>
             </section>
 
-            <!-- SERVICE INTRO -->
-            <section class="about-page-intro section-padding">
+            <!-- SECTION 2: TRUST BAR -->
+            <section class="seo-trust">
                 <div class="container">
-                    <div class="about-page-grid">
-                        <div class="fade-in-left">
-                            <div class="section-header">
-                                <span class="section-subtitle">Our Service</span>
-                                <h2 class="section-title">Dominate Search <span>Engine Rankings</span></h2>
+                    <p class="seo-trust-label">Trusted by 50+ Businesses Across Telangana</p>
+                    <div class="seo-trust-logos">
+                        <span class="seo-trust-logo"><i class="fas fa-store"></i> Retail</span>
+                        <span class="seo-trust-logo"><i class="fas fa-heartbeat"></i> Healthcare</span>
+                        <span class="seo-trust-logo"><i class="fas fa-laptop-house"></i> Tech</span>
+                        <span class="seo-trust-logo"><i class="fas fa-hotel"></i> Hospitality</span>
+                        <span class="seo-trust-logo"><i class="fas fa-graduation-cap"></i> Education</span>
+                        <span class="seo-trust-logo"><i class="fas fa-industry"></i> Manufacturing</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: WHY SEO MATTERS -->
+            <section class="seo-matters">
+                <div class="container">
+                    <div class="seo-section-header fade-in">
+                        <span class="seo-section-tag">Why SEO Matters</span>
+                        <h2 class="seo-section-title">The <span>Numbers</span> Don't Lie</h2>
+                        <p class="seo-section-desc">SEO is the most cost-effective way to get consistent, high-quality traffic to your website.</p>
+                    </div>
+                    <div class="seo-matters-grid">
+                        <div class="seo-matters-card fade-in" data-delay="100">
+                            <div class="seo-matters-num">93%</div>
+                            <p>of online experiences begin with a search engine. If you're not on page one, you're invisible.</p>
+                        </div>
+                        <div class="seo-matters-card fade-in" data-delay="200">
+                            <div class="seo-matters-num">75%</div>
+                            <p>of users never scroll past the first page of search results. Page one is the only page that matters.</p>
+                        </div>
+                        <div class="seo-matters-card fade-in" data-delay="300">
+                            <div class="seo-matters-num">14.6%</div>
+                            <p>is the average close rate for SEO leads — far higher than traditional outbound marketing.</p>
+                        </div>
+                        <div class="seo-matters-card fade-in" data-delay="400">
+                            <div class="seo-matters-num">2x</div>
+                            <p>Higher ROI compared to paid advertising. SEO compounds over time while ad costs keep rising.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: OUR SEO SERVICES -->
+            <section class="seo-services-section" id="seo-services">
+                <div class="container">
+                    <div class="seo-section-header fade-in">
+                        <span class="seo-section-tag">What We Offer</span>
+                        <h2 class="seo-section-title">Comprehensive <span>SEO</span> Services</h2>
+                        <p class="seo-section-desc">Every strategy is tailored to your business goals and target audience.</p>
+                    </div>
+                    <div class="seo-services-grid">
+                        <div class="seo-service-glass fade-in" data-delay="100">
+                            <div class="seo-service-icon"><i class="fas fa-file-alt"></i></div>
+                            <h3>On-Page SEO</h3>
+                            <p>Meta tags, headings, content structure, internal linking, and keyword optimization to make every page search-friendly.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="seo-service-glass fade-in" data-delay="150">
+                            <div class="seo-service-icon"><i class="fas fa-link"></i></div>
+                            <h3>Off-Page SEO</h3>
+                            <p>Authority-building link acquisition, guest posting, digital PR, and social signals that boost domain rating.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="seo-service-glass fade-in" data-delay="200">
+                            <div class="seo-service-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h3>Local SEO</h3>
+                            <p>Google Business Profile optimization, local citations, and location-based targeting for nearby customers.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="seo-service-glass fade-in" data-delay="250">
+                            <div class="seo-service-icon"><i class="fas fa-cogs"></i></div>
+                            <h3>Technical SEO</h3>
+                            <p>Site speed, crawlability, schema markup, XML sitemaps, mobile usability, and Core Web Vitals optimization.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="seo-service-glass fade-in" data-delay="300">
+                            <div class="seo-service-icon"><i class="fas fa-key"></i></div>
+                            <h3>Keyword Research</h3>
+                            <p>Deep keyword analysis to find high-intent, low-competition terms your ideal customers are searching for.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="seo-service-glass fade-in" data-delay="350">
+                            <div class="seo-service-icon"><i class="fas fa-pen-nib"></i></div>
+                            <h3>Content SEO</h3>
+                            <p>SEO-optimized content writing that ranks, engages readers, and drives conversions across your sales funnel.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="seo-service-glass fade-in" data-delay="400">
+                            <div class="seo-service-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3>SEO Audits &amp; Reports</h3>
+                            <p>Comprehensive site audits, competitor analysis, and monthly reporting with actionable improvement plans.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="seo-service-glass fade-in" data-delay="450">
+                            <div class="seo-service-icon"><i class="fas fa-store"></i></div>
+                            <h3>Google Business Setup</h3>
+                            <p>End-to-end GBP creation, verification, optimization, and management to dominate local search and Maps.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="seo-service-glass fade-in" data-delay="500">
+                            <div class="seo-service-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <h3>E-Commerce SEO</h3>
+                            <p>Product page optimization, category structuring, review schema, and WooCommerce/Shopify SEO strategies.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: SEO PROCESS -->
+            <section class="seo-process">
+                <div class="container">
+                    <div class="seo-section-header fade-in">
+                        <span class="seo-section-tag">Our Process</span>
+                        <h2 class="seo-section-title">How We <span>Rank</span> Your Business</h2>
+                        <p class="seo-section-desc">A proven, transparent 5-step process that delivers measurable results.</p>
+                    </div>
+                    <div class="seo-process-grid">
+                        <div class="seo-process-step fade-in" data-delay="100">
+                            <div class="seo-process-num">01</div>
+                            <h4>Audit &amp; Research</h4>
+                            <p>Deep-dive analysis of your website, competitors, and industry keywords.</p>
+                        </div>
+                        <div class="seo-process-step fade-in" data-delay="200">
+                            <div class="seo-process-num">02</div>
+                            <h4>Strategy Development</h4>
+                            <p>Custom roadmap with prioritized actions and timeline projections.</p>
+                        </div>
+                        <div class="seo-process-step fade-in" data-delay="300">
+                            <div class="seo-process-num">03</div>
+                            <h4>On-Site Optimization</h4>
+                            <p>Technical fixes, content optimization, and structural improvements.</p>
+                        </div>
+                        <div class="seo-process-step fade-in" data-delay="400">
+                            <div class="seo-process-num">04</div>
+                            <h4>Off-Site Building</h4>
+                            <p>Quality backlinks, local citations, and authority-building campaigns.</p>
+                        </div>
+                        <div class="seo-process-step fade-in" data-delay="500">
+                            <div class="seo-process-num">05</div>
+                            <h4>Monitor &amp; Improve</h4>
+                            <p>Ongoing tracking, monthly reports, and continuous strategy refinement.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6: INDUSTRIES -->
+            <section class="seo-industries">
+                <div class="container">
+                    <div class="seo-section-header fade-in">
+                        <span class="seo-section-tag">Industries</span>
+                        <h2 class="seo-section-title">Who We <span>Serve</span></h2>
+                        <p class="seo-section-desc">We've helped businesses across diverse industries dominate local and national search.</p>
+                    </div>
+                    <div class="seo-industries-grid">
+                        <div class="seo-industry-item fade-in" data-delay="100">
+                            <i class="fas fa-store"></i>
+                            <span>Retail &amp; E-Commerce</span>
+                        </div>
+                        <div class="seo-industry-item fade-in" data-delay="150">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Healthcare &amp; Clinics</span>
+                        </div>
+                        <div class="seo-industry-item fade-in" data-delay="200">
+                            <i class="fas fa-laptop-house"></i>
+                            <span>Technology &amp; SaaS</span>
+                        </div>
+                        <div class="seo-industry-item fade-in" data-delay="250">
+                            <i class="fas fa-hotel"></i>
+                            <span>Hospitality &amp; Travel</span>
+                        </div>
+                        <div class="seo-industry-item fade-in" data-delay="300">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education &amp; Training</span>
+                        </div>
+                        <div class="seo-industry-item fade-in" data-delay="350">
+                            <i class="fas fa-industry"></i>
+                            <span>Manufacturing &amp; B2B</span>
+                        </div>
+                        <div class="seo-industry-item fade-in" data-delay="400">
+                            <i class="fas fa-building"></i>
+                            <span>Real Estate &amp; Property</span>
+                        </div>
+                        <div class="seo-industry-item fade-in" data-delay="450">
+                            <i class="fas fa-utensils"></i>
+                            <span>Restaurants &amp; Food</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 7: WHY CHOOSE US -->
+            <section class="seo-why">
+                <div class="container">
+                    <div class="seo-section-header fade-in">
+                        <span class="seo-section-tag">Why Choose Us</span>
+                        <h2 class="seo-section-title">What Makes Us <span>Different</span></h2>
+                        <p class="seo-section-desc">We don't just optimize websites — we build sustainable, long-term growth engines.</p>
+                    </div>
+                    <div class="seo-why-grid">
+                        <div class="seo-why-card fade-in" data-delay="100">
+                            <div class="seo-why-icon"><i class="fas fa-medal"></i></div>
+                            <h3>Proven Track Record</h3>
+                            <p>50+ successful campaigns with measurable ranking improvements and real business growth for our clients.</p>
+                        </div>
+                        <div class="seo-why-card fade-in" data-delay="150">
+                            <div class="seo-why-icon"><i class="fas fa-handshake"></i></div>
+                            <h3>White-Hat Only</h3>
+                            <p>We use only ethical, Google-approved techniques. No black-hat tricks, no penalties, no shortcuts.</p>
+                        </div>
+                        <div class="seo-why-card fade-in" data-delay="200">
+                            <div class="seo-why-icon"><i class="fas fa-users"></i></div>
+                            <h3>Dedicated Account Manager</h3>
+                            <p>You get a single point of contact who knows your business and communicates proactively.</p>
+                        </div>
+                        <div class="seo-why-card fade-in" data-delay="250">
+                            <div class="seo-why-icon"><i class="fas fa-chart-simple"></i></div>
+                            <h3>Transparent Reporting</h3>
+                            <p>Detailed monthly reports with keyword rankings, traffic analytics, and clear ROI metrics.</p>
+                        </div>
+                        <div class="seo-why-card fade-in" data-delay="300">
+                            <div class="seo-why-icon"><i class="fas fa-location-dot"></i></div>
+                            <h3>Local Market Expertise</h3>
+                            <p>Based in Sangareddy, we understand the local market and know what works for Telangana businesses.</p>
+                        </div>
+                        <div class="seo-why-card fade-in" data-delay="350">
+                            <div class="seo-why-icon"><i class="fas fa-headset"></i></div>
+                            <h3>24/7 Support</h3>
+                            <p>Round-the-clock support via WhatsApp, phone, and email. We're always available when you need us.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 8: COUNTERS -->
+            <section class="seo-counters" id="seo-counters">
+                <div class="container">
+                    <div class="seo-counters-grid">
+                        <div class="seo-counter-item fade-in" data-delay="100">
+                            <div class="seo-counter-num"><span class="counter" data-target="5">0</span><span class="seo-counter-plus">+</span></div>
+                            <div class="seo-counter-label">Years of Experience</div>
+                        </div>
+                        <div class="seo-counter-item fade-in" data-delay="200">
+                            <div class="seo-counter-num"><span class="counter" data-target="200">0</span><span class="seo-counter-plus">+</span></div>
+                            <div class="seo-counter-label">Projects Completed</div>
+                        </div>
+                        <div class="seo-counter-item fade-in" data-delay="300">
+                            <div class="seo-counter-num"><span class="counter" data-target="50">0</span><span class="seo-counter-plus">+</span></div>
+                            <div class="seo-counter-label">Happy Clients</div>
+                        </div>
+                        <div class="seo-counter-item fade-in" data-delay="400">
+                            <div class="seo-counter-num"><span class="counter" data-target="1">0</span>x</div>
+                            <div class="seo-counter-label">Avg. Traffic Increase</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 9: CASE STUDIES -->
+            <section class="seo-cases">
+                <div class="container">
+                    <div class="seo-section-header fade-in">
+                        <span class="seo-section-tag">Success Stories</span>
+                        <h2 class="seo-section-title">Real Results <span>for Real Clients</span></h2>
+                        <p class="seo-section-desc">See how we've helped businesses like yours achieve measurable growth.</p>
+                    </div>
+                    <div class="seo-cases-grid">
+                        <div class="seo-case-card fade-in" data-delay="100">
+                            <div class="seo-case-thumb">
+                                <span class="seo-case-tag">Local SEO</span>
+                                <i class="fas fa-chart-line"></i>
                             </div>
-                            <p style="color: #636e72; line-height: 1.8; margin-bottom: 20px;">If your business isn't on the first page of Google, you're losing customers to competitors. Search Engine Optimization (SEO) is the key to getting found by people actively searching for your products or services.</p>
-                            <p style="color: #636e72; line-height: 1.8; margin-bottom: 20px;">At Raj Marketing Agency, we implement proven SEO strategies that improve your website's visibility, drive organic traffic, and generate qualified leads. Our approach combines technical expertise, quality content, and ethical white-hat techniques to deliver sustainable long-term results.</p>
-                            <p style="color: #636e72; line-height: 1.8; margin-bottom: 20px;">From local SEO to national campaigns, we optimize your online presence so your ideal customers can find you when it matters most.</p>
-                            <div class="btn-group">
-                                <a href="https://rajagency.in/contact-us/" class="btn btn-primary">Start Ranking Higher <i class="fas fa-arrow-right"></i></a>
-                                <a href="tel:+918121781089" class="btn btn-phone"><i class="fas fa-phone-alt"></i> Call Now</a>
+                            <div class="seo-case-body">
+                                <h3>Sangareddy Dental Clinic</h3>
+                                <p>From page 5 to #1 for "dentist in Sangareddy" — organic appointments up 340% in 4 months.</p>
+                                <span class="seo-case-result"><i class="fas fa-arrow-up"></i> 340% Traffic Increase</span>
                             </div>
                         </div>
-                        <div class="fade-in-right">
-                            <div class="about-image-box" style="min-height: 350px;">
-                                <div class="about-image-content">
-                                    <i class="fas fa-search" style="opacity: 0.15; font-size: 120px; color: #0052cc;"></i>
+                        <div class="seo-case-card fade-in" data-delay="200">
+                            <div class="seo-case-thumb">
+                                <span class="seo-case-tag">E-Commerce SEO</span>
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="seo-case-body">
+                                <h3>Hyderabad Fashion Store</h3>
+                                <p>Organic revenue grew 2.5x in 6 months with on-page optimization and content strategy.</p>
+                                <span class="seo-case-result"><i class="fas fa-arrow-up"></i> 150% Revenue Growth</span>
+                            </div>
+                        </div>
+                        <div class="seo-case-card fade-in" data-delay="300">
+                            <div class="seo-case-thumb">
+                                <span class="seo-case-tag">Technical SEO</span>
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="seo-case-body">
+                                <h3>Telangana Tech Startup</h3>
+                                <p>Core Web Vitals overhaul and technical audit led to 200% organic traffic surge in 8 weeks.</p>
+                                <span class="seo-case-result"><i class="fas fa-arrow-up"></i> 200% Traffic Surge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 10: TESTIMONIALS -->
+            <section class="seo-testimonials">
+                <div class="container">
+                    <div class="seo-section-header fade-in">
+                        <span class="seo-section-tag">Testimonials</span>
+                        <h2 class="seo-section-title">What Our <span>Clients Say</span></h2>
+                        <p class="seo-section-desc">Don't just take our word for it — hear from the businesses we've helped.</p>
+                    </div>
+                    <div class="seo-testi-wrapper" id="testiSlider">
+                        <div class="seo-testi-slider">
+                            <div class="seo-testi-slide">
+                                <div class="seo-testi-card">
+                                    <div class="seo-testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    <p class="seo-testi-text">"Raj Marketing Agency transformed our online presence. We went from barely getting any website traffic to ranking #1 for our main keywords in just 4 months. Highly recommended!"</p>
+                                    <div class="seo-testi-author">
+                                        <div class="seo-testi-avatar">V</div>
+                                        <div>
+                                            <div class="seo-testi-name">Venkat Reddy</div>
+                                            <div class="seo-testi-role">Owner, Sangareddy Dental Clinic</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seo-testi-slide">
+                                <div class="seo-testi-card">
+                                    <div class="seo-testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    <p class="seo-testi-text">"Professional, transparent, and results-driven. Their SEO strategies helped us double our online sales within 6 months. The monthly reports are detailed and easy to understand."</p>
+                                    <div class="seo-testi-author">
+                                        <div class="seo-testi-avatar">P</div>
+                                        <div>
+                                            <div class="seo-testi-name">Priya Sharma</div>
+                                            <div class="seo-testi-role">Founder, Hyderabad Fashion Store</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seo-testi-slide">
+                                <div class="seo-testi-card">
+                                    <div class="seo-testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    <p class="seo-testi-text">"The technical SEO audit was eye-opening. They fixed issues we didn't even know existed. Our site speed improved dramatically and rankings followed quickly. Great team!"</p>
+                                    <div class="seo-testi-author">
+                                        <div class="seo-testi-avatar">R</div>
+                                        <div>
+                                            <div class="seo-testi-name">Ravi Kumar</div>
+                                            <div class="seo-testi-role">CEO, Telangana Tech Solutions</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FEATURES -->
-            <section class="why-choose-section section-padding" style="background: var(--raj-light-gray);">
-                <div class="container">
-                    <div class="section-header text-center fade-in">
-                        <span class="section-subtitle">What We Offer</span>
-                        <h2 class="section-title">Our SEO <span>Services</span></h2>
-                        <p class="section-description">Comprehensive SEO solutions designed to boost your visibility and drive organic traffic.</p>
-                    </div>
-                    <div class="why-choose-grid">
-                        <div class="why-choose-item fade-in" data-delay="100">
-                            <div class="why-choose-icon"><i class="fas fa-file-alt"></i></div>
-                            <h3>On-Page SEO</h3>
-                            <p>Optimization of meta tags, headings, content, URL structure, and internal linking to make your pages search-engine friendly.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="150">
-                            <div class="why-choose-icon"><i class="fas fa-link"></i></div>
-                            <h3>Off-Page SEO</h3>
-                            <p>Quality link building, guest posting, and digital PR strategies to boost your site's authority and domain rating.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="200">
-                            <div class="why-choose-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <h3>Local SEO</h3>
-                            <p>Google Business Profile optimization, local citations, and location-specific strategies to attract nearby customers.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="250">
-                            <div class="why-choose-icon"><i class="fas fa-cogs"></i></div>
-                            <h3>Technical SEO</h3>
-                            <p>Site speed optimization, crawlability fixes, schema markup, XML sitemaps, and mobile usability improvements.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="300">
-                            <div class="why-choose-icon"><i class="fas fa-keyword"></i></div>
-                            <h3>Keyword Research</h3>
-                            <p>In-depth keyword analysis to identify high-value search terms your target audience is using to find businesses like yours.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="350">
-                            <div class="why-choose-icon"><i class="fas fa-pen-nib"></i></div>
-                            <h3>Content Optimization</h3>
-                            <p>SEO-friendly content writing and optimization that engages readers while satisfying search engine algorithms.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="400">
-                            <div class="why-choose-icon"><i class="fas fa-chart-line"></i></div>
-                            <h3>Ranking Reports</h3>
-                            <p>Monthly performance reports with keyword rankings, traffic data, and actionable insights to track your progress.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="450">
-                            <div class="why-choose-icon"><i class="fas fa-store"></i></div>
-                            <h3>Google Business Setup</h3>
-                            <p>Complete setup and optimization of your Google Business Profile to appear in local searches and Google Maps.</p>
+                        <div class="seo-testi-nav" id="testiDots"></div>
+                        <div class="seo-testi-arrows">
+                            <button class="seo-testi-arrow" id="testiPrev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="seo-testi-arrow" id="testiNext"><i class="fas fa-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- BENEFITS -->
-            <section class="work-process-section section-padding">
+            <!-- SECTION 11: FAQ -->
+            <section class="seo-faq">
                 <div class="container">
-                    <div class="section-header text-center fade-in">
-                        <span class="section-subtitle">Why It Matters</span>
-                        <h2 class="section-title">Benefits of <span>SEO</span></h2>
-                        <p class="section-description">SEO is one of the most cost-effective ways to grow your business online.</p>
+                    <div class="seo-section-header fade-in">
+                        <span class="seo-section-tag">FAQ</span>
+                        <h2 class="seo-section-title">Frequently Asked <span>Questions</span></h2>
+                        <p class="seo-section-desc">Everything you need to know about our SEO services.</p>
                     </div>
-                    <div class="process-grid">
-                        <div class="process-step fade-in" data-delay="100">
-                            <div class="process-number"><i class="fas fa-check" style="font-size: 28px;"></i></div>
-                            <h3>Increase Organic Traffic</h3>
-                            <p>Rank higher on search engines and get a steady stream of free, targeted traffic to your website.</p>
+                    <div class="seo-faq-list">
+                        <div class="seo-faq-item open">
+                            <button class="seo-faq-q">How long does it take to see SEO results? <i class="fas fa-plus"></i></button>
+                            <div class="seo-faq-a"><p>Most clients see measurable improvements within 3–6 months. SEO is a long-term strategy — the first month focuses on audit and fixes, months 2–3 on optimization and content, and results compound from month 4 onward. Some quick wins (like technical fixes) can show impact in 4–6 weeks.</p></div>
                         </div>
-                        <div class="process-step fade-in" data-delay="200">
-                            <div class="process-number"><i class="fas fa-check" style="font-size: 28px;"></i></div>
-                            <h3>Build Trust &amp; Credibility</h3>
-                            <p>Websites that appear on the first page of Google are perceived as more trustworthy and authoritative.</p>
+                        <div class="seo-faq-item">
+                            <button class="seo-faq-q">Do you guarantee #1 rankings? <i class="fas fa-plus"></i></button>
+                            <div class="seo-faq-a"><p>No ethical SEO agency can guarantee #1 rankings — Google's algorithm is too dynamic. What we guarantee is our process: data-driven strategy, white-hat techniques, transparent reporting, and continuous optimization. We have a strong track record of getting clients to page one.</p></div>
                         </div>
-                        <div class="process-step fade-in" data-delay="300">
-                            <div class="process-number"><i class="fas fa-check" style="font-size: 28px;"></i></div>
-                            <h3>Cost-Effective Marketing</h3>
-                            <p>Unlike paid ads, SEO delivers long-term results without ongoing ad spend, giving you better ROI over time.</p>
+                        <div class="seo-faq-item">
+                            <button class="seo-faq-q">What's included in a free SEO audit? <i class="fas fa-plus"></i></button>
+                            <div class="seo-faq-a"><p>Our free audit covers: technical health check, on-page analysis, keyword opportunity assessment, competitor benchmarking, and a prioritized action plan with estimated timelines and ROI projections.</p></div>
                         </div>
-                        <div class="process-step fade-in" data-delay="400">
-                            <div class="process-number"><i class="fas fa-check" style="font-size: 28px;"></i></div>
-                            <h3>Target the Right Audience</h3>
-                            <p>Reach people who are actively searching for your products or services with intent to buy.</p>
+                        <div class="seo-faq-item">
+                            <button class="seo-faq-q">How much do SEO services cost? <i class="fas fa-plus"></i></button>
+                            <div class="seo-faq-a"><p>Pricing depends on your business size, competition level, and goals. We offer customized packages starting from competitive rates. Contact us for a personalized quote — we'll design a strategy that fits your budget.</p></div>
                         </div>
-                        <div class="process-step fade-in" data-delay="500">
-                            <div class="process-number"><i class="fas fa-check" style="font-size: 28px;"></i></div>
-                            <h3>Sustainable Growth</h3>
-                            <p>SEO compounds over time. The efforts you invest today continue to pay off for months and years to come.</p>
+                        <div class="seo-faq-item">
+                            <button class="seo-faq-q">Do you work with local businesses only? <i class="fas fa-plus"></i></button>
+                            <div class="seo-faq-a"><p>No, we serve businesses of all sizes across India. While we're based in Sangareddy and specialize in local SEO for Telangana businesses, we also handle national SEO campaigns for e-commerce stores, SaaS companies, and B2B organizations nationwide.</p></div>
+                        </div>
+                        <div class="seo-faq-item">
+                            <button class="seo-faq-q">Will I get regular updates on progress? <i class="fas fa-plus"></i></button>
+                            <div class="seo-faq-a"><p>Absolutely. You'll receive detailed monthly reports covering keyword rankings, organic traffic, backlink profile, technical health, and ROI analysis. Plus, you'll have a dedicated account manager available via WhatsApp for weekly updates and quick questions.</p></div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- CTA SECTION -->
-            <section class="cta-section">
+            <!-- SECTION 12: FREE AUDIT CTA -->
+            <section class="seo-audit" id="seo-audit">
                 <div class="container">
-                    <div class="cta-content fade-in-scale">
-                        <h2>Ready to Rank Higher?</h2>
-                        <p>Let's optimize your website and dominate search results. Contact Raj Marketing Agency for a free SEO consultation.</p>
-                        <div class="btn-group" style="justify-content: center;">
-                            <a href="https://rajagency.in/contact-us/" class="btn btn-primary btn-lg">Start Ranking Higher <i class="fas fa-arrow-right"></i></a>
-                            <a href="https://wa.me/918121781089" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                    <div class="seo-audit-content fade-in-scale">
+                        <h2>Ready to <span>Dominate</span> Google Search?</h2>
+                        <p>Get a free, no-obligation SEO audit and discover exactly how your website can rank higher, attract more traffic, and generate more leads.</p>
+                        <div class="btn-group">
+                            <a href="https://rajagency.in/contact-us/" class="btn btn-primary btn-lg"><i class="fas fa-search"></i> Get Your Free SEO Audit</a>
+                            <a href="https://wa.me/918121781089" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <!-- BACK TO TOP -->
+            <button class="seo-back-top" id="seoBackTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
         </main>
     </div>
@@ -787,7 +1364,7 @@ ul { list-style: none; padding: 0; margin: 0; }
             </div>
         </div>
     </div>
-<!-- FOOTER -->
+    <!-- FOOTER -->
     <footer id="colophon" class="site-footer">
         <div class="footer-wave-shape">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -803,10 +1380,10 @@ ul { list-style: none; padding: 0; margin: 0; }
                     <p class="footer-tagline">Grow Your Business with Result-Driven Digital Marketing. Based in Sangareddy, Telangana, we help businesses increase leads, sales, and online visibility.</p>
                     <div class="footer-social">
                         <a href="https://wa.me/918121781089" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/raj_marketing_agency/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61591476655297" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/channel/UChsp8k5exZJ6NaffGce2MFw" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/raj-marketing-agency-726739417/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-col footer-links">
@@ -823,10 +1400,10 @@ ul { list-style: none; padding: 0; margin: 0; }
                 <div class="footer-col footer-services">
                     <h4 class="footer-heading">Services</h4>
                     <ul class="footer-menu-list">
-                        <li><a href="https://rajagency.in/website-development/">Website Development</a></li>
-                        <li><a href="https://rajagency.in/seo-services/">SEO Services</a></li>
+                        <li><a href="https://rajagency.in/services/">Website Development</a></li>
+                        <li><a href="https://rajagency.in/services/">SEO Services</a></li>
                         <li><a href="https://rajagency.in/services/">Social Media Marketing</a></li>
-                        <li><a href="https://rajagency.in/google-meta-ads/">Google &amp; Meta Ads</a></li>
+                        <li><a href="https://rajagency.in/services/">Google Ads Management</a></li>
                         <li><a href="https://rajagency.in/services/">Lead Generation</a></li>
                         <li><a href="https://rajagency.in/services/">Branding Solutions</a></li>
                     </ul>
@@ -1093,8 +1670,127 @@ ul { list-style: none; padding: 0; margin: 0; }
             var qs = 'name=' + name + '&phone=' + phone + '&service=' + service + '&source=' + source + '&formName=Unlock+Pricing';
             var $btn = $(this).find('button[type="submit"]');
             $btn.text('Submitting...').prop('disabled', true);
-            try{var r=await fetch('https://rajagency.in/api/submit.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:qs});var d=await r.json();window.location.href='https://rajagency.in/thank-you';}catch(err){window.location.href='https://rajagency.in/thank-you';}
+            try{var r=await fetch('https://script.google.com/macros/s/AKfycbwhqYh1ZM4PCp41WoPtypJKPYFe1I5h2LGDAsNe38Fib9GMAUmiwjl3pog3kO8QZttE0Q/exec',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:qs});var d=await r.json();window.location.href='https://rajagency.in/thank-you';}catch(err){window.location.href='https://rajagency.in/thank-you';}
         });
+</script>
+<script>
+// SEO Page - Vanilla JS Interactions
+(function() {
+    'use strict';
+
+    // FAQ Accordion
+    var faqItems = document.querySelectorAll('.seo-faq-item');
+    faqItems.forEach(function(item) {
+        var q = item.querySelector('.seo-faq-q');
+        q.addEventListener('click', function() {
+            var isOpen = item.classList.contains('open');
+            faqItems.forEach(function(i) { i.classList.remove('open'); });
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+
+    // Testimonial Slider
+    var slider = document.querySelector('.seo-testi-slider');
+    var slides = slider ? slider.querySelectorAll('.seo-testi-slide') : [];
+    var dotsContainer = document.getElementById('testiDots');
+    var currentSlide = 0;
+    if (slides.length > 0) {
+        slides.forEach(function(_, i) {
+            var dot = document.createElement('button');
+            dot.className = 'seo-testi-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            dot.addEventListener('click', function() { goToSlide(i); });
+            dotsContainer.appendChild(dot);
+        });
+        var dots = dotsContainer.querySelectorAll('.seo-testi-dot');
+        document.getElementById('testiNext').addEventListener('click', function() {
+            goToSlide((currentSlide + 1) % slides.length);
+        });
+        document.getElementById('testiPrev').addEventListener('click', function() {
+            goToSlide((currentSlide - 1 + slides.length) % slides.length);
+        });
+        var autoSlide = setInterval(function() {
+            goToSlide((currentSlide + 1) % slides.length);
+        }, 5000);
+    }
+    function goToSlide(index) {
+        if (!slider) return;
+        currentSlide = index;
+        slider.style.transform = 'translateX(-' + (index * 100) + '%)';
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === index); });
+    }
+
+    // Counter Animation
+    function animateCounter(el) {
+        var target = parseInt(el.getAttribute('data-target'));
+        if (isNaN(target) || target === 0) { el.textContent = target; return; }
+        var current = 0;
+        var increment = Math.max(1, Math.ceil(target / 60));
+        var timer = setInterval(function() {
+            current += increment;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = current.toLocaleString();
+        }, 25);
+    }
+    var counterObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var counters = entry.target.querySelectorAll('.counter');
+                counters.forEach(function(c) { animateCounter(c); });
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    var counterSection = document.getElementById('seo-counters');
+    if (counterSection) counterObserver.observe(counterSection);
+
+    // Scroll fade-in animations for seo-page
+    var seoFadeElements = document.querySelectorAll('.seo-page .fade-in, .seo-hero-left .word, .fade-in-scale');
+    if (seoFadeElements.length > 0) {
+        var seoObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    seoObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        seoFadeElements.forEach(function(el) { seoObserver.observe(el); });
+    }
+
+    // Back to top
+    var backTop = document.getElementById('seoBackTop');
+    if (backTop) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) { backTop.classList.add('visible'); }
+            else { backTop.classList.remove('visible'); }
+        });
+        backTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // SEO Hero Form Submission
+    var heroForm = document.getElementById('seoHeroForm');
+    if (heroForm) {
+        heroForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            var btn = heroForm.querySelector('.submit-btn');
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+            var formData = new FormData(heroForm);
+            formData.append('formName', 'SEO Hero Quote');
+            try {
+                var r = await fetch('/api/submit.php', { method: 'POST', body: formData });
+                var d = await r.json();
+                if (d.redirect) { window.location.href = d.redirect; }
+                else { window.location.href = 'https://rajagency.in/thank-you'; }
+            } catch(err) {
+                window.location.href = 'https://rajagency.in/thank-you';
+            }
+        });
+    }
+})();
 </script>
 </body>
 </html>
