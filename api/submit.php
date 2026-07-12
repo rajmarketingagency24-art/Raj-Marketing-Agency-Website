@@ -55,4 +55,14 @@ $stmt->execute([
     ':source' => $source,
 ]);
 
+$recipient = 'srikanth.raj18@gmail.com';
+$subject = 'New website lead: ' . $formName;
+$body = "Form: $formName\nName: $name\nPhone: $phone\nEmail: $email\nService: $service\nBudget: $budget\nSource: $source\n\nMessage:\n$message";
+$headers = "From: Raj Marketing Agency <noreply@rajagency.in>\r\n";
+if ($email !== '') {
+    $headers .= "Reply-To: $email\r\n";
+}
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+mail($recipient, $subject, $body, $headers);
+
 echo json_encode(['success' => true, 'redirect' => 'https://rajagency.in/thank-you']);

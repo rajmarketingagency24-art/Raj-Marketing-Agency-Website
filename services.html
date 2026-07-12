@@ -1221,14 +1221,11 @@ ul { list-style: none; padding: 0; margin: 0; }
         
         $('#unlockForm').on('submit', async function(e) {
             e.preventDefault();
-            var name = encodeURIComponent($('#unlock-name').val().trim());
-            var phone = encodeURIComponent($('#unlock-phone').val().trim());
-            var service = encodeURIComponent($('#unlock-service').val().trim());
-            var source = encodeURIComponent($('#unlockForm input[name="source"]').val());
-            var qs = 'name=' + name + '&phone=' + phone + '&service=' + service + '&source=' + source + '&formName=Unlock+Pricing';
             var $btn = $(this).find('button[type="submit"]');
             $btn.text('Submitting...').prop('disabled', true);
-            try{var r=await fetch('https://rajagency.in/api/submit.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:qs});var d=await r.json();window.location.href='https://rajagency.in/thank-you';}catch(err){window.location.href='https://rajagency.in/thank-you';}
+            var formData = new FormData(this);
+            formData.append('formName', 'Unlock Pricing');
+            try{var r=await fetch('/api/submit.php',{method:'POST',body:formData});var d=await r.json();window.location.href=d.redirect||'https://rajagency.in/thank-you';}catch(err){window.location.href='https://rajagency.in/thank-you';}
         });
 </script>
 </body>

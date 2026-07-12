@@ -961,14 +961,9 @@ var form=this;
 var btn=form.querySelector('.submit-btn');
 btn.textContent='Sending...';
 btn.disabled=true;
-var name=encodeURIComponent(nameVal);
-var phone=encodeURIComponent(phoneVal);
-var email=encodeURIComponent(emailVal);
-var budget=encodeURIComponent(document.getElementById('budget').value);
-var message=encodeURIComponent(document.getElementById('message').value.trim());
-var source=encodeURIComponent(document.getElementById('source').value);
-var qs='name='+name+'&phone='+phone+'&email='+email+'&budget='+budget+'&message='+message+'&source='+source+'&formName=Contact';
-try{var r=await fetch('https://rajagency.in/api/submit.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:qs});var d=await r.json();window.location.href='https://rajagency.in/thank-you';}catch(err){window.location.href='https://rajagency.in/thank-you';}
+ var formData=new FormData(form);
+ formData.append('formName','Contact');
+ try{var r=await fetch('/api/submit.php',{method:'POST',body:formData});var d=await r.json();window.location.href=d.redirect||'https://rajagency.in/thank-you';}catch(err){window.location.href='https://rajagency.in/thank-you';}
 });
 </script>
 </body>
