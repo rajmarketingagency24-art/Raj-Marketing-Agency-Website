@@ -1,0 +1,147 @@
+/* Responsive safeguards shared by every standalone page. */
+html, body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+img, video, iframe, canvas, svg {
+    max-width: 100%;
+}
+
+img, video {
+    height: auto;
+}
+
+.container {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .header-main {
+        padding: 12px 0;
+    }
+
+    .header-main-inner {
+        gap: 12px;
+    }
+
+    .site-logo {
+        max-width: min(180px, 55vw);
+    }
+
+    .main-navigation {
+        flex: 0 0 auto;
+        min-width: 0;
+    }
+
+    .menu-toggle {
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 44px;
+        min-width: 44px;
+        min-height: 44px;
+        margin: 0;
+    }
+
+    .main-navigation.active .menu {
+        max-height: calc(100dvh - 68px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mobile-menu-overlay.active ~ .floating-cta {
+        pointer-events: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .section-padding {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .section-header {
+        margin-bottom: 36px;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+
+    .footer-bottom-links,
+    .header-contact-info,
+    .header-social {
+        flex-wrap: wrap;
+    }
+
+    .sticky-mobile-cta {
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    }
+
+    body:has(.sticky-mobile-cta) .floating-cta {
+        bottom: calc(85px + env(safe-area-inset-bottom));
+    }
+}
+
+@media (max-width: 575px) {
+    .site-logo {
+        max-width: min(150px, 52vw);
+        height: auto;
+        max-height: 48px;
+    }
+
+    .section-subtitle {
+        letter-spacing: 2px;
+    }
+
+    .section-title,
+    .cta-content h2,
+    .page-hero-simple .hero-center h1 {
+        overflow-wrap: anywhere;
+    }
+
+    .btn-group .btn {
+        justify-content: center;
+    }
+
+    .floating-cta {
+        right: max(12px, env(safe-area-inset-right));
+        bottom: max(12px, env(safe-area-inset-bottom));
+        gap: 8px;
+    }
+
+    .float-whatsapp,
+    .float-call {
+        width: 50px;
+        height: 50px;
+    }
+
+    .float-whatsapp i,
+    .float-call i {
+        font-size: 23px;
+    }
+
+    .pricing-popup-overlay {
+        padding: 12px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .pricing-popup {
+        width: 100%;
+        max-height: calc(100dvh - 24px);
+        margin: 12px 0;
+    }
+
+    .seo-back-top {
+        right: 74px;
+        bottom: max(14px, env(safe-area-inset-bottom));
+    }
+}

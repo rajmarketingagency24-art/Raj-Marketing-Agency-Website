@@ -490,17 +490,30 @@ ul { list-style: none; padding: 0; margin: 0; }
 .pricing-badge { display: inline-block; padding: 6px 24px; background: #11151F; color: #fff; font-size: 14px; font-weight: 700; border-radius: 50px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.12); }
 .pricing-amount { font-size: 48px; font-weight: 800; color: var(--raj-dark); line-height: 1; margin-bottom: 4px; font-family: 'Inter', sans-serif; }
 .pricing-amount .currency { font-size: 28px; vertical-align: super; margin-right: 2px; }
+.pricing-amount-locked { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 20px; color: var(--raj-gray); min-height: 48px; }
+.pricing-amount-locked i { color: var(--raj-accent); }
 .pricing-period { font-size: 14px; color: var(--raj-gray); margin-bottom: 30px; }
 .pricing-features { list-style: none; padding: 0; margin: 0 0 30px; text-align: left; }
 .pricing-features li { padding: 10px 0 10px 28px; position: relative; font-size: 15px; color: var(--raj-dark); border-bottom: 1px solid #f0f0f0; line-height: 1.5; }
 .pricing-features li:last-child { border-bottom: none; }
 .pricing-features li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; top: 10px; color: var(--raj-blue); font-size: 14px; }
 .pricing-card .btn-primary { box-shadow: none; }
+.pricing-unlock-btn { width: 100%; justify-content: center; }
+.package-unlock-popup { display: none; position: fixed; inset: 0; z-index: 9999; align-items: center; justify-content: center; padding: 20px; background: rgba(15, 23, 42, 0.65); }
+.package-unlock-popup.active { display: flex; }
+.package-unlock-dialog { position: relative; width: min(100%, 440px); padding: 36px; background: #fff; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+.package-unlock-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--raj-light-gray); color: var(--raj-gray); cursor: pointer; font-size: 20px; }
+.package-unlock-dialog h3 { margin-bottom: 8px; font-size: 26px; color: var(--raj-dark); }
+.package-unlock-dialog p { margin-bottom: 20px; color: var(--raj-gray); }
+.package-unlock-dialog .form-group { margin-bottom: 14px; }
+.package-unlock-dialog input { width: 100%; padding: 13px 16px; border: 1px solid #dbe3ee; border-radius: 10px; font: inherit; }
+.package-unlock-dialog input:focus { outline: none; border-color: var(--raj-accent); box-shadow: 0 0 0 3px rgba(235,89,95,0.12); }
 @media (max-width: 991px) {
     .pricing-grid { grid-template-columns: 1fr; gap: 24px; }
     .pricing-featured { transform: none; }
     .pricing-featured:hover { transform: translateY(-8px); }
 }
+@media (max-width: 575px) { .package-unlock-dialog { padding: 32px 20px 24px; } }
 
 .service-card-cta { display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--raj-accent); text-decoration: none; transition: var(--raj-transition); }
 .service-card-cta:hover { color: #c2410c; gap: 6px; }
@@ -575,6 +588,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .pricing-popup .hero-form-wrapper { padding: 0; }
 .pricing-popup .hero-form-title { font-size: 24px; }
 </style>
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 <div id="page" class="site">
@@ -813,9 +827,9 @@ ul { list-style: none; padding: 0; margin: 0; }
                         <p class="section-description">Flexible pricing packages designed to meet your business needs and budget.</p>
                     </div>
                     <div class="pricing-grid">
-                        <div class="pricing-card animate animate-delay-1 show">
+                        <div class="pricing-card animate animate-delay-1 show" data-package="Starter" data-price="25,000">
                             <div class="pricing-badge">Starter</div>
-                            <div class="pricing-amount"><span class="currency">₹</span>25,000</div>
+                            <div class="pricing-amount pricing-amount-locked"><i class="fas fa-lock"></i> Price Locked</div>
                             <div class="pricing-period">per month</div>
                             <ul class="pricing-features">
                                 <li>Website Maintenance</li>
@@ -826,11 +840,11 @@ ul { list-style: none; padding: 0; margin: 0; }
                                 <li>Google Ads Management*</li>
                                 <li>Google Business Setup</li>
                             </ul>
-                            <a href="https://rajagency.in/contact-us/" class="btn btn-primary" style="width:100%;justify-content:center">Get Started Today</a>
+                            <button type="button" class="btn btn-primary pricing-unlock-btn">Unlock Price <i class="fas fa-lock"></i></button>
                         </div>
-                        <div class="pricing-card pricing-featured animate animate-delay-2 show">
+                        <div class="pricing-card pricing-featured animate animate-delay-2 show" data-package="Growth" data-price="45,000">
                             <div class="pricing-badge">Growth</div>
-                            <div class="pricing-amount"><span class="currency">₹</span>45,000</div>
+                            <div class="pricing-amount pricing-amount-locked"><i class="fas fa-lock"></i> Price Locked</div>
                             <div class="pricing-period">per month</div>
                             <ul class="pricing-features">
                                 <li>Starter Package Included</li>
@@ -841,11 +855,11 @@ ul { list-style: none; padding: 0; margin: 0; }
                                 <li>8 Reels + Creatives</li>
                                 <li>Priority Support</li>
                             </ul>
-                            <a href="https://rajagency.in/contact-us/" class="btn btn-primary" style="width:100%;justify-content:center">Get Started Today</a>
+                            <button type="button" class="btn btn-primary pricing-unlock-btn">Unlock Price <i class="fas fa-lock"></i></button>
                         </div>
-                        <div class="pricing-card animate animate-delay-3 show">
+                        <div class="pricing-card animate animate-delay-3 show" data-package="Ultimate" data-price="75,000">
                             <div class="pricing-badge">Ultimate</div>
-                            <div class="pricing-amount"><span class="currency">₹</span>75,000</div>
+                            <div class="pricing-amount pricing-amount-locked"><i class="fas fa-lock"></i> Price Locked</div>
                             <div class="pricing-period">per month</div>
                             <ul class="pricing-features">
                                 <li>Free Drone Shoot (OR) Free Brochure Design</li>
@@ -858,12 +872,28 @@ ul { list-style: none; padding: 0; margin: 0; }
                                 <li>Festival &amp; Offer Designs</li>
                                 <li>Dedicated Account Manager</li>
                             </ul>
-                            <a href="https://rajagency.in/contact-us/" class="btn btn-primary" style="width:100%;justify-content:center">Get Started Today</a>
+                            <button type="button" class="btn btn-primary pricing-unlock-btn">Unlock Price <i class="fas fa-lock"></i></button>
                         </div>
                     </div>
                     <p style="text-align:center;font-size:13px;color:#94a3b8;margin-top:24px;max-width:600px;margin-left:auto;margin-right:auto;">* Prices are indicative and may vary based on client requirements. Ad spend is charged separately.</p>
                 </div>
             </section>
+
+            <div class="package-unlock-popup" id="servicePackageUnlockPopup" aria-hidden="true">
+                <div class="package-unlock-dialog" role="dialog" aria-modal="true" aria-labelledby="servicePackageUnlockTitle">
+                    <button type="button" class="package-unlock-close" aria-label="Close">&times;</button>
+                    <h3 id="servicePackageUnlockTitle">Unlock Package Price</h3>
+                    <p>Share your details to reveal the selected package price.</p>
+                    <form id="servicePackageUnlockForm">
+                        <input type="hidden" name="service" id="servicePackageUnlockService">
+                        <input type="hidden" name="source" value="Services Package Pricing">
+                        <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+                        <div class="form-group"><input type="tel" name="phone" placeholder="Phone Number" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required></div>
+                        <div class="form-group"><input type="email" name="email" placeholder="Email Address"></div>
+                        <button type="submit" class="btn btn-primary pricing-unlock-btn">Submit &amp; Reveal Price</button>
+                    </form>
+                </div>
+            </div>
 
             <!-- CTA SECTION -->
             <section class="cta-section">
@@ -938,10 +968,10 @@ ul { list-style: none; padding: 0; margin: 0; }
                     <p class="footer-tagline">Grow Your Business with Result-Driven Digital Marketing. Based in Sangareddy, Telangana, we help businesses increase leads, sales, and online visibility.</p>
                     <div class="footer-social">
                         <a href="https://wa.me/918121781089" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/raj_marketing_agency/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61591476655297" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/channel/UChsp8k5exZJ6NaffGce2MFw" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/raj-marketing-agency-726739417/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-col footer-links">
@@ -1227,6 +1257,43 @@ ul { list-style: none; padding: 0; margin: 0; }
             formData.append('formName', 'Unlock Pricing');
             try{var r=await fetch('/api/submit.php',{method:'POST',body:formData});var d=await r.json();window.location.href=d.redirect||'https://rajagency.in/thank-you';}catch(err){window.location.href='https://rajagency.in/thank-you';}
         });
+
+        (function(){
+            var popup=document.getElementById('servicePackageUnlockPopup');
+            var form=document.getElementById('servicePackageUnlockForm');
+            var service=document.getElementById('servicePackageUnlockService');
+            var activeCard=null;
+            var close=function(){popup.classList.remove('active');popup.setAttribute('aria-hidden','true');};
+            document.querySelectorAll('.pricing-card .pricing-unlock-btn').forEach(function(button){
+                button.addEventListener('click',function(){
+                    activeCard=this.closest('.pricing-card');
+                    service.value=activeCard.dataset.package;
+                    popup.classList.add('active');
+                    popup.setAttribute('aria-hidden','false');
+                });
+            });
+            popup.querySelector('.package-unlock-close').addEventListener('click',close);
+            popup.addEventListener('click',function(e){if(e.target===popup){close();}});
+            form.addEventListener('submit',async function(e){
+                e.preventDefault();
+                var button=form.querySelector('button[type="submit"]');
+                button.textContent='Submitting...';button.disabled=true;
+                var data=new FormData(form);data.append('formName','Services Package Unlock');
+                try {
+                    var response=await fetch('/api/submit.php',{method:'POST',body:data});
+                    var result=await response.json();
+                    if(!response.ok||!result.success){throw new Error(result.message||'Submission failed');}
+                    activeCard.querySelector('.pricing-amount').innerHTML='<span class="currency">₹</span>'+activeCard.dataset.price;
+                    activeCard.querySelector('.pricing-amount').classList.remove('pricing-amount-locked');
+                    activeCard.querySelector('.pricing-unlock-btn').remove();
+                    form.reset();close();
+                } catch(error) {
+                    alert('Unable to submit your details. Please try again.');
+                } finally {
+                    button.textContent='Submit & Reveal Price';button.disabled=false;
+                }
+            });
+        })();
 </script>
 </body>
 </html>
