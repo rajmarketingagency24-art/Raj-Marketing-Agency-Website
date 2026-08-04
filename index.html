@@ -574,6 +574,31 @@ ul { list-style: none; padding: 0; margin: 0; }
     .msme-number { font-size: 12px; letter-spacing: 0; }
 }
 
+.projects-section { background: var(--raj-light-gray); }
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; justify-items: center; }
+@media (max-width: 767px) { .project-grid { grid-template-columns: 1fr; } }
+.project-card { background: var(--raj-white); border-radius: var(--raj-radius); overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: var(--raj-transition); width: 100%; max-width: 440px; }
+.project-card:hover { transform: translateY(-8px); box-shadow: var(--raj-shadow-hover); }
+.project-screens { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--raj-blue-light); }
+.project-slider { display: flex; height: 100%; transition: transform 0.5s ease; }
+.project-slide { flex: 0 0 100%; height: 100%; }
+.project-slide a { display: block; width: 100%; height: 100%; cursor: zoom-in; }
+.project-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.project-slider-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border: none; border-radius: 50%; background: rgba(255,255,255,0.92); color: var(--raj-dark); cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.18); z-index: 2; transition: var(--raj-transition); }
+.project-slider-nav:hover { background: var(--raj-accent); color: var(--raj-white); }
+.project-slider-prev { left: 10px; }
+.project-slider-next { right: 10px; }
+.project-slider-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 2; }
+.project-slider-dots button { width: 8px; height: 8px; border: none; border-radius: 50%; background: rgba(255,255,255,0.6); cursor: pointer; padding: 0; transition: var(--raj-transition); }
+.project-slider-dots button.active { width: 20px; border-radius: 4px; background: var(--raj-white); }
+.project-body { padding: 24px; text-align: center; }
+.project-body h3 { font-size: 20px; font-weight: 800; color: var(--raj-dark); margin-bottom: 6px; }
+.project-industry { font-size: 12px; font-weight: 600; color: var(--raj-accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.project-services { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 16px; }
+.project-tag { background: var(--raj-light-gray); color: var(--raj-dark); font-size: 12px; font-weight: 600; padding: 5px 14px; border-radius: 50px; }
+.project-client { font-size: 14px; color: var(--raj-gray); margin-bottom: 18px; }
+.project-client strong { color: var(--raj-dark); }
+.project-body .btn { padding: 11px 26px; font-size: 14px; box-shadow: none; }
 </style>
     <style>
         .industry-item:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-color: var(--raj-accent) !important; }
@@ -829,6 +854,58 @@ ul { list-style: none; padding: 0; margin: 0; }
                             <h3>Brochure Design</h3>
                             <p>Creative marketing materials and business brochures.</p>
                         <a href="https://rajagency.in/services/" class="service-card-cta">Design Your Brochure →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RECENT PROJECTS SECTION -->
+            <section class="projects-section section-padding" id="recent-projects">
+                <div class="container">
+                    <div class="section-header text-center fade-in">
+                        <span class="section-subtitle">Our Portfolio</span>
+                        <h2 class="section-title">Our Recent <span>Website Projects</span></h2>
+                        <p class="section-description">Websites we've designed to help businesses build credibility, generate leads, and grow online.</p>
+                    </div>
+                    <div class="project-grid stagger-container">
+                        <div class="project-card stagger-item">
+                            <div class="project-screens">
+                                <a href="https://rajagency.in/wp-content/uploads/2026/08/RMA-Portfolio.png" target="_blank" rel="noopener"><img src="https://rajagency.in/wp-content/uploads/2026/08/RMA-Portfolio.png" alt="Raj Marketing Agency Website Screenshot" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
+                            </div>
+                            <div class="project-body">
+                                <h3>Raj Marketing Agency</h3>
+                                <div class="project-industry">Digital Marketing / Performance Marketing</div>
+                                <div class="project-services">
+                                    <span class="project-tag">Website</span>
+                                    <span class="project-tag">SEO</span>
+                                    <span class="project-tag">Branding</span>
+                                    <span class="project-tag">Leads</span>
+                                </div>
+                                <div class="project-client">In-House Project</div>
+                                <a href="https://rajgency.in" target="_blank" rel="noopener" class="btn btn-primary">View Website <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card stagger-item">
+                            <div class="project-screens">
+                                <div class="project-slider">
+                                    <div class="project-slide"><a href="https://rajagency.in/wp-content/uploads/2026/08/Printlio-.png" target="_blank" rel="noopener"><img src="https://rajagency.in/wp-content/uploads/2026/08/Printlio-.png" alt="Printlio Website Screenshot"></a></div>
+                                    <div class="project-slide"><a href="https://rajagency.in/wp-content/uploads/2026/08/Printlio-SEO.png" target="_blank" rel="noopener"><img src="https://rajagency.in/wp-content/uploads/2026/08/Printlio-SEO.png" alt="Printlio SEO Screenshot"></a></div>
+                                </div>
+                                <button type="button" class="project-slider-nav project-slider-prev" aria-label="Previous screenshot"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="project-slider-nav project-slider-next" aria-label="Next screenshot"><i class="fas fa-chevron-right"></i></button>
+                                <div class="project-slider-dots"></div>
+                            </div>
+                            <div class="project-body">
+                                <h3>Printlio</h3>
+                                <div class="project-industry">E-commerce / Online Printing &amp; Personalized Gifts</div>
+                                <div class="project-services">
+                                    <span class="project-tag">Website</span>
+                                    <span class="project-tag">SEO</span>
+                                    <span class="project-tag">Branding</span>
+                                </div>
+                                <div class="project-client">Client: <strong>K.Ramana Garu</strong></div>
+                                <a href="https://printlio.in" target="_blank" rel="noopener" class="btn btn-primary">View Website <i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1293,6 +1370,37 @@ form.addEventListener('submit',async function(e){
         button.textContent='Submit & Reveal Price';button.disabled=false;
     }
 });
+})();
+</script>
+
+<script>
+(function() {
+    function initProjectSlider(card) {
+        var slider = card.querySelector('.project-slider');
+        var slides = slider ? slider.querySelectorAll('.project-slide') : [];
+        var dotsWrap = card.querySelector('.project-slider-dots');
+        var prev = card.querySelector('.project-slider-prev');
+        var next = card.querySelector('.project-slider-next');
+        var current = 0;
+        var dots = [];
+        if (!slider || slides.length <= 1) return;
+        slides.forEach(function(_, i) {
+            var d = document.createElement('button');
+            d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            if (i === 0) d.classList.add('active');
+            d.addEventListener('click', function() { goTo(i); });
+            dotsWrap.appendChild(d);
+            dots.push(d);
+        });
+        function goTo(i) {
+            current = i;
+            slider.style.transform = 'translateX(-' + (i * 100) + '%)';
+            dots.forEach(function(d, j) { d.classList.toggle('active', j === i); });
+        }
+        prev.addEventListener('click', function() { goTo((current - 1 + slides.length) % slides.length); });
+        next.addEventListener('click', function() { goTo((current + 1) % slides.length); });
+    }
+    document.querySelectorAll('.project-card').forEach(initProjectSlider);
 })();
 </script>
 </body>
