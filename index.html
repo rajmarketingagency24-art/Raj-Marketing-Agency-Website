@@ -602,6 +602,37 @@ ul { list-style: none; padding: 0; margin: 0; }
 </style>
     <style>
         .industry-item:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-color: var(--raj-accent) !important; }
+
+/*===== PROOF / RESULTS SECTION =====*/
+.proof-section { background: #2F3C50; color: #fff; text-align: center; }
+.proof-section .section-subtitle { color: rgba(255,255,255,.75); }
+.proof-section .section-subtitle::after { background: var(--raj-accent); }
+.proof-section .section-title { color: #fff; }
+.proof-section .section-title span { color: var(--raj-accent); }
+.proof-section .section-description { color: rgba(255,255,255,.8); margin: 0 auto; }
+.proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-top: 48px; }
+.proof-item .proof-number { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; margin-bottom: 4px; }
+.proof-item .proof-label { font-size: .95rem; color: rgba(255,255,255,.8); }
+.proof-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+.proof-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,.08); text-align: left; }
+.proof-card img { width: 100%; height: auto; display: block; }
+.proof-card figcaption { padding: 14px 16px; font-size: .85rem; color: #475569; background: #f8fafc; border-top: 1px solid #e2e8f0; }
+
+/* Scroll-in animation */
+.proof-animate { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+.proof-animate.show { opacity: 1; transform: translateY(0); }
+.proof-animate-delay-1 { transition-delay: .1s; }
+.proof-animate-delay-2 { transition-delay: .2s; }
+.proof-animate-delay-3 { transition-delay: .3s; }
+.proof-animate-delay-4 { transition-delay: .4s; }
+
+@media (max-width: 992px) {
+    .proof-grid { grid-template-columns: 1fr 1fr; }
+    .proof-gallery { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+    .proof-grid { grid-template-columns: 1fr; }
+}
     </style>
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
@@ -1069,6 +1100,45 @@ ul { list-style: none; padding: 0; margin: 0; }
                 </div>
             </section>
 
+            <!-- PROOF / RESULTS -->
+            <section class="proof-section section-padding" id="proof">
+                <div class="container">
+                    <div class="section-header text-center proof-animate">
+                        <span class="section-subtitle">Proof, Not Promises</span>
+                        <h2 class="section-title">Numbers Our <span>Clients</span> Can Rely On</h2>
+                        <p class="section-description">A snapshot of the standard we hold ourselves to on every engagement.</p>
+                    </div>
+                    <div class="proof-grid">
+                        <div class="proof-item proof-animate proof-animate-delay-1">
+                            <div class="proof-number"><span class="proof-counter" data-target="120">0</span>+</div>
+                            <div class="proof-label">Campaigns Managed</div>
+                        </div>
+                        <div class="proof-item proof-animate proof-animate-delay-2">
+                            <div class="proof-number"><span class="proof-counter" data-target="98">0</span>%</div>
+                            <div class="proof-label">Client Retention</div>
+                        </div>
+                        <div class="proof-item proof-animate proof-animate-delay-3">
+                            <div class="proof-number"><span class="proof-counter" data-target="24">0</span>h</div>
+                            <div class="proof-label">Avg. Response Time</div>
+                        </div>
+                        <div class="proof-item proof-animate proof-animate-delay-4">
+                            <div class="proof-number"><span class="proof-counter" data-target="4.9">0</span>★</div>
+                            <div class="proof-label">Average Client Rating</div>
+                        </div>
+                    </div>
+                    <div class="proof-gallery proof-animate proof-animate-delay-1">
+                        <figure class="proof-card">
+                            <img src="https://rajagency.in/wp-content/uploads/2026/05/search-console1-1536x698.jpeg" alt="Organic search performance growth chart" loading="lazy">
+                            <figcaption>Organic traffic growth across a six-month SEO engagement.</figcaption>
+                        </figure>
+                        <figure class="proof-card">
+                            <img src="https://rajagency.in/wp-content/uploads/2026/05/image1.jpg" alt="Paid campaign dashboard with lead metrics" loading="lazy">
+                            <figcaption>Google Analytics &amp; Performance Tracking</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
             <!-- MAP SECTION -->
             <section class="contact-map-section section-padding">
                 <div class="container">
@@ -1401,6 +1471,51 @@ form.addEventListener('submit',async function(e){
         next.addEventListener('click', function() { goTo((current + 1) % slides.length); });
     }
     document.querySelectorAll('.project-card').forEach(initProjectSlider);
+})();
+</script>
+<script>
+(function() {
+    var section = document.getElementById('proof');
+    if (!section) return;
+    var animateEls = section.querySelectorAll('.proof-animate');
+    var counters = section.querySelectorAll('.proof-counter');
+    var counted = false;
+    function checkAnimations() {
+        animateEls.forEach(function(el) {
+            if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+                el.classList.add('show');
+            }
+        });
+    }
+    function countUp() {
+        counters.forEach(function(c) {
+            var target = parseFloat(c.getAttribute('data-target'));
+            var isDecimal = target % 1 !== 0;
+            var current = 0;
+            var increment = isDecimal ? target / 60 : Math.ceil(target / 60);
+            var timer = setInterval(function() {
+                current += increment;
+                if (current >= target) {
+                    c.textContent = isDecimal ? target.toFixed(1) : target;
+                    clearInterval(timer);
+                } else {
+                    c.textContent = isDecimal ? current.toFixed(1) : current;
+                }
+            }, 25);
+        });
+    }
+    function checkCounters() {
+        if (counted) return;
+        if (section.getBoundingClientRect().top < window.innerHeight - 100) {
+            counted = true;
+            countUp();
+        }
+    }
+    window.addEventListener('scroll', checkAnimations, { passive: true });
+    window.addEventListener('scroll', checkCounters, { passive: true });
+    window.addEventListener('load', function() { checkAnimations(); checkCounters(); });
+    checkAnimations();
+    checkCounters();
 })();
 </script>
 </body>
