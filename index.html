@@ -634,6 +634,66 @@ ul { list-style: none; padding: 0; margin: 0; }
     .proof-grid { grid-template-columns: 1fr; }
 }
     </style>
+    <style>
+        /*=============================================
+           COMPARISON TABLE - WHY OUR APPROACH IS DIFFERENT
+           =============================================*/
+        .comparison-section { background: var(--raj-white); }
+        .comparison-table-wrap { margin-top: 40px; }
+        .comparison-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; background: var(--raj-white); border: 1px solid var(--raj-blue-light); border-radius: 16px; box-shadow: 0 10px 40px rgba(30, 41, 59, 0.08); }
+        .comparison-scroll:focus-visible { outline: 3px solid var(--raj-accent); outline-offset: 2px; }
+        .comparison-table { width: 100%; min-width: 690px; border-collapse: separate; border-spacing: 0; font-family: var(--raj-font); text-align: center; }
+        .comparison-table thead th { padding: 18px 14px; font-size: 15px; font-weight: 700; color: var(--raj-dark); border-bottom: 1px solid var(--raj-blue-light); }
+        .comparison-table thead .comparison-col-ours { background: var(--raj-blue-gradient); color: var(--raj-white); }
+        .comparison-col-ours-name { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; }
+        .comparison-col-ours-name::after { content: ''; width: 26px; height: 3px; background: var(--raj-accent); border-radius: 2px; }
+        .comparison-table thead .comparison-feature-header { text-align: left; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--raj-gray); background: var(--raj-light-gray); }
+        .comparison-table td, .comparison-table tbody th { padding: 17px 14px; border-bottom: 1px solid #eef2f7; background: var(--raj-white); }
+        .comparison-table tbody tr:last-child td, .comparison-table tbody tr:last-child th { border-bottom: none; }
+        .comparison-table td.comparison-col { min-width: 165px; }
+        .comparison-table td.comparison-col-ours { background: #f3f6fb; box-shadow: inset 1px 0 0 var(--raj-blue-light), inset -1px 0 0 var(--raj-blue-light); }
+        .comparison-table .comparison-feature { text-align: left; font-size: 14px; font-weight: 500; color: var(--raj-dark); min-width: 195px; }
+        .comparison-table .comparison-feature, .comparison-table .comparison-feature-header { position: sticky; left: 0; z-index: 2; }
+        .comparison-table .comparison-feature { background: var(--raj-white); box-shadow: inset -1px 0 0 var(--raj-blue-light); }
+        .comparison-table .comparison-feature-header { z-index: 3; }
+
+        .cmp-mark { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; font-size: 13px; font-weight: 800; line-height: 1; vertical-align: middle; }
+        .cmp-mark-yes { background: #dcfce7; color: #15803d; }
+        .cmp-mark-no { background: #fee2e2; color: #b91c1c; }
+
+        .comparison-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; margin-top: 18px; font-size: 13px; color: var(--raj-gray); }
+        .comparison-legend-item { display: inline-flex; align-items: center; gap: 8px; }
+        .comparison-legend-item .cmp-mark { width: 22px; height: 22px; font-size: 11px; flex-shrink: 0; }
+
+        .comparison-cta { margin-top: 44px; padding: 54px 28px; text-align: center; background: var(--raj-light-gray); border: 1px solid var(--raj-blue-light); border-radius: 20px; }
+        .comparison-cta h3 { font-size: 26px; font-weight: 800; color: var(--raj-dark); margin-bottom: 10px; }
+        .comparison-cta h3 span { color: var(--raj-accent); }
+        .comparison-cta p { font-size: 15px; color: var(--raj-gray); max-width: 560px; margin: 0 auto 30px; }
+
+        @media (min-width: 992px) {
+            .comparison-table tbody tr { transition: background 0.2s ease; }
+            .comparison-table tbody tr:hover td, .comparison-table tbody tr:hover th { background: var(--raj-light-gray); }
+            .comparison-table tbody tr:hover td.comparison-col-ours { background: #edf2f9; }
+            .comparison-table tbody tr:hover .comparison-feature { background: var(--raj-light-gray); }
+        }
+        @media (max-width: 991px) {
+            .comparison-scroll { overflow-x: auto; }
+            .comparison-table { min-width: 0; table-layout: fixed; }
+            .comparison-table th, .comparison-table td { overflow-wrap: anywhere; word-break: break-word; }
+            .comparison-table thead th.comparison-feature-header, .comparison-table th.comparison-feature { width: 34%; }
+            .comparison-table thead th:not(.comparison-feature-header), .comparison-table td.comparison-col { width: 22%; }
+            .comparison-table thead th { padding: 14px 8px; font-size: 13px; }
+            .comparison-table td, .comparison-table tbody th { padding: 14px 8px; }
+        }
+        @media (max-width: 575px) {
+            .comparison-table thead th { padding: 12px 5px; font-size: 12px; }
+            .comparison-table td, .comparison-table tbody th { padding: 13px 5px; }
+            .comparison-table .comparison-feature { font-size: 12.5px; }
+            .cmp-mark { width: 23px; height: 23px; font-size: 10.5px; }
+            .comparison-cta { padding: 44px 20px; }
+            .comparison-cta h3 { font-size: 22px; }
+        }
+    </style>
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
@@ -968,10 +1028,14 @@ ul { list-style: none; padding: 0; margin: 0; }
                                 <li>Website Maintenance</li>
                                 <li>Performance Report</li>
                                 <li>Social Media Management</li>
-                                <li>4 Creative Posts</li>
-                                <li>2 Reels</li>
+                                <li>4 Creative Posts + Reels</li>
                                 <li>Google Ads Management*</li>
-                                <li>Google Business Setup</li>
+                                <li>GBP Setup &amp; Optimization</li>
+                                <li>Dedicated Account Manager</li>
+                                <li>GTM + GA4 Advanced Tracking</li>
+                                <li>Monthly Strategy Call</li>
+                                <li>Regular Campaign Optimization</li>
+                                <li>Transparent Communication</li>
                             </ul>
                             <button type="button" class="btn btn-primary pricing-unlock-btn">Unlock Price <i class="fas fa-lock"></i></button>
                         </div>
@@ -980,30 +1044,44 @@ ul { list-style: none; padding: 0; margin: 0; }
                             <div class="pricing-amount pricing-amount-locked"><i class="fas fa-lock"></i> Price Locked</div>
                             <div class="pricing-period">per month</div>
                             <ul class="pricing-features">
-                                <li>Starter Package Included</li>
+                                <li>Website Maintenance</li>
+                                <li>Performance Report</li>
+                                <li>Social Media Management</li>
                                 <li>Google Ads Management*</li>
                                 <li>Meta Ads Management*</li>
                                 <li>Landing Page Optimization</li>
                                 <li>Competitor Analysis</li>
-                                <li>8 Reels + Creatives</li>
-                                <li>Priority Support</li>
+                                <li>8 Creative Posts + Reels</li>
+                                <li>Dedicated Account Manager</li>
+                                <li>GTM + GA4 Advanced Tracking</li>
+                                <li>Monthly Strategy Call</li>
+                                <li>Regular Campaign Optimization</li>
+                                <li>Transparent Communication</li>
                             </ul>
                             <button type="button" class="btn btn-primary pricing-unlock-btn">Unlock Price <i class="fas fa-lock"></i></button>
                         </div>
-                        <div class="pricing-card animate animate-delay-3 show" data-package="Ultimate" data-price="75,000">
-                            <div class="pricing-badge">Ultimate</div>
+                        <div class="pricing-card animate animate-delay-3 show" data-package="Unlimited" data-price="75,000">
+                            <div class="pricing-badge">Unlimited</div>
                             <div class="pricing-amount pricing-amount-locked"><i class="fas fa-lock"></i> Price Locked</div>
                             <div class="pricing-period">per month</div>
                             <ul class="pricing-features">
+                                <li>Website Maintenance</li>
+                                <li>Performance Report</li>
+                                <li>GBP Setup &amp; Optimization</li>
                                 <li>Free Drone Shoot (OR) Free Brochure Design</li>
                                 <li>Social Media Management</li>
                                 <li>Meta Ads Management*</li>
                                 <li>Google Ads Management*</li>
-                                <li>12 Premium Creatives</li>
+                                <li>Up to 25 Creative Posts + Reels</li>
                                 <li>SEO Services</li>
+                                <li>Competitor Analysis</li>
                                 <li>Branding Creatives &amp; Monthly Reports</li>
-                                <li>Festival &amp; Offer Designs</li>
+                                <li>Festival &amp; Offer Creatives</li>
                                 <li>Dedicated Account Manager</li>
+                                <li>GTM + GA4 Advanced Tracking</li>
+                                <li>Monthly Strategy Call</li>
+                                <li>Regular Campaign Optimization</li>
+                                <li>Transparent Communication</li>
                             </ul>
                             <button type="button" class="btn btn-primary pricing-unlock-btn">Unlock Price <i class="fas fa-lock"></i></button>
                         </div>
@@ -1027,49 +1105,6 @@ ul { list-style: none; padding: 0; margin: 0; }
                     </form>
                 </div>
             </div>
-
-            <!-- WHY CHOOSE US -->
-            <section class="why-choose-section section-padding" id="why-choose">
-                <div class="container">
-                    <div class="section-header text-center fade-in">
-                        <span class="section-subtitle">Why Choose Us</span>
-                        <h2 class="section-title">What Makes <span>Raj Marketing Agency</span> Different</h2>
-                        <p class="section-description">We combine expertise, transparency, and dedication to deliver exceptional results for every client.</p>
-                    </div>
-                    <div class="why-choose-grid">
-                        <div class="why-choose-item fade-in" data-delay="100">
-                            <div class="why-choose-icon"><i class="fas fa-pen-fancy"></i></div>
-                            <h3>Customized Marketing Strategies</h3>
-                            <p>Every business is unique. We create tailored strategies that align with your specific goals and target audience.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="200">
-                            <div class="why-choose-icon"><i class="fas fa-wallet"></i></div>
-                            <h3>Affordable Packages</h3>
-                            <p>Get premium digital marketing services at competitive prices. Maximum ROI for every rupee you invest.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="300">
-                            <div class="why-choose-icon"><i class="fas fa-users-cog"></i></div>
-                            <h3>Experienced Team</h3>
-                            <p>Our team brings years of industry experience across SEO, ads, design, and development domains.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="100">
-                            <div class="why-choose-icon"><i class="fas fa-file-invoice"></i></div>
-                            <h3>Transparent Reporting</h3>
-                            <p>Get clear, detailed monthly reports with real data. No hidden metrics, just honest results.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="200">
-                            <div class="why-choose-icon"><i class="fas fa-trophy"></i></div>
-                            <h3>Result-Oriented Approach</h3>
-                            <p>We focus on what matters: measurable growth in leads, sales, and brand visibility for your business.</p>
-                        </div>
-                        <div class="why-choose-item fade-in" data-delay="300">
-                            <div class="why-choose-icon"><i class="fas fa-headset"></i></div>
-                            <h3>Dedicated Support</h3>
-                            <p>We are always available to answer your questions and provide ongoing support for your campaigns.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- WORK PROCESS -->
             <section class="work-process-section section-padding" id="process">
@@ -1105,6 +1140,114 @@ ul { list-style: none; padding: 0; margin: 0; }
                             <h3>Growth</h3>
                             <p>Your business scales with sustained, measurable growth.</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHY OUR APPROACH IS DIFFERENT -->
+            <section class="comparison-section section-padding" id="comparison">
+                <div class="container">
+                    <div class="section-header text-center fade-in">
+                        <span class="section-subtitle">What Makes Us Different</span>
+                        <h2 class="section-title">Why Our <span>Approach Is Different</span></h2>
+                        <p class="section-description">More than campaign management &mdash; we focus on strategy, leads, tracking and continuous improvement.</p>
+                    </div>
+                    <div class="comparison-table-wrap fade-in">
+                        <div class="comparison-scroll" tabindex="0" role="region" aria-label="Comparison of our approach, typical agencies and freelancers. Scroll horizontally to view all columns.">
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th class="comparison-feature-header" scope="col">Feature</th>
+                                        <th class="comparison-col-ours" scope="col"><span class="comparison-col-ours-name">Our Approach</span></th>
+                                        <th class="comparison-col" scope="col">Typical Agencies</th>
+                                        <th class="comparison-col" scope="col">Freelancers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Transparent Communication</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Monthly Strategy Call</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Lead Generation Focused</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Free Landing Page Optimization</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Dedicated Campaign Manager</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Free Audit Before Commitment</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Advanced Tracking with GTM + GA4</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Competitor Analysis</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Regular Campaign Optimization</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Clear Monthly Reports</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Lead Quality Tracking</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="comparison-feature" scope="row">Conversion-Focused Approach</th>
+                                        <td class="comparison-col comparison-col-ours"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span><span class="screen-reader-text">Included</span></td>
+                                        <td class="comparison-col"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span><span class="screen-reader-text">Not included</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="comparison-legend">
+                            <span class="comparison-legend-item"><span class="cmp-mark cmp-mark-yes" aria-hidden="true">&#10003;</span> Provided</span>
+                            <span class="comparison-legend-item"><span class="cmp-mark cmp-mark-no" aria-hidden="true">&#10005;</span> Typically Not Included</span>
+                        </div>
+                    </div>
+                    <div class="comparison-cta fade-in">
+                        <h3>Want to see what we can <span>improve in your marketing?</span></h3>
+                        <p>Get a free, no-obligation audit of your campaigns, website and lead flow &mdash; and see exactly what we would change.</p>
+                        <a href="https://rajagency.in/contact-us/" class="btn btn-primary btn-lg">Get Your Free Marketing Audit <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </section>
