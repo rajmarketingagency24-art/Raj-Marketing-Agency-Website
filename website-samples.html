@@ -72,12 +72,12 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 /* BUTTONS */
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; font-size: 15px; font-weight: 600; border-radius: 50px; border: none; cursor: pointer; transition: var(--raj-transition); text-decoration: none; line-height: 1; }
-.btn-primary { background: var(--raj-accent); color: var(--raj-white); box-shadow: 0 8px 30px rgba(235, 89, 95, 0.3); }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(235, 89, 95, 0.4); color: var(--raj-white); }
+.btn-primary { background: var(--raj-accent); color: var(--raj-white); box-shadow: none; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: none; color: var(--raj-white); }
 .btn-secondary { background: var(--raj-white); color: var(--raj-blue); border: 2px solid var(--raj-blue); }
 .btn-secondary:hover { background: var(--raj-blue); color: var(--raj-white); transform: translateY(-3px); }
-.btn-whatsapp { background: var(--raj-whatsapp); color: var(--raj-white); box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3); }
-.btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4); color: var(--raj-white); }
+.btn-whatsapp { background: var(--raj-whatsapp); color: var(--raj-white); box-shadow: none; }
+.btn-whatsapp:hover { transform: translateY(-3px); box-shadow: none; color: var(--raj-white); }
 .btn-phone { background: var(--raj-dark); color: var(--raj-white); }
 .btn-phone:hover { background: var(--raj-blue); color: var(--raj-white); transform: translateY(-3px); }
 .btn-lg { padding: 20px 40px; font-size: 17px; }
@@ -107,8 +107,8 @@ ul { list-style: none; padding: 0; margin: 0; }
 .hamburger-line { width: 28px; height: 3px; background: var(--raj-dark); border-radius: 3px; transition: var(--raj-transition); }
 .header-cta { display: flex; gap: 10px; flex-shrink: 0; }
 .cta-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; transition: var(--raj-transition); text-decoration: none; }
-.cta-btn-primary { background: var(--raj-accent); color: var(--raj-white); box-shadow: 0 4px 15px rgba(203, 15, 9, 0.3); }
-.cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(203, 15, 9, 0.4); color: var(--raj-white); }
+.cta-btn-primary { background: var(--raj-accent); color: var(--raj-white); box-shadow: none; }
+.cta-btn-primary:hover { transform: translateY(-2px); box-shadow: none; color: var(--raj-white); }
 .cta-btn-phone { background: var(--raj-light-gray); color: var(--raj-dark); }
 .cta-btn-phone:hover { background: var(--raj-dark); color: var(--raj-white); }
 
@@ -128,14 +128,14 @@ ul { list-style: none; padding: 0; margin: 0; }
 .btn-hero-outline:hover { background: var(--raj-white); color: var(--raj-accent); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
 
 /* Samples Hero - Website Theme Colors */
-#samples-hero { background: linear-gradient(135deg, var(--raj-dark) 0%, var(--raj-blue) 55%, #334155 100%); aspect-ratio: auto; min-height: 520px; }
+#samples-hero { background: linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(30,41,59,0.75) 100%), url('https://rajagency.in/wp-content/uploads/2026/09/background.png') center center / cover no-repeat; aspect-ratio: auto; min-height: 520px; }
 #samples-hero .hero-bg-img { display: none; }
-#samples-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 15%, rgba(235,89,95,0.2) 0%, transparent 45%), radial-gradient(circle at 10% 85%, rgba(30,41,59,0.6) 0%, transparent 50%); z-index: 1; pointer-events: none; }
+#samples-hero::before { content: none; }
 #samples-hero .hero-center { position: relative; }
 #samples-hero .hero-center h1 { color: var(--raj-white); }
-#samples-hero .hero-accent-line { width: 70px; height: 4px; background: var(--raj-accent); border-radius: 2px; margin: 0 auto 22px; }
-#samples-hero .hero-tagline { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; background: rgba(235,89,95,0.15); border: 1px solid rgba(235,89,95,0.4); color: #ffd7d9; border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
-#samples-hero .hero-tagline i { color: var(--raj-accent); }
+#samples-hero .hero-accent-line { width: 70px; height: 4px; background: rgba(255,255,255,0.75); border-radius: 2px; margin: 0 auto 22px; }
+#samples-hero .hero-tagline { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); color: #fff; border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
+#samples-hero .hero-tagline i { color: #fff; }
 
 /* PAGE HEADER */
 .page-header-section { background: var(--raj-dark); padding: 140px 0 80px; position: relative; overflow: hidden; text-align: center; }
